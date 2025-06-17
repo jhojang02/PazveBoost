@@ -1,6 +1,7 @@
 import './App.css'
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 import Home from './pages/Home';
+import Header from './pages/Servicios';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     
     <PrimeReactProvider value={{ unstyled: false }}>
       <Home />
+      <Header />
     </PrimeReactProvider>
   )
 }
