@@ -1,14 +1,14 @@
 import { Button } from "primereact/button"
 import { Calendar } from "primereact/calendar"
+import IniciarSesion from "./Iniciar-sesion/IniciarSesion"
+
 
 function Home() {
   return (
     <div>
-        Primcipal
-        <Button label="Primary" />
-        <Calendar  />
+        <IniciarSesion />
     </div>
   )
 }
 
-export default Home
+export default Home;
