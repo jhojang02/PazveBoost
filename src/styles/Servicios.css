@@ -1,8 +1,89 @@
-* {
+body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
   background-color: #81c6f6;
+
+}.header {
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+.header-top {
+  background-color: #81c6f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: black;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 40px;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 45px 10px 15px;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+}
+
+.search-bar button {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 5px 10px;
+  transition: background 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background-color: #0984e3;
+  border-radius: 20px;
+}
+
+.login-button {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.Imagen {
+  width: 300px;
+  height: 70px;
 }
