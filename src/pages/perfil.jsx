@@ -1,14 +1,25 @@
-import "../style/perfil.css";
+import { Avatar } from "primereact/avatar"
+import 'primeicons/primeicons.css';
+import { AvatarGroup } from "primereact/avatargroup";
 
-function perfil(){
+
+function Perfil(){
     return(
         <div className="perfil">
-            <Avatar icon="pi pi-user" size="xlarge" />
-            <Avatar icon="pi pi-user" size="large" style={{ backgroundColor: '#2196F3', color: '#ffffff' }} />
-            <Avatar icon="pi pi-user" style={{ backgroundColor: '#9c27b0', color: '#ffffff' }} />
-            
+            <h1>Mi Perfil</h1>
+           <Avatar image="/images/avatar/amyelsner.png" size="xlarge" shape="circle" />
+            <h2> Usuario 777</h2>
 
+            
+            <i className="pi pi-check"></i> <p>Editar Perfil</p>
+            <br></br>
+            <i className="pi pi-times"></i> <p>Ayuda</p>
+            <br></br>
+            <span className="pi-arrow-left"></span>
+            <br></br>
+            <span className="pi pi-user"></span>
+        
         </div>
     )
 }
-export default perfil
+export default Perfil

@@ -1,7 +1,7 @@
 import './App.css'
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 import Home from './pages/Home';
-import Perfil from './pages/perfil';
+import Perfil from './pages/Perfil';
 
 function App() {
 
