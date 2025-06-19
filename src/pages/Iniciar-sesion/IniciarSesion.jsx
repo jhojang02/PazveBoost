@@ -1,28 +1,32 @@
-import './IniciarSesion.css'
+
 import React, { useState } from "react";
 import { InputText } from "primereact/inputtext";
 import { FloatLabel } from "primereact/floatlabel";
+import img from './img.png'
+import './IniciarSesion.css'
 
 function IniciarSesion(){
-    const [value, setValue] = useState('');
+    const [correo, setCorreo] = useState('');
+    const [contraseña, setContraseña] = useState('');
     
     return(
         <div className="container-principal">
             <div className="caja-sesion">
                 <div className="section-logo">
-                    <img src="https://mail.google.com/mail/u/0?ui=2&ik=afe5bddd2c&attid=0.1&permmsgid=msg-f:1835220543824463244&th=1978035c7728058c&view=att&disp=safe&realattid=f_mc15h1p90&zw" alt="Logo" className="" />
+                    <img src={img} alt="" />
                 </div>
                 <div className="section-informacion">
                     <h2>Iniciar sesion</h2>
                     <p>Ingresar tus credenciales para ingresar a tu cuenta</p>
                     <FloatLabel>
-                        <InputText id="username" value={value} onChange={(e) => setValue(e.target.value)} />
-                        <label htmlFor="username">Username</label>
+                        <InputText id="correo" value={correo} onChange={(e) => setCorreo(e.target.value)} />
+                        <label htmlFor="correo">Correo:</label>
                     </FloatLabel>
                     <FloatLabel>
-                        <InputText id="username" value={value} onChange={(e) => setValue(e.target.value)} />
-                        <label htmlFor="username">Username</label>
+                        <InputText id="contraseña" type='password' value={contraseña} onChange={(e) => setContraseña(e.target.value)} />
+                        <label htmlFor="contraseña">Contraseña:</label>
                     </FloatLabel>
+                    <button type="button">Iniciar sesion </button>
                 </div>
             </div>
         </div>
