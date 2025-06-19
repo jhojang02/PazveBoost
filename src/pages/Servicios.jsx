@@ -1,6 +1,6 @@
 import '../styles/Servicios.css';
 
-function Header (imagen) {
+function Header () {
     return (
 <header className="header">
   <div className="header-top">
