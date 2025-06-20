@@ -4,9 +4,8 @@ import { Calendar } from "primereact/calendar"
 function Home() {
   return (
     <div>
-        Primcipal
-        <Button label="Primary" />
-        <Calendar  />
+      
+         <Perfil />
     </div>
   )
 }

@@ -1,24 +1,28 @@
-import { Avatar } from "primereact/avatar"
-import 'primeicons/primeicons.css';
-import { AvatarGroup } from "primereact/avatargroup";
+import React from 'react'; 
+import { Avatar } from 'primereact/avatar';
+import { Badge } from 'primereact/badge';
+import "../pages/Perfil.css";
 
 
-function Perfil(){
-    return(
-        <div className="perfil">
-            <h1>Mi Perfil</h1>
-           <Avatar image="/images/avatar/amyelsner.png" size="xlarge" shape="circle" />
-            <h2> Usuario 777</h2>
+function Perfil() {
 
-            
-            <i className="pi pi-check"></i> <p>Editar Perfil</p>
-            <br></br>
-            <i className="pi pi-times"></i> <p>Ayuda</p>
-            <br></br>
-            <span className="pi-arrow-left"></span>
-            <br></br>
-            <span className="pi pi-user"></span>
-        
+    return (
+        <div className='Contenedor'>
+            <div className="card">
+            <div className="flex flex-wrap gap-5">
+                <div className="flex-auto">
+                    <h2 className='Titulo'>Mi Perfil</h2>
+                    <Avatar image="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png" className="mr-2" size="xlarge" shape="circle" />
+                    <h2 className='Titulo'>Usuario</h2>
+                    
+                    <div className='pi pi-check'>
+                        <h3 className='Opciones'>Editar Perfil</h3>
+                    </div>
+                    <h3>Ayuda</h3>
+                    <h3>Cerrar Sesion</h3>
+                </div>
+        </div>
+        </div>
         </div>
     )
 }

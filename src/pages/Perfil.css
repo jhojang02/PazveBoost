@@ -1,0 +1,29 @@
+body {
+    background-color: #81c6f6;
+}
+
+.Contenedor{
+    background-color: #ffff;
+    width: 1000px;
+    height: 700px;
+    margin: 100px;
+    margin-left: 25%;
+}
+
+.flex-auto{
+    align-items: center;
+    text-align: center;
+
+}
+
+.Titulo{
+    margin-bottom: 5%;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.Opciones{
+    margin-top: 5%;
+    padding: 20px;
+}
