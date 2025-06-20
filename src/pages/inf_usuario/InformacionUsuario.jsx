@@ -4,13 +4,14 @@ import { InputText } from 'primereact/inputtext';
 import './informacionUsuario.css'
 import { InputNumber } from 'primereact/inputnumber';
 import { FloatLabel } from 'primereact/floatlabel';
+import img from "./img.png"
 
 function InformacionUsuario() {
     const [value, setValue] = useState('');
     return (
         <div className='fondo'>
             <div className='cdr_inf'>
-                <img src='img.png' />
+                <img src={img} />
                 <div className='letra'>
                     <span >Informacion de usuario<br />Por favor, digite su informacion
                         <br /><br />
