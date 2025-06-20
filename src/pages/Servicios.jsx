@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, {useRef, useState} from "react";
 import { ListBox } from 'primereact/listbox';
+import { Button } from 'primereact/button';
+import { Badge } from 'primereact/badge';
+import { OverlayPanel } from 'primereact/overlaypanel';
 
 import Logo from '../Imagenes/Logo.png'
 import '../styles/Servicios.css';
@@ -47,4 +50,50 @@ export default function BasicDemo() {
     )
 }
 
-export {Header}; 
+const CarritoCompras = () => {
+  const op = useRef(null);
+  const [carrito, setCarrito] = useState([
+    { id: 1, nombre: 'Cámara Tipo Domo', precio: 150000 },
+    { id: 2, nombre: 'Instalación', precio: 75000 }
+  ]);
+
+  const total = carrito.reduce((acc, prod) => acc + prod.precio, 0);
+
+  return (
+    <div className="Boton-Carrito-Lateral">
+      <div className="Filtro-Carrito">
+      <Button
+        icon="pi pi-shopping-cart"
+        className="p-button-rounded p-button-text"
+        onClick={(e) => op.current.toggle(e)}
+        aria-label="Ver carrito"
+      />
+      <Badge 
+      value={carrito.length} 
+      severity="info"
+      className="badge-carrito" 
+      />
+      </div>
+
+      <OverlayPanel ref={op}>
+        <div className="Panel-Filtro">
+          <h4>Carrito</h4>
+          {carrito.length === 0 ? (
+            <p>Tu carrito está vacío</p>
+          ) : (
+            <ul>
+              {carrito.map((producto) => (
+                <li key={producto.id}>
+                  {producto.nombre} - ${producto.precio.toLocaleString('es-CO')}
+                </li>
+              ))}
+            </ul>
+          )}
+          <p><strong>Total:</strong> ${total.toLocaleString('es-CO')}</p>
+        </div>
+      </OverlayPanel>
+    </div>
+  );
+};
+
+export {Header, CarritoCompras}; 

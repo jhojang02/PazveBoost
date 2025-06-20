@@ -1,5 +1,5 @@
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-import BasicDemo, { Header } from './pages/Servicios';
+import BasicDemo, { Header, CarritoCompras } from './pages/Servicios';
 
 function App() {
 
@@ -7,6 +7,7 @@ function App() {
     
     <PrimeReactProvider value={{ unstyled: false }}>
       <Header />
+      <CarritoCompras />
       <BasicDemo />
     </PrimeReactProvider>
   )

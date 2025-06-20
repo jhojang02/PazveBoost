@@ -100,9 +100,57 @@ body, html, #root {
   width: 20vw;
   height: auto;
   margin: 30px;
-  border-radius: 10px;
+}
+
+.p-listbox,
+.p-component,
+.p-listbox .p-listbox-list,
+.p-listbox .p-inputtext,
+.p-listbox .p-listbox-item,
+.p-listbox .p-listbox-header {
+  border-radius: 0 !important;
+}
+
+.p-listbox .p-listbox-item {
+  border-bottom: 1px solid grey;
 }
 
 .p-listbox-header {
   background-color: #0984e3;
+}
+
+.p-component {
+  border: 1px solid #0984e3;
+}
+
+
+.Filtro-Carrito {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  padding-left: 100px;
+}
+
+.badge-carrito {
+  margin-left: -9px;
+  position: relative;
+  margin-top: -20px;
+  position: left;
+  right: 0;
+  top: 0;
+  background-color: red;
+}
+
+.Boton-Carrito-Lateral {
+  margin-top: 30px;
+}
+
+.p-button-rounded {
+  background-color: #0984e3;
+}
+
+.p-overlaypanel {
+  background-color: #288edb;
+  color: white;
 }
