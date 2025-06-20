@@ -19,9 +19,8 @@ body{
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  width: 70%;
-  max-width: 900px;
-  height: 450px;
+  width: 1093px;
+  height: 793px;
 }
 
 .section-logo {
@@ -50,19 +49,27 @@ body{
 
 .section-informacion h2 {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
 }
 
 .section-informacion p {
   margin-bottom: 25px;
-  font-size: 14px;
+  font-size: 30px;
   color: #000000;
 }
 
 .p-float-label {
   margin-bottom: 25px;
+  width: 100%;
 }
+
+.p-float-label input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+
 
 button {
   background-color: #0099ff;

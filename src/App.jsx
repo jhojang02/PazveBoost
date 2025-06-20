@@ -4,7 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 import Home from './pages/Home';
-import IniciarSesion from './pages/Iniciar-sesion/IniciarSesion';
 
 function App() {
 
