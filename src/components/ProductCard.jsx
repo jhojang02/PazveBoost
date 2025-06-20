@@ -2,7 +2,9 @@ import './ProductCard.css'
 
 const ProductCard = ({ product }) => {
   return (
-    <><div className="product-card">
+    <>
+    <div className='product'>
+    <div className="product-card">
           <img src={product.image} alt={product.name} className="product-img" />
       </div>
       <div className='product-text'>
@@ -12,6 +14,7 @@ const ProductCard = ({ product }) => {
             <button className="btn">Más detalles</button>
             <button className="btn">🛒</button>
         </div>
+    </div>
     </div></>
   );
 };
