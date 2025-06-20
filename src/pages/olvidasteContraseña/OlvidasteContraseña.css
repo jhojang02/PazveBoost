@@ -1,0 +1,61 @@
+.fondo {
+    padding-left: 40%;
+}
+
+.cdr_inf {
+    background-color: #ffff;
+    width: 1090px;
+    height: 793px;
+    border-radius: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: flex;
+
+
+}
+
+img {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 15%;
+
+}
+
+.txt {
+    padding-top: 14%;
+    padding-left: 0%;
+    text-align: start;
+}
+
+.txt h3 {
+    text-align: center;
+}
+
+.Sgn {
+    background-color: #0B99FE;
+    color: #ffff;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 266px;
+    height: 52px;
+
+
+
+}
+
+.rgr {
+    background-color: #ffff;
+    color: black;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 266px;
+    height: 52px;
+}
+
+.btn {
+
+    padding-top: 10%;
+    padding-left: 13%;
+
+}

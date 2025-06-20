@@ -1,12 +1,12 @@
 import { Button } from "primereact/button"
 import { Calendar } from "primereact/calendar"
-import InformacionUsuario from "./inf_usuario/InformacionUsuario"
+import OlvidasteContraseña from "./olvidasteContraseña/OlvidasteContraseña"
 
 
 function Home() {
   return (
     <div>
-        <InformacionUsuario/>
+        <OlvidasteContraseña/>
     </div>
   )
 }
