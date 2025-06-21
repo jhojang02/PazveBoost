@@ -1,14 +1,13 @@
 import { Button } from "primereact/button"
 import { Calendar } from "primereact/calendar"
+import CambiarContraseña from "./CambiarContraseña/CambiarContraseña";
 
 function Home() {
   return (
     <div>
-        Primcipal
-        <Button label="Primary" />
-        <Calendar  />
+        <CambiarContraseña/>
     </div>
   )
 }
 
-export default Home
+export default Home;

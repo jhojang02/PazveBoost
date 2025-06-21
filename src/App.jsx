@@ -9,9 +9,8 @@ function App() {
     
     <PrimeReactProvider value={{ unstyled: false }}>
       <Home />
-      <Header />
     </PrimeReactProvider>
   )
 }
 
-export default App
+export default App;
