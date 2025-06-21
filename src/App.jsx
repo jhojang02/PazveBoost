@@ -7,8 +7,10 @@ function App() {
     
     <PrimeReactProvider value={{ unstyled: false }}>
       <Header />
+      <div className='sidebar'>
       <CarritoCompras />
       <BasicDemo />
+      </div>
     </PrimeReactProvider>
   )
 }

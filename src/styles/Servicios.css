@@ -93,36 +93,45 @@ body, html, #root {
   font-weight: bold;
   text-decoration: none;
   margin-right: 5%;
+  margin-top: 6px;
 }
 
-.card {
+/* Barra Navegacion hasta aca */
+
+/*Filtro*/
+.card-uno {
   background-color: #0984e3;
-  width: 20vw;
+  width: 10vw;
   height: auto;
   margin: 30px;
 }
-
-.p-listbox,
-.p-component,
-.p-listbox .p-listbox-list,
-.p-listbox .p-inputtext,
-.p-listbox .p-listbox-item,
-.p-listbox .p-listbox-header {
-  border-radius: 0 !important;
+.filtros-busqueda{
+  border-radius: 0;
+  border:1px solid #0984e3;
+}
+.filtros-busqueda > .p-listbox-header{
+  border-radius: 0;
 }
 
-.p-listbox .p-listbox-item {
-  border-bottom: 1px solid grey;
+.filtros-busqueda >
+.p-listbox-list-wrapper {
+  border-radius: 0;
 }
 
+.filtros-busqueda >
 .p-listbox-header {
   background-color: #0984e3;
 }
 
-.p-component {
-  border: 1px solid #0984e3;
+.p-listbox-item {
+  border-bottom: 1px solid grey;
 }
 
+.p-listbox .p-listbox-list{
+  padding: 0%;
+}
+
+/* Carrito empieza aca */
 
 .Filtro-Carrito {
   display: flex;
@@ -133,24 +142,43 @@ body, html, #root {
 }
 
 .badge-carrito {
-  margin-left: -9px;
+  margin-left: -20px;
   position: relative;
-  margin-top: -20px;
+  margin-top: 40px;
   position: left;
   right: 0;
   top: 0;
   background-color: red;
+  border-radius: 0;
 }
 
 .Boton-Carrito-Lateral {
   margin-top: 30px;
 }
 
-.p-button-rounded {
-  background-color: #0984e3;
-}
 
-.p-overlaypanel {
+.panel-filtro-overlay {
   background-color: #288edb;
   color: white;
+}
+
+.panel-filtro-overlay:before {
+  border-bottom-color: #288edb;
+}
+
+.panel-filtro-overlay:after {
+  border-bottom-color: #288edb;
+}
+
+.sucess-boton {
+  margin-right: 65px;
+}
+
+/* Empieza la sidebar */
+
+.sidebar {
+  background-color: white;
+  height: 82.25vh;
+  width: 13%;
+  margin-top: -30px;
 }
