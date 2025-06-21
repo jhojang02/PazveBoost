@@ -14,12 +14,9 @@
 }
 
 .product-grid {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
+  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
   padding: 30px;

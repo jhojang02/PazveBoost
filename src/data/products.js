@@ -25,7 +25,7 @@ export const products = [
     },
         {
         id: 5,
-        name: "Dahua IPC-HFW2831S-S-S2",
+        name: "Dahua IPC-HFW2831S-S",
         price: "$500.000 COP",
         image: "/images/camara5.png",
     },
