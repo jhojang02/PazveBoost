@@ -1,12 +1,12 @@
 import { Button } from "primereact/button"
 import { Calendar } from "primereact/calendar"
-import OlvidasteContraseña from "./olvidasteContraseña/OlvidasteContraseña"
+import ContraseñaCambiada from "./contraseñaCambiada/ContraseñaCambiada"
 
 
 function Home() {
   return (
     <div>
-        <OlvidasteContraseña/>
+        <ContraseñaCambiada/>
     </div>
   )
 }
