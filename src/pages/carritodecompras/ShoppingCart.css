@@ -1,0 +1,87 @@
+.shopping-cart-container {
+    font-family: Arial, sans-serif;
+    border: 1px solid black;
+    border-radius: 16px;
+    padding-right: 25px;
+    width: 927px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: black;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.item-label {
+    flex: 1;
+    font-size: 20px;
+    color: black;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.arrow {
+    margin: 0 15px;
+    color: #ff0000;
+    font-size: 25px;
+}
+
+.item-value {
+    flex: 2;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+.item-value.green {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.action-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-bottom: 25px;
+    width: 150px;
+    text-align: center;
+}
+
+.action-button.primary {
+    background-color: #3970FB;
+    color: white;
+}
+
+.action-button.primary:hover {
+    background-color: #0056b3;
+}
+
+.action-button.secondary {
+    background-color: #3970FB;
+    color: white;
+}
+
+.action-button.secondary:hover {
+    background-color: #0056b3;
+}
+
+.button-placeholder {
+    width: 150px;
+    margin-left: auto;
+}

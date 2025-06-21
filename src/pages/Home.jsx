@@ -1,12 +1,9 @@
-import { Button } from "primereact/button"
-import { Calendar } from "primereact/calendar"
+import ShoppingCart from "./carritodecompras/ShoppingCart"
 
 function Home() {
   return (
     <div>
-        Primcipal
-        <Button label="Primary" />
-        <Calendar  />
+      <ShoppingCart />
     </div>
   )
 }
