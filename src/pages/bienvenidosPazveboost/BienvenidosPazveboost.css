@@ -1,0 +1,19 @@
+.cdr_inf {
+    background-color: #ffff;
+    width: 1090px;
+    height: 793px;
+    border-radius: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+
+
+}
+
+img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 231px;
+    
+}

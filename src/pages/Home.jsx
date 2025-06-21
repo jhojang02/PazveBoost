@@ -1,12 +1,12 @@
 import { Button } from "primereact/button"
 import { Calendar } from "primereact/calendar"
-import ContraseñaCambiada from "./contraseñaCambiada/ContraseñaCambiada"
+import BienvenidosPazveboost from "./bienvenidosPazveboost/BienvenidosPazveboost"
 
 
 function Home() {
   return (
     <div>
-        <ContraseñaCambiada/>
+        <BienvenidosPazveboost/>
     </div>
   )
 }
