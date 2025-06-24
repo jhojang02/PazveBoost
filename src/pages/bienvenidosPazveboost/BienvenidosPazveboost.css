@@ -6,14 +6,31 @@
     align-items: flex-start;
     justify-content: center;
     display: flex;
+    font-size: 25px;
+
 
 
 }
 
 img {
-    display: flex;
     justify-content: center;
     align-items: center;
-    width: 231px;
+    width: 285px;
     
+}
+
+h1{
+    text-align: center;
+    font-size: 52px;
+}
+
+button{
+    background-color: #81C6F6 ;
+    color: #ffff;
+    width: 271px;
+    height: 74px;
+    border-radius: 10%;
+    font-size: 28px;
+    border: 1px solid white;
+    box-shadow: 11px 5px 15px 0px rgba(0, 0, 0, 0.3);
 }
