@@ -1,3 +1,17 @@
+.container{
+    width: 1440px;
+    height: 776px;
+    background-color: white;
+    position: relative;
+}
+
+.header-shopping-cart-container{
+    background-color: #3F8FD2;
+    opacity: 0.68;
+    width: 1440px;
+    height: 84px;
+}
+
 .shopping-cart-container {
     font-family: Arial, sans-serif;
     border: 1px solid black;
@@ -7,6 +21,11 @@
     margin: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: white;
+
+    position: absolute;
+    bottom: 0;
+    left: 18%;
+    margin-bottom: 20px;
 }
 
 .title {
@@ -58,7 +77,6 @@
     font-size: 16px;
     font-weight: bold;
     margin-left: auto;
-    margin-bottom: 25px;
     width: 150px;
     text-align: center;
 }
@@ -75,6 +93,7 @@
 .action-button.secondary {
     background-color: #3970FB;
     color: white;
+    margin-bottom: 15px;
 }
 
 .action-button.secondary:hover {
