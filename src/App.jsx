@@ -1,7 +1,7 @@
-import './index.css'
 import './App.css'
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 import Home from './pages/Home';
+import Header from './pages/Servicios';
 
 function App() {
 
@@ -13,6 +13,7 @@ function App() {
           <Home />
         </div>
       </div>
+      <Header />
     </PrimeReactProvider>
   )
 }
