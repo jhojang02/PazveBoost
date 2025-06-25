@@ -14,13 +14,11 @@ function App() {
           <div className='carrito-container'>
             <CarritoCompras />
           </div>
-          <h3>Carrito</h3>
+          <h3 className='name_car'>Carrito</h3>
           <BasicDemo />
         </div>
         <div className='contenedor contenedor_fondo'>
-            <div>
             <Home />
-            </div>
         </div>
       </div>
     </PrimeReactProvider>
