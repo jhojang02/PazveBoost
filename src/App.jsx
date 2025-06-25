@@ -1,5 +1,5 @@
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-import Perfil from './pages/perfil';
+import EditarPerfil from './pages//EditarPerfil.jsx';
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     
     <PrimeReactProvider value={{ unstyled: false }}>
-      <Perfil />
+      <EditarPerfil />
     </PrimeReactProvider>
   )
 }

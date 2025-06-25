@@ -4,8 +4,8 @@ import { Calendar } from "primereact/calendar"
 function Home() {
   return (
     <div>
-      
          <Perfil />
+         <editarPerfil />
     </div>
   )
 }
