@@ -6,9 +6,12 @@ function App() {
   return (
     
     <PrimeReactProvider value={{ unstyled: false }}>
-      <Header />
+      <Header/>
       <div className='sidebar'>
+      <div className='carrito-container'>
       <CarritoCompras />
+      </div>
+      <h3>Carrito</h3>
       <BasicDemo />
       </div>
     </PrimeReactProvider>

@@ -60,6 +60,7 @@ const CarritoCompras = () => {
   const total = carrito.reduce((acc, prod) => acc + prod.precio, 0);
 
   return (
+    <div className="sidebar">
     <div className="Boton-Carrito-Lateral">
       <div className="Filtro-Carrito">
         <Button icon="pi pi-shopping-cart" rounded severity="info" onClick={(e) => op.current.toggle(e)} aria-label="Ver carrito" />
@@ -87,6 +88,8 @@ const CarritoCompras = () => {
           </div>
         </div>
       </OverlayPanel>
+
+      </div>
 
     </div>
 
