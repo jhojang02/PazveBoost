@@ -1,14 +1,15 @@
-import { Button } from "primereact/button"
-import { Calendar } from "primereact/calendar"
+import ProductCard from "../components/ProductCard";
+import { products } from "../data/products";
 
-function Home() {
+function Home () {
   return (
-    <div>
-        Primcipal
-        <Button label="Primary" />
-        <Calendar  />
+    <div className="product-grid">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
     </div>
-  )
-}
+  );
+};
+
 
 export default Home

@@ -8,7 +8,11 @@ function App() {
   return (
     
     <PrimeReactProvider value={{ unstyled: false }}>
-      <Home />
+      <div className='contenedor_fondo'>
+       <div>
+          <Home />
+        </div>
+      </div>
       <Header />
     </PrimeReactProvider>
   )
