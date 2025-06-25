@@ -1,4 +1,3 @@
-import '../styles/Servicios.css';
 
 function Header () {
     return (

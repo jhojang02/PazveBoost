@@ -9,7 +9,7 @@ function App() {
     
     <PrimeReactProvider value={{ unstyled: false }}>
       <Home />
-      <Header />
+      
     </PrimeReactProvider>
   )
 }
