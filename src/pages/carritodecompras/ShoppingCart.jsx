@@ -1,13 +1,19 @@
 import './ShoppingCart.css'
 
 const ShoppingCart = () => {
-    const productPrice = "$329.900 COP";
+    const productPrice = "$300.000 COP";
     const shippingCost = "Gratis";
-    const totalCost = "$329.900 COP";
+    const totalCost = "$300.000 COP";
 
     return (
         <div className='container'>
-            <div className='header-shopping-cart-container'></div>
+            <div className='header-shopping-cart-container'>
+                <div className='container-icon'>
+                <span className='header-arrow'>←</span>
+                <span className='icon-shopping-cart'>🛒</span>
+                <span className='text-header'>Carrito de Compras</span>
+                </div>
+            </div>
             <div className="shopping-cart-container">
                 <p className="title">Información de la Compra</p>
 

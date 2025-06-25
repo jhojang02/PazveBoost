@@ -6,8 +6,7 @@
 }
 
 .header-shopping-cart-container{
-    background-color: #3F8FD2;
-    opacity: 0.68;
+    background-color: #7cb3e0;
     width: 1440px;
     height: 84px;
 }
@@ -103,4 +102,26 @@
 .button-placeholder {
     width: 150px;
     margin-left: auto;
+}
+
+.container-icon{
+    display: flex;
+    align-items: center;
+    height: 84px;
+    font-size: 40px;
+}
+
+.header-arrow{
+    color: black;
+    margin-right: 115px;
+    margin-left: 15%;
+    font-size: 65px;
+}
+
+.icon-shopping-cart{
+    margin-right: 115px;
+}
+
+.text-header{
+    font-weight: 500;
 }
