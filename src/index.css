@@ -1,0 +1,12 @@
+.body {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  width: 20%;
+}
+.contenedor {
+  width: 75%;
+}
