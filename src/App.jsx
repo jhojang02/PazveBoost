@@ -5,9 +5,15 @@ import './index.css'
 function App() {
 
   return (
-    <>
-      <Home />
-    </>
+    
+    <PrimeReactProvider value={{ unstyled: false }}>
+      <div className='contenedor_fondo'>
+       <div>
+          <Home />
+        </div>
+      </div>
+      <Header />
+    </PrimeReactProvider>
   )
 }
 
