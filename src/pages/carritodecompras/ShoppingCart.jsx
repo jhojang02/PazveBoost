@@ -1,5 +1,6 @@
 import './ShoppingCart.css'
 import ProductCard from '../../components/ProductCard';
+import { products } from '../../data/products';
 
 const ShoppingCart = () => {
     const productPrice = "$300.000 COP";
@@ -10,13 +11,15 @@ const ShoppingCart = () => {
         <div className='container'>
             <div className='header-shopping-cart-container'>
                 <div className='container-icon'>
-                <span className='header-arrow'>←</span>
-                <span className='icon-shopping-cart'>🛒</span>
-                <span className='text-header'>Carrito de Compras</span>
+                    <span className='header-arrow'>←</span>
+                    <span className='icon-shopping-cart'>🛒</span>
+                    <span className='text-header'>Carrito de Compras</span>
                 </div>
             </div>
-            <div>
-                <ProductCard />
+            <div className="product-grid">
+                {products.map((product) => (
+                    <ProductCard key={product.id} product={product} />
+                ))}
             </div>
             <div className="shopping-cart-container">
                 <p className="title">Información de la Compra</p>
