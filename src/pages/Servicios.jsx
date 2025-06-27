@@ -3,6 +3,7 @@ import { ListBox } from 'primereact/listbox';
 import { Button } from 'primereact/button';
 import { Badge } from 'primereact/badge';
 import { OverlayPanel } from 'primereact/overlaypanel';
+import { Rating } from "primereact/rating";
 
 import Logo from '../Imagenes/Logo.png'
 import '../styles/Servicios.css';
@@ -89,8 +90,17 @@ const CarritoCompras = () => {
       </OverlayPanel>
 
     </div>
-
   );
 };
 
-export { Header, CarritoCompras }; 
+function WithoutCancelDemo() {
+    const [value, setValue] = useState(null);
+
+    return (
+        <div className="card flex justify-content-center">
+            <Rating className="calificacion" value={value} onChange={(e) => setValue(e.value)} cancel={false} />
+        </div>
+    );
+}
+
+export { Header, CarritoCompras, WithoutCancelDemo}; 

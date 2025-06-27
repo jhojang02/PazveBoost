@@ -1,5 +1,5 @@
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-import BasicDemo, { Header, CarritoCompras } from './pages/Servicios';
+import BasicDemo, { Header, CarritoCompras, WithoutCancelDemo } from './pages/Servicios';
 import Home from './pages/Home';
 import './index.css';
 
@@ -14,8 +14,14 @@ function App() {
           <div className='carrito-container'>
             <CarritoCompras />
           </div>
-          <h3 className='name_car'>Carrito</h3>
+          <div className='carrito-header'>
+          <h3 className='name_car'>Carrito <span className='simbolo'>➡</span> </h3> 
           <BasicDemo />
+          <div className='estrellas'>
+            <h4>! Califica nuestra pagina ¡  😊  </h4>
+          <WithoutCancelDemo />
+          </div>
+        </div>
         </div>
         <div className='contenedor contenedor_fondo'>
             <Home />

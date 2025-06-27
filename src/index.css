@@ -15,3 +15,23 @@
   border-radius: 20px;
 }
 
+.simbolo {
+  font-size: 30px;
+  margin: 28px;
+}
+
+.estrellas {
+  justify-content: center;
+  justify-items: center;
+  margin: 10px;
+  margin-top: 40vh;
+  color: #0984e3;
+}
+
+.calificacion .p-rating-item svg {
+  color: #0984e3;
+}
+
+.calificacion .p-rating .p-rating-item{
+  border: 0;
+}
