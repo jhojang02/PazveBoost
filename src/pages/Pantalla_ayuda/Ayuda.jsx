@@ -3,12 +3,12 @@ import { Button } from 'primereact/button';
 import React, { useState } from "react";
 import { InputText } from "primereact/inputtext";
 import { FloatLabel } from "primereact/floatlabel";
-import Flecha from "./imagenFlecha.png";
+import Flechadevolver from "./Flechadevolver.png";
 
 function Ayuda() {
     const [value, setValue] = useState('');
     const [botonPrincipal, setBotonPrincipal] = useState('FAQ');
-    const [botonSecundario, setBotonSecundario] = useState('');
+    const [botonSecundario, setBotonSecundario] = useState('Servicio');
 
     const handlePrincipalClick = (boton) => {
         setBotonPrincipal(boton);
@@ -18,11 +18,12 @@ function Ayuda() {
         setBotonSecundario(boton);
     };
 
+
     return (
         <div className="container-principal-ayuda">
             <div className="header-ayuda">
                 <div className="logo">
-                    <button><img src={Flecha} alt="Volver" /></button>
+                    <button><img src={Flechadevolver} alt="Volver" /></button>
                 </div>
                 <div className="titulos">
                     <h2>Ayuda & FAQS</h2>
@@ -39,23 +40,14 @@ function Ayuda() {
                 <Button
                     label="Contáctanos"
                     className={`${botonPrincipal === 'Contactanos' ? 'p-button-primary' : 'p-button-outlined'} boton-grande`}
-                    onClick={() => handlePrincipalClick('Contactanos')}
+                    onClick={() => window.location.href="https://www.facebook.com/PAZGOSOLUCIONES/"}
                 />
             </div>
 
             
             <div className="botones-pequenos">
-                <Button
-                    label="General"
-                    className={`${botonSecundario === 'General' ? 'p-button-secondary' : 'p-button-outlined'} boton-pequeno`}
-                    onClick={() => handleSecundarioClick('General')}
-                />
-                <Button
-                    label="Cuenta"
-                    className={`${botonSecundario === 'Cuenta' ? 'p-button-secondary' : 'p-button-outlined'} boton-pequeno`}
-                    onClick={() => handleSecundarioClick('Cuenta')}
-                />
-                <Button
+                
+                <a href="https://www.facebook.com/PAZGOSOLUCIONES/"></a><Button 
                     label="Servicio"
                     className={`${botonSecundario === 'Servicio' ? 'p-button-secondary' : 'p-button-outlined'} boton-pequeno`}
                     onClick={() => handleSecundarioClick('Servicio')}
@@ -68,6 +60,8 @@ function Ayuda() {
                     <label htmlFor="buscar">Buscar</label>
                 </FloatLabel>
             </div>
+
+            
         </div>
     );
 }
