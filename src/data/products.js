@@ -17,22 +17,4 @@ export const products = [
         price: "$300.000 COP",
         image: "/images/camara3.png",
     },
-        {
-        id: 4,
-        name: "DS-2CD2T86G2-ISU/SL",
-        price: "$1,240.522 COP",
-        image: "/images/camara4.png",
-    },
-        {
-        id: 5,
-        name: "Dahua IPC-HFW2831S-S",
-        price: "$500.000 COP",
-        image: "/images/camara5.png",
-    },
-        {
-        id: 6,
-        name: "DS-2CD2T86G2-ISU/SL",
-        price: "$350.000 COP",
-        image: "/images/camara6.png",
-    },
 ]

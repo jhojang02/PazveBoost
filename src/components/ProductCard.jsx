@@ -12,7 +12,6 @@ const ProductCard = ({ product }) => {
           <p className="product-price">{product.price}</p>
           <div className="button-group">
             <button className="btn">Más detalles</button>
-            <button className="btn">🛒</button>
           </div>
         </div>
       </div></>

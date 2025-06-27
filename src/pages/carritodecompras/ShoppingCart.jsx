@@ -1,4 +1,5 @@
 import './ShoppingCart.css'
+import ProductCard from '../../components/ProductCard';
 
 const ShoppingCart = () => {
     const productPrice = "$300.000 COP";
@@ -13,6 +14,9 @@ const ShoppingCart = () => {
                 <span className='icon-shopping-cart'>🛒</span>
                 <span className='text-header'>Carrito de Compras</span>
                 </div>
+            </div>
+            <div>
+                <ProductCard />
             </div>
             <div className="shopping-cart-container">
                 <p className="title">Información de la Compra</p>

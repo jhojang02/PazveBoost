@@ -5,6 +5,14 @@
   text-align: center;
 }
 
+.contenedor_fondo {
+  background-color: white;
+  align-items: flex-end;
+  justify-content: right;
+  width: 1077px;
+  height: 776px;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
