@@ -5,3 +5,13 @@
   text-align: center;
 }
 
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+  }
