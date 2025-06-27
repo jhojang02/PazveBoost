@@ -1,6 +1,53 @@
-.p-float-label label{
-    display: block;
-    width: 300px;
+.Titulo{
+    margin-bottom: 20px;
+    font-size:30px;
+   
+    
+}
+
+.Contenedor {
+    background-color: #ffff;
+    width: 1000px;
+    height: 800px;
+    margin: 100px;
+    margin-left: 25%;
+    padding-left: 25px;
+    
+    
+}
+
+body {
+    background-color: #81c6f6;
+}
+
+.flex-auto {
+    align-items: center;
     text-align: center;
+}
+
+.labels-u {
     justify-content: center;
+    justify-items: center;
+    margin-top: 12px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.espaciado {
+    margin: 30px;
+    border: 0;
+    box-shadow:  0 0 0 1px #0984e3;
+    border-radius: 5px;
+}
+
+.pi {
+    margin-left: 15px;
+    margin-top: 15px;
+
+}
+
+.x-avatar img {
+    width: 100px;
+    height: 100px;
+    margin-top: 80px;
 }
