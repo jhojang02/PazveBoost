@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { InputText } from "primereact/inputtext";
 import { FloatLabel } from "primereact/floatlabel";
 import Flechadevolver from "./Flechadevolver.png";
+import { Accordion, AccordionTab } from 'primereact/accordion';
 
 function Ayuda() {
     const [value, setValue] = useState('');
@@ -40,14 +41,14 @@ function Ayuda() {
                 <Button
                     label="Contáctanos"
                     className={`${botonPrincipal === 'Contactanos' ? 'p-button-primary' : 'p-button-outlined'} boton-grande`}
-                    onClick={() => window.location.href="https://www.facebook.com/PAZGOSOLUCIONES/"}
+                    onClick={() => window.location.href = "https://www.facebook.com/PAZGOSOLUCIONES/"}
                 />
             </div>
 
-            
+
             <div className="botones-pequenos">
-                
-                <a href="https://www.facebook.com/PAZGOSOLUCIONES/"></a><Button 
+
+                <a href="https://www.facebook.com/PAZGOSOLUCIONES/"></a><Button
                     label="Servicio"
                     className={`${botonSecundario === 'Servicio' ? 'p-button-secondary' : 'p-button-outlined'} boton-pequeno`}
                     onClick={() => handleSecundarioClick('Servicio')}
@@ -61,7 +62,65 @@ function Ayuda() {
                 </FloatLabel>
             </div>
 
-            
+            <div className="card">
+                <div className="card">
+                    <Accordion activeIndex={0}>
+                        <AccordionTab header="¿Como usar PFM?" className="tiras">
+                            <p className="m-0">
+                                Para usar nuestro sistema de cámaras de seguridad, simplemente conecta las cámaras al DVR o NVR, luego accede a la interfaz desde tu computadora o aplicación móvil. Desde allí podrás ver las cámaras en tiempo real, configurar alertas de movimiento y revisar grabaciones anteriores.
+                            </p>
+                        </AccordionTab>
+
+                        <AccordionTab header="¿Cuanto cuesta usar PFM?" className="tiras">
+                            <p className="m-0">
+                                El costo depende del tipo y cantidad de cámaras, así como de las características que desees (visión nocturna, cámaras IP, almacenamiento en la nube, etc).
+                            </p>
+                        </AccordionTab>
+
+                        <AccordionTab header="¿Como contactar con soporte?" className="tiras">
+                            <p className="m-0">
+                                Puedes contactarnos a través de nuestra página de Facebook: <a href="https://www.facebook.com/PAZGOSOLUCIONES/" target="_blank" rel="noopener noreferrer">PAZGOSOLUCIONES</a>.
+                            </p>
+                        </AccordionTab>
+
+                        <AccordionTab header="¿Como puedo restablecer mi contraseña si la olvido?">
+                            <p className="m-0">
+                                Si olvidaste la contraseña de acceso a tu sistema de cámaras o aplicación, puedes restablecerla desde el menú de configuración o contactando con nuestro soporte técnico para recibir ayuda paso a paso.
+                            </p>
+                        </AccordionTab>
+
+                        <AccordionTab header="¿Existen medidas de privacidad o seguridad de datos implementadas?">
+                            <p className="m-0">
+                                Sí, todas nuestras cámaras y sistemas incluyen protocolos de seguridad como cifrado de video y contraseñas de acceso. Además, recomendamos cambiar la contraseña predeterminada tras la instalación para mayor seguridad.
+                            </p>
+                        </AccordionTab>
+
+                        <AccordionTab header="¿Puedo personalizar la configuraricon dentro de la apliacion?">
+                            <p className="m-0">
+                                .
+                            </p>
+                        </AccordionTab>
+
+                        <AccordionTab header="¿Puedo eliminar mi cuenta?">
+                            <p className="m-0">
+                                Sí. Si deseas eliminar tu cuenta o desactivar el acceso remoto de tus cámaras, solo contáctanos y te ayudaremos a realizar el proceso de forma segura.
+                            </p>
+                        </AccordionTab>
+
+                        <AccordionTab header="¿Como accedo a mi historial de gastos?">
+                            <p className="m-0">
+                                .
+                            </p>
+                        </AccordionTab>
+
+                        <AccordionTab header="¿Puedo utilizar la aplicacion sin conexion?">
+                            <p className="m-0">
+                                Puedes acceder a las grabaciones almacenadas localmente sin internet, pero para visualizar en tiempo real o acceder desde fuera de casa necesitarás una conexión activa a internet.
+                            </p>
+                        </AccordionTab>
+                    </Accordion>
+                </div>
+            </div>
         </div>
     );
 }
