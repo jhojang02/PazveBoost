@@ -1,12 +1,6 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  max-width: 1440px;
-  max-height: 1024px;
-
-  color-scheme: light dark;
-  color: black;
-  background-color: #81c6f6;
-
+.body {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  margin:0 auto;
 }
