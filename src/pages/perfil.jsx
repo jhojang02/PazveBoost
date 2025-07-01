@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from 'react'; 
 import { Avatar } from 'primereact/avatar';
 import { Badge } from 'primereact/badge';
-import "./CerrarSesion.css";
+import 'primeicons/primeicons.css';
+import "../pages/Perfil.css";
 
 
-function CerrarSesion() {
+function Perfil() {
 
     return (
-        <div className='cdr_inf'>
+        <div className='Contenedor'>
             <div className='pi pi-arrow-left'></div>
             <div className="card">
             <div className="flex flex-wrap gap-5">
@@ -25,5 +26,4 @@ function CerrarSesion() {
         </div>
     )
 }
-
-export default CerrarSesion
+export default Perfil

@@ -1,6 +1,6 @@
 import { Button } from "primereact/button"
 import { Calendar } from "primereact/calendar"
-import CerrarSesion from "./cerrarSesion/CerrarSesion"
+import CerrarSesion from "./cerrarSesion/CerrarSesion.jsx"
 
 
 function Home() {
