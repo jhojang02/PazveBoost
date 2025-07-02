@@ -79,6 +79,7 @@ body, html, #root {
   color: white;
   text-decoration: none;
   font-size: 16px;
+  place-content: center;
   padding: 8px 16px;
   transition: background 0.3s;
   margin-left: 35px;
