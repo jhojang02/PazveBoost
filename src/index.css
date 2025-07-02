@@ -1,13 +1,44 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  max-width: 1440px;
-  max-height: 1024px;
-
-  color-scheme: light dark;
-  color: black;
-  background-color: #81c6f6;
-
+.body {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  margin:0 auto;
 }
 
+.sidebar {
+  width: 20%;
+}
+
+.contenedor {
+  width: 78%;
+  height: auto;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+.simbolo {
+  font-size: 30px;
+  margin: 28px;
+}
+
+.estrellas {
+  justify-content: center;
+  justify-items: center;
+  margin: 10px;
+  margin-top: 10vh;
+  color: #0984e3;
+}
+
+.calificacion .p-rating-item svg {
+  color: #0984e3;
+}
+
+.calificacion .p-rating .p-rating-item{
+  border: 0;
+}
+
+.p-rating-item-active,
+.p-rating-item.p-focus {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
