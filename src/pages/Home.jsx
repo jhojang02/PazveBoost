@@ -1,14 +1,15 @@
 import { Button } from "primereact/button"
 import { Calendar } from "primereact/calendar"
-import CerrarSesion from "./cerrarSesion/CerrarSesion.jsx"
+import BienvenidosPazveboost from "./bienvenidosPazveboost/BienvenidosPazveboost.jsx"
 
 
 function Home() {
   return (
     <div>
-        <CerrarSesion/>
+        <BienvenidosPazveboost/>
     </div>
   )
 }
+
 
 export default Home
