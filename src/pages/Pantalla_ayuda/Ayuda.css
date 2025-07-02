@@ -106,7 +106,7 @@ body {
 }
 
 .buscador {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   display: flex;
   justify-content: center;
 }
@@ -116,4 +116,8 @@ body {
   max-width: 500px;
   border-radius: 10px;
   
+}
+
+.m-0{
+  text-align: left;
 }
