@@ -9,6 +9,7 @@ function App() {
     <PrimeReactProvider value={{ unstyled: false }}>
       <EditarPerfil />
     </PrimeReactProvider>
+    
   )
 }
 

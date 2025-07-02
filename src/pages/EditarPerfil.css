@@ -12,7 +12,7 @@
     margin: 100px;
     margin-left: 25%;
     padding-left: 25px;
-    
+    border-radius: 25px;
     
 }
 
@@ -50,4 +50,21 @@ body {
     width: 100px;
     height: 100px;
     margin-top: 80px;
+}
+
+.avatars{
+    width: 50%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    align-items: center;
+    border:2px solid #0984e3;
+    margin: 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-left: 25%;
+    background-color: #81c6f6;
+
 }
