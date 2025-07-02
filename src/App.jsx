@@ -1,10 +1,7 @@
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 import BasicDemo, { Header, CarritoCompras, WithoutCancelDemo, AccesosRapidos} from './pages/Servicios';
 import Home from './pages/Home';
-<<<<<<< HEAD
-=======
 import './index.css';
->>>>>>> servicios
 
 function App() {
 
