@@ -103,4 +103,18 @@ function WithoutCancelDemo() {
     );
 }
 
-export { Header, CarritoCompras, WithoutCancelDemo}; 
+function AccesosRapidos() {
+  return (
+    <div class="sidebar-accessos">
+  <h4>Accesos Rápidos</h4>
+  <ul class="accessos-lista">
+    <li><a href="#promociones">🔥 Cámaras en promoción</a></li>
+    <li><a href="#kits">🔧 Kits de instalación</a></li>
+    <li><a href="#nuevos">🆕 Nuevos productos</a></li>
+    <li><a href="#populares">⭐ Más populares</a></li>
+  </ul>
+</div>
+  )
+}
+
+export { Header, CarritoCompras, WithoutCancelDemo, AccesosRapidos}; 
