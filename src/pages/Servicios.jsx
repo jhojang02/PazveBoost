@@ -26,7 +26,7 @@ function Header() {
         <div className="nav-links">
           <a href="#">INICIO</a>
           <a href="#">NOSOTROS</a>
-          <a href="#" className="active">PRODUCTOS</a>
+          <a href="#">PRODUCTOS</a>
           <a href="#">SERVICIOS</a>
           <a href="#">CONTACTENOS</a>
         </div>

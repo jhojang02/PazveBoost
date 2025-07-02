@@ -13,7 +13,7 @@ export const products = [
     },
         {
         id: 3,
-        name: "Reolink Argus 3 Pro",
+        name: "Instalación",
         price: "$300.000 COP",
         image: "/images/instalacion.jpg",
     },
