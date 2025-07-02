@@ -26,8 +26,8 @@ function Header() {
         <div className="nav-links">
           <a href="#">INICIO</a>
           <a href="#">NOSOTROS</a>
-          <a href="#" className="active">PRODUCTOS</a>
-          <a href="#">SERVICIOS</a>
+          <a href="#">PRODUCTOS</a>
+          <a href="#" className="active">SERVICIOS</a>
           <a href="#">CONTACTENOS</a>
         </div>
         <a href="#" className="login-button">Iniciar Sesión</a>
@@ -39,9 +39,9 @@ function Header() {
 export default function BasicDemo() {
   const [selectedCity, setSelectedCity] = useState(null);
   const cities = [
-    { name: 'Camara Tipo Domo', code: 'CD' },
+    { name: 'Categorias', code: 'CD' },
     { name: 'Instalacion', code: 'I' },
-    { name: 'Camara Portaltil', code: 'CP' },
+    { name: 'Adsesorias', code: 'CP' },
   ];
 
   return (
