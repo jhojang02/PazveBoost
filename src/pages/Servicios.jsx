@@ -41,7 +41,7 @@ export default function BasicDemo() {
   const cities = [
     { name: 'Categorias', code: 'CD' },
     { name: 'Instalacion', code: 'I' },
-    { name: 'Adsesorias', code: 'CP' },
+    { name: 'Acesorias', code: 'CP' },
   ];
 
   return (
@@ -54,8 +54,8 @@ export default function BasicDemo() {
 const CarritoCompras = () => {
   const op = useRef(null);
   const [carrito, setCarrito] = useState([
-    { id: 1, nombre: 'Cámara Tipo Domo', precio: 150000 },
-    { id: 2, nombre: 'Instalación', precio: 75000 }
+    { id: 1, nombre: 'Instalación', precio: 175000 },
+    { id: 2, nombre: 'Soporte Técnico', precio: 350000 }
   ]);
 
   const total = carrito.reduce((acc, prod) => acc + prod.precio, 0);
