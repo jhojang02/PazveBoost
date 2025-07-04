@@ -1,5 +1,5 @@
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-import EditarPerfil from './pages//EditarPerfil.jsx';
+import EditarPerfil from './pages/EditarPerfil.jsx';
 
 
 function App() {

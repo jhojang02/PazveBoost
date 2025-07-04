@@ -5,7 +5,7 @@ function Home() {
   return (
     <div>
          <Perfil />
-         <editarPerfil />
+         <EditarPerfil />
     </div>
   )
 }
