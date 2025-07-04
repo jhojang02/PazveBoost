@@ -3,6 +3,7 @@ import { Avatar } from 'primereact/avatar';
 import { Badge } from 'primereact/badge';
 import 'primeicons/primeicons.css';
 import "../pages/Perfil.css";
+import { Perfil1 } from '../components/primerComponente.jsx';
 
 
 function Perfil() {
@@ -17,9 +18,11 @@ function Perfil() {
                     <Avatar image="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png" className="img" />
                     <h2 className='Titulo'>Usuario</h2>
                     
-                    <div className='opciones'><i className="pi pi-user-edit" style={{ fontSize: '1.8rem' }}></i><h3>Editar Perfil</h3></div>
-                    <div className='opciones'><i className=" pi pi-exclamation-circle" style={{ fontSize: '1.8rem' }}></i><h3>Ayuda</h3></div>
-                    <div className='opciones'><i className=" pi pi-sign-out" style={{ fontSize: '1.8rem' }}></i><h3>Cerrar Sesion</h3></div>
+                    <div className='general_botones'>
+                    <button className='botones'><div className='opciones'><i className="pi pi-user-edit" style={{ fontSize: '2.8rem' }}></i><h3>Editar Perfil</h3></div></button>
+                    <button className='botones'><div className='opciones'><i className=" pi pi-exclamation-circle" style={{ fontSize: '2.8rem' }}></i><h3>Ayuda</h3></div></button>
+                    <Perfil1 />
+                    </div>
                 </div>
         </div>
         </div>
