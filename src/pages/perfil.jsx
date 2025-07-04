@@ -2,10 +2,10 @@ import React from 'react';
 import { Avatar } from 'primereact/avatar';
 import { Badge } from 'primereact/badge';
 import 'primeicons/primeicons.css';
-import "CerrarSesion.css";
+import "../pages/Perfil.css";
 
 
-function CerrarSesion() {
+function Perfil() {
 
     return (
         <div className='Contenedor'>
@@ -26,4 +26,4 @@ function CerrarSesion() {
         </div>
     )
 }
-export default CerrarSesion
+export default Perfil

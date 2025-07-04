@@ -1,12 +1,12 @@
 import { Button } from "primereact/button"
 import { Calendar } from "primereact/calendar"
-import CerrarSesion from "./cerrarSesion/CerrarSesion.jsx"
+import InformacionUsuario from "./inf_usuario/InformacionUsuario.jsx"
 
 
 function Home() {
   return (
     <div>
-        <CerrarSesion/>
+        <InformacionUsuario/>
     </div>
   )
 }
