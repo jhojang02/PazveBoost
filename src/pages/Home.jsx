@@ -5,9 +5,11 @@ import IniciarSesion from "./Iniciar-sesion/IniciarSesion"
 
 function Home() {
   return (
-    <div>
+    <form action="iniciar_sesion.php" method="post" >
+      <div>
         <IniciarSesion />
-    </div>
+      </div>
+    </form>
   )
 }
 
