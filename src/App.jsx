@@ -9,7 +9,7 @@ function App() {
 
   return (
     
-    <PrimeReactProvider value={{ unstyled: false }}>
+    <PrimeReactProvider value={{ unstyled: true }}>
       <Home />
     </PrimeReactProvider>
   )
