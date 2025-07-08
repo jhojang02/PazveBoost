@@ -23,28 +23,28 @@ function InformacionUsuario() {
                     <span >Informacion de usuario<br />Por favor, digite su informacion
                         <br /><br />
                         <FloatLabel>
-                            <InputText id="nombre"  value={nombre} onChange={(e) => setNombre(e.target.value)} />
-                            <label htmlFor="nombre">Nombre:</label>
+                            <InputText id="Apellido"  value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                            <label htmlFor="Apellido">Apellido:</label>
                         </FloatLabel><br />
                         <FloatLabel>
-                            <InputText id="apellido" value={apellido} onChange={(e) => setApellido(e.target.value)} />
-                            <label htmlFor="apellido">Apellido:</label>
+                            <InputText id="Direccion" value={apellido} onChange={(e) => setApellido(e.target.value)} />
+                            <label htmlFor="Direccion">Direccion:</label>
                         </FloatLabel><br/>
                         <FloatLabel>
-                            <InputText id="fecha_nacimiento" value={fechaNacimiento} onChange={(e) => setFechaNacimiento(e.target.value)} />
-                            <label htmlFor="fecha_nacimiento">Fecha de nacimiento:</label>
+                            <InputText id="ID" value={fechaNacimiento} onChange={(e) => setFechaNacimiento(e.target.value)} />
+                            <label htmlFor="ID">Id:</label>
                         </FloatLabel><br/>
                         <FloatLabel>
-                            <InputText id="telefono" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
-                            <label htmlFor="telefono">Telefono:</label>
+                            <InputText id="Telefono" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
+                            <label htmlFor="Telefono">Telefono:</label>
                         </FloatLabel><br/>
                         <FloatLabel>
-                            <InputText id="correo" value={correo} onChange={(e) => setCorreo(e.target.value)} />
-                            <label htmlFor="correo">Correo:</label>
+                            <InputText id="Nombre" value={correo} onChange={(e) => setCorreo(e.target.value)} />
+                            <label htmlFor="Nombre">Nombre:</label>
                         </FloatLabel><br/>
                         <FloatLabel>
-                            <InputText id="contraseña" value={contrasena} onChange={(e) => setContrasena(e.target.value)} />
-                            <label htmlFor="contraseña">Contraseña:</label>
+                            <InputText id="Ciudad" value={contrasena} onChange={(e) => setContrasena(e.target.value)} />
+                            <label htmlFor="Ciudad">Ciudad:</label>
                         </FloatLabel><br/>
                         <button>Registrar</button>
                     </span>
