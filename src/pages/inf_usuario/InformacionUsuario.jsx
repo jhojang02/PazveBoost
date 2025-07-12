@@ -15,6 +15,7 @@ function InformacionUsuario() {
     const [telefono, setTelefono] = useState('');
     const [correo, setCorreo] = useState('');
     const [contrasena, setContrasena] = useState('');
+
     return (
         <div className='fondo'>
             <div className='cdr_inf'>
