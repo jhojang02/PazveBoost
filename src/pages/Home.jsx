@@ -8,7 +8,7 @@ import Bienvenidos from "./bienvenidosPazveboost/BienvenidosPazveboost.jsx"
 function Home() {
   return (
     <div>
-        <Bienvenidos />
+        <InformacionUsuario />
     </div>
   )
 }
