@@ -13,9 +13,13 @@
 }
 
 img {
+    
     justify-content: center;
     align-items: center;
-    width: 285px;
+    width: 250px;
+    height: 250px;
+  margin-left: 150px;
+    margin-top: 0;
     
 }
 
