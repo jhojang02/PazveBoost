@@ -1,13 +1,13 @@
 import { Button } from "primereact/button"
 import { Calendar } from "primereact/calendar"
-import InformacionUsuario from "./inf_usuario/InformacionUsuario.jsx"
+import BienvenidosPazveboost from "./bienvenidosPazveboost/BienvenidosPazveboost.jsx"
 
 
 
 function Home() {
   return (
     <div>
-        <InformacionUsuario />
+        <BienvenidosPazveboost />
     </div>
   )
 }
