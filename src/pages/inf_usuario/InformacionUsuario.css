@@ -21,6 +21,11 @@ img{
 
 .letra{
     padding-left: 7%;
+    color: black;
+}
+
+p{
+    text-align: center;
 }
 
 .p-float-label {
@@ -47,4 +52,3 @@ button:hover{
 .register{
     margin-right: 70px;
 }
-

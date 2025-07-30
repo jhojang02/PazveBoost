@@ -21,7 +21,7 @@ function InformacionUsuario() {
             <div className='cdr_inf'>
                 <img src={img} />
                 <div className='letra'>
-                    <span >Informacion de usuario<br />Por favor, digite su informacion
+                    <div className="Titulo"><p>Informacion de usuario<br />Por favor, digite su informacion</p></div>
                         <br /><br />
                         <div className="Container1">
                         <FloatLabel>
@@ -50,7 +50,6 @@ function InformacionUsuario() {
                         </FloatLabel><br/>
                         </div>
                         <button className="register">Registrar</button>
-                    </span>
                 </div>
 
 
