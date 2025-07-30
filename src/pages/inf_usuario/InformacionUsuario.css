@@ -1,6 +1,7 @@
 .cdr_inf{
-    width: 1090px;
-    height: 793px;
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
     background-color: #FFFFFF;
     border-radius: 20px;
     align-items: flex-start;
@@ -13,10 +14,10 @@ img{
     display: flex;
     justify-content: left;
     align-items: center;
-    margin-top: 14%;
+    margin-top: 3%;
     margin-left: 5%;
-    width: 600px;
-    height: 500px;
+    width: 800px;
+    height: 600px;
 }
 
 .letra{
@@ -26,6 +27,7 @@ img{
 
 p{
     text-align: center;
+    margin-top: 30px;
 }
 
 .p-float-label {
@@ -51,4 +53,8 @@ button:hover{
 
 .register{
     margin-right: 70px;
+}
+
+.Titulo{
+    margin-right: 60px;
 }
