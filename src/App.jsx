@@ -13,8 +13,6 @@ function App() {
 
     <PrimeReactProvider value={{ unstyled: false }}>
       <InfoUser />
-      <Home />
-      
     </PrimeReactProvider>
     
    
