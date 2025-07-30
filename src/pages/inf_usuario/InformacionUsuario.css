@@ -1,33 +1,39 @@
 .cdr_inf{
-    width: 1090px ;
+    width: 1090px;
     height: 793px;
     background-color: #FFFFFF;
-   
     border-radius: 20px;
     align-items: flex-start;
     justify-content: flex-start;
     display: flex;
-    ;
+    margin-right: 90px;
 }
 
 img{
     display: flex;
     justify-content: left;
     align-items: center;
-    padding-top: 15%;
+    margin-top: 14%;
+    margin-left: 5%;
+    width: 600px;
+    height: 500px;
 }
 
 .letra{
-    padding-top: 5%;
-    padding-left: 11%;
+    padding-left: 7%;
 }
 
+.p-float-label {
+    font-size: 90%;
+    padding-right: 80px;
+}
 
 button{
     background-color: #0B99FE ;
     color: #FFFFFF;
     width: 266px;
     height: 52px;
+    padding: 0%;
 }
 
 button:hover{
@@ -35,5 +41,10 @@ button:hover{
 }
 
 .fondo{
-    padding-left: 40%;
+    padding-left: 4%;
 }
+
+.register{
+    margin-right: 70px;
+}
+

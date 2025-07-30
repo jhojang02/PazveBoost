@@ -23,6 +23,7 @@ function InformacionUsuario() {
                 <div className='letra'>
                     <span >Informacion de usuario<br />Por favor, digite su informacion
                         <br /><br />
+                        <div className="Container1">
                         <FloatLabel>
                             <InputText id="Apellido"  value={nombre} onChange={(e) => setNombre(e.target.value)} />
                             <label htmlFor="Apellido">Apellido:</label>
@@ -47,7 +48,8 @@ function InformacionUsuario() {
                             <InputText id="Ciudad" value={contrasena} onChange={(e) => setContrasena(e.target.value)} />
                             <label htmlFor="Ciudad">Ciudad:</label>
                         </FloatLabel><br/>
-                        <button>Registrar</button>
+                        </div>
+                        <button className="register">Registrar</button>
                     </span>
                 </div>
 
