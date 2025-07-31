@@ -1,4 +1,4 @@
-.cdr_inf {
+.ContenedorBienvenida {
     background-color: #ffff;
     width: 1090px;
     height: 793px;
@@ -7,18 +7,13 @@
     justify-content: center;
     display: flex;
     font-size: 25px;
-
-
-
 }
 
-img {
-    
-    justify-content: center;
-    align-items: center;
-    width: 280px;
- 
-    
+.ImagenBienvenida {
+    width: 400px;
+    height: auto;
+    padding: 0%;
+    margin-left: 95px;
 }
 
 h1{
