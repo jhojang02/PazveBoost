@@ -59,3 +59,13 @@ img {
     padding-left: 13%;
 
 }
+
+.p-inputtext,
+.p-component {
+    margin-left: 43px;
+    margin-top: 17px;
+}
+
+.p-inputtext2 {
+    margin-left: 35px;
+}

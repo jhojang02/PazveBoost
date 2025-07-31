@@ -12,7 +12,7 @@ function App() {
      
 
     <PrimeReactProvider value={{ unstyled: false }}>
-      <Home />
+      <OlvidoContra />
     </PrimeReactProvider>
     
    
