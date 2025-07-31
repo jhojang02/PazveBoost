@@ -15,7 +15,7 @@ function OlvidasteContraseña() {
                 <img src={img} />
                 <div className='txt'>
                     <span>
-                        <h3>¿OlVIDASTE TU CONTRASEÑA?</h3><br />Al cambiar tu contraseña, elige una segura y única.<br /> Usa una combinacion de letras, numeros y simbolos de letras, números y símbolos. No compartas tu contraseña con nadie.<br /><br /><strong>Ingresa la dirección de correo electrónico:</strong><br /><br />
+                        <h3 className="title-contraseña">¿OlVIDASTE TU CONTRASEÑA?</h3><br />Al cambiar tu contraseña, elige una segura y única.<br /> Usa una combinacion de letras, numeros y simbolos de letras, números y símbolos. No compartas tu contraseña con nadie.<br /><br /><strong>Ingresa la dirección de correo electrónico:</strong><br /><br />
                         <FloatLabel>
                             <InputText id="username" value={value} onChange={(e) => setValue(e.target.value)} className="p-float-label"/>
                             <label htmlFor="username" className="p-inputtext2">Email:</label>
