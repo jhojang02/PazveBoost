@@ -1,9 +1,10 @@
 import './App.css'
 import "./index.css"
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-import Home from './pages/Home';
+import HomeBienvenida from './pages/Home';
 import InfoUser from './pages/inf_usuario/InformacionUsuario'
 import OlvidoContra from './pages/olvidasteContraseña/OlvidasteContraseña'
+import Pantalla_ayuda from './pages/Pantalla_ayuda/Ayuda';
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
      
 
     <PrimeReactProvider value={{ unstyled: false }}>
-      <InfoUser />
+      <Pantalla_ayuda />
     </PrimeReactProvider>
     
    

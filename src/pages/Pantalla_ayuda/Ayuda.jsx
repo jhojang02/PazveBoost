@@ -23,8 +23,8 @@ function Ayuda() {
     return (
         <div className="container-principal-ayuda">
             <div className="header-ayuda">
-                <div className="logo">
-                    <button><img src={Flechadevolver} alt="Volver" /></button>
+                <div className="logo" id="logo">
+                    <button className="volver"><img src={Flechadevolver} alt="Volver" id="volver-boton" /></button>
                 </div>
                 <div className="titulos">
                     <h2>Ayuda & FAQS</h2>
@@ -41,6 +41,7 @@ function Ayuda() {
                 <Button
                     label="Contáctanos"
                     className={`${botonPrincipal === 'Contactanos' ? 'p-button-primary' : 'p-button-outlined'} boton-grande`}
+                    id="boton-contacto"
                     onClick={() => window.location.href = "https://www.facebook.com/PAZGOSOLUCIONES/"}
                 />
             </div>
@@ -55,9 +56,9 @@ function Ayuda() {
                 />
             </div>
 
-            <div className="buscador">
+            <div className="buscador" id="buscador">
                 <FloatLabel>
-                    <InputText id="buscar" value={value} onChange={(e) => setValue(e.target.value)} />
+                    <InputText id="buscar" value={value} onChange={(e) => setValue(e.target.value)} className="buscar" />
                     <label htmlFor="buscar">Buscar</label>
                 </FloatLabel>
             </div>

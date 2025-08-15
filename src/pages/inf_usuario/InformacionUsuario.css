@@ -56,5 +56,10 @@ button:hover{
 }
 
 .Titulo{
-    margin-right: 60px;
+    margin-right: 85px;
+    font-size: 20px;
+}
+
+.p-inputtext, .p-component {
+    margin-left: 0 !important;
 }

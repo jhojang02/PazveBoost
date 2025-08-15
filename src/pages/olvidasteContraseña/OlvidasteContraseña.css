@@ -9,16 +9,14 @@
     align-items: flex-start;
     justify-content: flex-start;
     display: flex;
-
-
 }
 
-img {
+#imagen-logo .pazve-logo {
     display: flex;
     justify-content: left;
     align-items: center;
     padding-top: 15%;
-
+    width: 650px;
 }
 
 .txt {
@@ -60,6 +58,7 @@ img {
 
 }
 
+.unico,
 .p-inputtext,
 .p-component {
     margin-left: 43px;

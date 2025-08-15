@@ -121,3 +121,21 @@ body {
 .m-0{
   text-align: left;
 }
+
+#boton-contacto {
+  font-size: 25px;
+  justify-content: center;
+}
+
+#logo .volver {
+  border-radius: 5px;
+  width: 150px;
+}
+
+#logo #volver-boton {
+  width: 40px;
+}
+
+#buscador input label {
+  margin-left: 150px;
+}
