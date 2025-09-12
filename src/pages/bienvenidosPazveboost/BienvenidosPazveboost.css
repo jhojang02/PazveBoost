@@ -1,33 +1,35 @@
 .ContenedorBienvenida {
     background-color: #ffff;
-    width: 1090px;
-    height: 793px;
+    padding: 2rem;
+    width: 900px;
     border-radius: 20px;
     align-items: flex-start;
     justify-content: center;
     display: flex;
     font-size: 25px;
+    box-sizing: border-box;
 }
 
 .ImagenBienvenida {
-    width: 400px;
+    width: 300px;
     height: auto;
-    padding: 0%;
-    margin-left: 95px;
+    margin: 0 auto;
 }
 
 h1{
     text-align: center;
-    font-size: 52px;
+    font-size: 40px;
 }
 
-button{
+.ParrafoBienvenida {
+    margin: none !important;
+}
+.BotonSiguienteBienvenida{
+    margin: 0 auto;
     background-color: #81C6F6 ;
-    color: #ffff;
     width: 271px;
     height: 74px;
-    border-radius: 10%;
+    border-radius: 20px;
     font-size: 28px;
-    border: 1px solid white;
     box-shadow: 11px 5px 15px 0px rgba(0, 0, 0, 0.3);
 }

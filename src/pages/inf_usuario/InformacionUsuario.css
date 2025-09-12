@@ -1,65 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 .cdr_inf{
-    width: 90%;
-    max-width: 1200px;
-    height: auto;
-    background-color: #FFFFFF;
+    background-color: #ffff;
+    padding: 2rem;
+    width: 900px;
+    height: 600px;
     border-radius: 20px;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     display: flex;
-    margin-right: 90px;
+    font-size: 25px;
+    box-sizing: border-box;
 }
 
 img{
     display: flex;
     justify-content: left;
     align-items: center;
-    margin-top: 3%;
-    margin-left: 5%;
-    width: 800px;
-    height: 600px;
+    margin-top: 11%;
+    margin-left: 2%;
+    width: 550px;
+    height: auto;
+    margin-right: 80px;
 }
 
-.letra{
-    padding-left: 7%;
-    color: black;
+#InputInfo {
+    font-size: 50%;
+    padding-right: 95px;
 }
 
-p{
-    text-align: center;
-    margin-top: 30px;
-}
-
-.p-float-label {
-    font-size: 90%;
-    padding-right: 80px;
-}
-
-button{
+.register{
     background-color: #0B99FE ;
     color: #FFFFFF;
     width: 266px;
     height: 52px;
-    padding: 0%;
+    margin-left: 12px;
 }
 
-button:hover{
+.register:hover{
     background-color: #0b88e0 ;
 }
 
-.fondo{
-    padding-left: 4%;
-}
-
-.register{
-    margin-right: 70px;
-}
-
 .Titulo{
-    margin-right: 85px;
+    text-align: center;
     font-size: 20px;
 }
 
 .p-inputtext, .p-component {
     margin-left: 0 !important;
+}
+
+.Container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }

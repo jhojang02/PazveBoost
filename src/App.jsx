@@ -1,12 +1,12 @@
 import './App.css';
-import './index.css';
 import { PrimeReactProvider } from 'primereact/api';
 import { Routes, Route } from 'react-router-dom';
 
-import HomeBienvenida from './pages/Home';
+import HomeBienvenida from './pages/bienvenidosPazveboost/BienvenidosPazveboost';
 import InfoUser from './pages/inf_usuario/InformacionUsuario';
 import OlvidoContra from './pages/olvidasteContraseña/OlvidasteContraseña';
 import Pantalla_ayuda from './pages/Pantalla_ayuda/Ayuda';
+import Perfil from './pages/perfil/perfil.jsx';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <Route path="/olvidaste" element={<OlvidoContra />} />
         <Route path="/ayuda" element={<Pantalla_ayuda />} />
         <Route path="*" element={<div>Página no encontrada</div>} />
+        <Route path="Perfil" element={<Perfil />} />
       </Routes>
     </PrimeReactProvider>
   );

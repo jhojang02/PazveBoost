@@ -23,16 +23,13 @@ img {
     color: black;
     font-size: 25px;
     
-
-
-
 }
 
 .imagen{
     width: 280px;
 }
 
-button{
+.BotonContraseña{
     background-color: #0B99FE;
     color: #ffff;
     width: 312px;

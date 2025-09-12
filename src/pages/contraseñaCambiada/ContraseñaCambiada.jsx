@@ -14,7 +14,7 @@ function ContraseñaCambiada() {
                  <img src={otraimg} className="imagen" />
                 <span>La contraseña ha sido<br/> cambiada con exito</span>
                 <br /><br/>
-                <button>Volver a iniciar sesión</button>
+                <button className="BotonContraseña">Volver a iniciar sesión</button>
             </div>
         </div>
     )

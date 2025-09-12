@@ -1,4 +1,8 @@
 <?php
+header("Acces-Control-Allow-Origin: *");
+header("Acces-Control-Allow-Headers: Content-Type");
+header("Acces-Control-Allow-Methods: GET, POST, OPTIONS");
+
 $database = "proyecto";
 $host = "localhost";
 $userDB = "root";
