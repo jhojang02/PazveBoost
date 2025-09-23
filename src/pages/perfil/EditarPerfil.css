@@ -10,7 +10,6 @@
     width: 1000px;
     height: 800px;
     margin: 100px;
-    margin-left: 25%;
     padding-left: 25px;
     border-radius: 25px;
     
@@ -43,7 +42,6 @@ body {
 .Arrow .pi {
     margin-left: 15px;
     margin-top: 15px;
-
 }
 
 .x-avatar img {

@@ -27,7 +27,7 @@ function Perfil() {
                     <h2 className='Titulo'>Usuario</h2>
                     </div>
                     <div className='general_botones'>
-                    <button className='botones'><div className='opciones'><i className="pi pi-user-edit" style={{ fontSize: '2.8rem' } } onClick={Click}></i><h3 className='TituloBotonEditar'>Editar Perfil</h3></div></button>
+                    <button className='botones'><div className='opciones' onClick={Click}><i className="pi pi-user-edit" style={{ fontSize: '2.8rem' } }></i><h3 className='TituloBotonEditar'>Editar Perfil</h3></div></button>
                     <button className='botones'><div className='opciones'><i className=" pi pi-exclamation-circle" style={{ fontSize: '2.8rem' }}></i><h3 className='TituloBotonEditar'>Ayuda</h3></div></button>
                     <Perfil1/>
                     </div>
