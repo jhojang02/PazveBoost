@@ -33,8 +33,10 @@ function EditarPerfil() {
     const [value, setValue] = React.useState('');
 
     return (
-        <div className='Contenedor'>
+        <div className='ContenedorEditar'>
+            <div>
             <i className='pi pi-arrow-left back-arrow' />
+            </div>
             <div className="card">
                 <div className="flex flex-wrap gap-5">
                     <div className="flex-auto">

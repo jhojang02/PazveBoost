@@ -10,28 +10,22 @@ body {
     border-radius: 20px;
     align-items: flex-start;
     justify-content: center;
-    display: flex;
     font-size: 25px;
     box-sizing: border-box;
+    margin-left: 10px;
 }
 
-.Titulo {
+.Titulo_perfil {
     margin: 10px 0;
     font-size: 30px;
     text-align: center;
 }
 
-.avatar-container {
-    margin: 0 auto;
+.Avatar{
+    width: 200px;
+    height: 200px;
 }
 
-.Avatar {
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 3rem 0;
-}
 
 .general_botones {
     display: flex;
@@ -53,11 +47,19 @@ body {
     cursor: pointer;
     transition: 0.3s;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    width: 70%;
+    width: 50%;
 }
 
 .botones:hover {
     background-color: #f1f1f1;
+}
+
+.TituloBotonEditar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 25px;
 }
 
 .opciones {

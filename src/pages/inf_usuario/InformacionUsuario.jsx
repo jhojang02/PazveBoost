@@ -4,7 +4,7 @@ import { InputText } from 'primereact/inputtext';
 import './informacionUsuario.css'
 import { InputNumber } from 'primereact/inputnumber';
 import { FloatLabel } from 'primereact/floatlabel';
-import img from "./img.png"
+import imagen from "./img.png"
 import { useNavigate } from "react-router-dom"
 
 function InformacionUsuario() {
@@ -27,7 +27,7 @@ function InformacionUsuario() {
     return (
         <div className='fondo'>
             <div className='cdr_inf'>
-                <img src={img} />
+                <img src={imagen} className="imagen"/>
                 <div className='letra'>
                     <div className="Titulo"><p>Informacion de usuario<br />Por favor, digite su informacion</p></div>
                         <br /><br />
