@@ -11,7 +11,7 @@ function OlvidasteContraseña() {
     const [value, setValue] = useState('');
     return (
         <div className='fondo'>
-            <div className="cdr_inf">
+            <div className="cdr_inf2">
                 <div id="imagen-logo">
                 <img src={img} className="pazve-logo"/>
                 </div>

@@ -7,6 +7,7 @@ import { Perfil1 } from './componentesPerfil/primerComponente.jsx';
 import { useNavigate } from "react-router-dom"
 
 
+
 function Perfil() {
 
     const navigate = useNavigate();
@@ -14,6 +15,10 @@ function Perfil() {
         const Click = () => {
         navigate('/editarPerfil');
         };
+
+        const Click2 = () => {
+        navigate('/ayuda')
+        }
 
     return (
         <div className='Contenedor'>
@@ -28,7 +33,7 @@ function Perfil() {
                     </div>
                     <div className='general_botones'>
                     <button className='botones'><div className='opciones' onClick={Click}><i className="pi pi-user-edit" style={{ fontSize: '2.8rem' } }></i><h3 className='TituloBotonEditar'>Editar Perfil</h3></div></button>
-                    <button className='botones'><div className='opciones'><i className=" pi pi-exclamation-circle" style={{ fontSize: '2.8rem' }}></i><h3 className='TituloBotonEditar'>Ayuda</h3></div></button>
+                    <button className='botones'><div className='opciones' onClick={Click2}><i className=" pi pi-exclamation-circle" style={{ fontSize: '2.8rem' }}></i><h3 className='TituloBotonEditar'>Ayuda</h3></div></button>
                     <Perfil1/>
                     </div>
                 </div>

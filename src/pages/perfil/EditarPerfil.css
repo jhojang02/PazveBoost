@@ -1,4 +1,4 @@
-.Titulo{
+.Titulo_editar_perfil{
     margin-bottom: 20px;
     font-size:30px;
    
@@ -8,11 +8,10 @@
 .ContenedorEditar {
     background-color: #ffff;
     width: 1000px;
-    height: 800px;
+    height: 750px;
     margin: 100px;
     padding-left: 25px;
     border-radius: 25px;
-    
 }
 
 body {

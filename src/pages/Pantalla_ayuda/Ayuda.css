@@ -7,8 +7,8 @@ body {
 .container-principal-ayuda {
   background-color: white;
   border-radius: 12px;
-  width: 1090px;
-  height: auto;
+  width: 1000px;
+  height: 750px;
   margin: 30px auto;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -100,6 +100,13 @@ body {
   background-color: #0B99FE; 
 }
 
+.p-accordion .p-accordion-header .p-accordion-header-link {
+  padding: 0.5rem;
+}
+
+.p-accordion .p-accordion-content {
+  padding: 0%;
+}
 
 .p-button-secondary.boton-pequeno {
   background-color: #0B99FE; 
@@ -138,4 +145,10 @@ body {
 
 #buscador input label {
   margin-left: 150px;
+}
+
+.link_contraseña:active {
+  color: blue;
+  font-weight: bold;
+  transform: translateY(2px);
 }

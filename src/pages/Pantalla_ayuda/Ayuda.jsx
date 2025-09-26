@@ -5,6 +5,7 @@ import { InputText } from "primereact/inputtext";
 import { FloatLabel } from "primereact/floatlabel";
 import Flechadevolver from "./Flechadevolver.png";
 import { Accordion, AccordionTab } from 'primereact/accordion';
+import { useNavigate } from "react-router-dom"
 
 function Ayuda() {
     const [value, setValue] = useState('');
@@ -18,6 +19,12 @@ function Ayuda() {
     const handleSecundarioClick = (boton) => {
         setBotonSecundario(boton);
     };
+
+    const navigate = useNavigate();
+        
+            const clickContraseña = () => {
+            navigate('/olvidarContraseña');
+            };
 
 
     return (
@@ -90,8 +97,8 @@ function Ayuda() {
 
                         <AccordionTab header="¿Cómo puedo restablecer mi contraseña si la olvido?">
                             <p className="m-0">
-                                Si olvidaste la contraseña de acceso a tu sistema de cámaras o aplicación, puedes restablecerla desde el menú de configuración o contactando 
-                                con nuestro soporte técnico para recibir ayuda paso a paso.
+                                Si olvidaste la contraseña de acceso a tu sistema de cámaras o aplicación, puedes restablecerla desde el menú de configuración, contactando 
+                                con nuestro soporte técnico para recibir ayuda paso a paso, o directamente desde este link       -----       <a onClick={clickContraseña} className="link_contraseña">Restablecer Contraseña</a>
                             </p>
                         </AccordionTab>
 

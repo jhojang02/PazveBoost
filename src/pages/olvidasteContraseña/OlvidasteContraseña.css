@@ -1,10 +1,10 @@
 
 
 
-.cdr_inf {
+.cdr_inf2 {
     background-color: #ffff;
     width: 1090px;
-    height: 793px;
+    height: 750px;
     border-radius: 20px;
     align-items: flex-start;
     justify-content: flex-start;
@@ -58,17 +58,19 @@
 
 }
 
-.unico,
-.p-inputtext,
-.p-component {
+.unico {
     margin-left: 43px;
     margin-top: 17px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-left: 49px;
+    width: 266px;
+}
+
+.p-inputtext:enabled:focus{
+    width: 266px;
 }
 
 .p-inputtext2 {
-    margin-left: 35px;
-}
-
-.title-contraseña {
-    margin-right: 80px;
+    margin-left: 92px;
 }
