@@ -3,7 +3,7 @@ import BasicDemo, { Header, CarritoCompras, WithoutCancelDemo, AccesosRapidos} f
 import Home from './pages/menu_productos/Home';
 import './index.css';
 
-function App() {
+function Estructura() {
 
   return (
 
@@ -32,4 +32,4 @@ function App() {
   )
 }
 
-export default App
+export default Estructura
