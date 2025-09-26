@@ -40,8 +40,8 @@ body {
 }
 
 .Arrow .pi {
-    margin-left: 15px;
-    margin-top: 15px;
+    margin-left: -2px;
+    margin-top: 20px;
 }
 
 .x-avatar img {
@@ -65,4 +65,9 @@ body {
     margin-left: 25%;
     background-color: #81c6f6;
 
+}
+
+#username {
+    border: transparent;
+    margin-top: 0;
 }

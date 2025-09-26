@@ -34,7 +34,7 @@ function EditarPerfil() {
 
     return (
         <div className='ContenedorEditar'>
-            <div>
+            <div className='Arrow'>
             <i className='pi pi-arrow-left back-arrow' />
             </div>
             <div className="card">
@@ -46,21 +46,21 @@ function EditarPerfil() {
                         <div className='labels-u'>
                             <div className='espaciado'>
                                 <FloatLabel>
-                                    <InputText id="nombre_u" value={value} onChange={(e) => setValue(e.target.value)} />
-                                    <label htmlFor="username">Nombre Usuario</label>
+                                    <InputText id="username" className='nosexd' value={value} onChange={(e) => setValue(e.target.value)} />
+                                    <label htmlFor="username1" className='los_nombres1'>Nombre Usuario</label>
                                 </FloatLabel>
                             </div>
 
                             <div className='espaciado'>
                                 <FloatLabel>
-                                    <InputText id="username" value={value} onChange={(e) => setValue(e.target.value)} />
-                                    <label htmlFor="username">Correo</label>
+                                    <InputText id="username" className='correo' value={value} onChange={(e) => setValue(e.target.value)} />
+                                    <label htmlFor="username" className='los_nombres'>Correo</label>
                                 </FloatLabel>
                             </div>
                             <div className='espaciado'>
                                 <FloatLabel>
-                                    <InputText id="username" value={value} onChange={(e) => setValue(e.target.value)} />
-                                    <label htmlFor="username">Celular</label>
+                                    <InputText id="username" className='celular' value={value} onChange={(e) => setValue(e.target.value)} />
+                                    <label htmlFor="username" className='los_nombres'>Celular</label>
                                 </FloatLabel>
                             </div>
                         </div>
@@ -75,9 +75,6 @@ function EditarPerfil() {
                             }
                         </div>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
