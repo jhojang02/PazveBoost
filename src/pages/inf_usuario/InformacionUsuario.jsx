@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { InputText } from 'primereact/inputtext';
 import './informacionUsuario.css'
+//Hola
 import { InputNumber } from 'primereact/inputnumber';
 import { FloatLabel } from 'primereact/floatlabel';
 import imagen from "./img.png"
