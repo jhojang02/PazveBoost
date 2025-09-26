@@ -3,7 +3,7 @@ import { PrimeReactProvider } from 'primereact/api';
 import { Routes, Route } from 'react-router-dom';
 
 import HomeBienvenida from './pages/bienvenidosPazveboost/BienvenidosPazveboost';
-import InfoUser from './pages/inf_usuario/informacionUsuario.jsx';
+import InfoUser from './pages/inf_usuario/InformacionUsuario.jsx';
 import OlvidoContra from './pages/olvidasteContraseña/OlvidasteContraseña';
 import Pantalla_ayuda from './pages/Pantalla_ayuda/Ayuda';
 import Perfil from './pages/perfil/perfil.jsx';
