@@ -9,11 +9,8 @@ function IniciarSesion({ esEmpleado }) {
     const [correo, setCorreo] = useState('');
     const [contraseña, setContraseña] = useState('');
 
-
-
-
     return (
-        <div className="container-principal">
+        <div className="container-principal-perfil">
             <div className="caja-sesion">
                 <div className="section-logo">
                     <img src={img} alt="" />
@@ -21,16 +18,20 @@ function IniciarSesion({ esEmpleado }) {
                 <div className="section-informacion">
                     <h2>Iniciar sesion {esEmpleado ? 'empleado' : 'cliente'}</h2>
                     <p>Ingresar tus credenciales para ingresar a tu cuenta</p>
-                    <FloatLabel>
+                    <FloatLabel className="inputs-login">
                         <InputText id="correo" value={correo} onChange={(e) => setCorreo(e.target.value)} />
-                        <label htmlFor="correo">{esEmpleado ? 'Nombre de usuario' : 'Correo:'}</label>
+                        <label htmlFor="correo" className="labels-login">{esEmpleado ? 'Nombre de usuario' : 'Correo:'}</label>
                     </FloatLabel>
-                    <FloatLabel>
+                    <FloatLabel className="inputs-login">
                         <InputText id="contraseña" type='password' value={contraseña} onChange={(e) => setContraseña(e.target.value)} />
-                        <label htmlFor="contraseña">Contraseña:</label>
+                        <label htmlFor="contraseña" className="labels-login">Contraseña:</label>
                     </FloatLabel>
-                    <button type="button" onClick={() => enviarDatos(esEmpleado)}>
+                    <button className="boton_inicio" type="button" onClick={() => enviarDatos(esEmpleado)}>
                         Iniciar sesión
+                    </button>
+                    <p className="registro-p">¿No tienes cuenta?, Registrate...</p>
+                    <button className="boton_registro" type="button" onClick={() => enviarDatos(esEmpleado)}>
+                        Registrate
                     </button>
                 </div>
             </div>

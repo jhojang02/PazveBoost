@@ -4,9 +4,10 @@ body{
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
-.container-principal {
+.container-principal-perfil {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,24 +55,35 @@ body{
 }
 
 .section-informacion p {
-  margin-bottom: 25px;
-  font-size: 30px;
+  margin-bottom: 40px;
   color: #000000;
 }
 
-.p-float-label {
-  margin-bottom: 25px;
-  width: 100%;
+.inputs-login {
+  display: flex;
+  margin-right: 100px;
+  flex-direction: row-reverse;
+  font-size: 25px;
 }
 
-.p-float-label input {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
+#correo, #contraseña {
+  margin-bottom: 20px;
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: 1px solid #0099ff;
 }
 
+.labels-login{
+  margin-right: 10px;
+  margin-top: 3px;
+}
 
-button {
+.registro-p {
+  margin-top: 70px;
+  font-size: 20px;
+}
+
+.boton_inicio {
   background-color: #0099ff;
   color: white;
   padding: 10px 24px;
@@ -81,6 +93,25 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
   width: 100%;
+  font-size: 20px;
+  height: 50px;
+  max-width: 180px;
+  align-self: center;
+  margin-top: 15px;
+}
+
+.boton_registro {
+  background-color: #2686c5;
+    color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  font-size: 20px;
+  height: 50px;
   max-width: 180px;
   align-self: center;
 }
