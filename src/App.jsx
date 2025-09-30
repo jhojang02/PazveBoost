@@ -7,7 +7,7 @@ import HomeBienvenida from './pages/Home';
 import InfoUser from './pages/inf_usuario/InformacionUsuario';
 import OlvidoContra from './pages/olvidasteContraseña/OlvidasteContraseña';
 import Pantalla_ayuda from './pages/Pantalla_ayuda/Ayuda';
-import IniciarSesion from './pages/iniciarSesion/IniciarSesion';
+import IniciarSesion from './pages/iniciarSesiontemp/IniciarSesion';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route path="/usuario" element={<InfoUser />} />
           <Route path="/olvidaste" element={<OlvidoContra />} />
           <Route path="/ayuda" element={<Pantalla_ayuda />} />
-          <Route path="/inicio" element={<iniciarSesion/>} />
+          <Route path="/inicio" element={<IniciarSesion/>} />
         </Routes>
       </Router>
     </PrimeReactProvider>
