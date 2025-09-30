@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { InputText } from "primereact/inputtext";
 import { FloatLabel } from "primereact/floatlabel";
-
-import './IniciarSesion.css'
+import img from "./image.png"
+import './IniciarSesion.css';
+import { useNavigate } from "react-router-dom";
 
 function IniciarSesion({ esEmpleado }) {
     const [correo, setCorreo] = useState('');
     const [contraseña, setContraseña] = useState('');
+        const navigate = useNavigate();
+    
 
     return (
         <div className="container-principal-perfil">
@@ -17,21 +20,22 @@ function IniciarSesion({ esEmpleado }) {
                 <div className="section-informacion">
                     <h2>Iniciar sesion {esEmpleado ? 'empleado' : 'cliente'}</h2>
                     <p>Ingresar tus credenciales para ingresar a tu cuenta</p>
-                    <FloatLabel className="inputs-login">
+                    <FloatLabel className="inputs-login-Inisesion">
                         <InputText id="correo" value={correo} onChange={(e) => setCorreo(e.target.value)} />
                         <label htmlFor="correo" className="labels-login">{esEmpleado ? 'Nombre de usuario' : 'Correo:'}</label>
                     </FloatLabel>
-                    <FloatLabel className="inputs-login">
+                    <FloatLabel className="inputs-login-Inisesion">
                         <InputText id="contraseña" type='password' value={contraseña} onChange={(e) => setContraseña(e.target.value)} />
                         <label htmlFor="contraseña" className="labels-login">Contraseña:</label>
                     </FloatLabel>
+                    <p>¿Olvidaste tu contraseña?<br></br>
                     <button className="boton_inicio" type="button" onClick={() => enviarDatos(esEmpleado)}>
                         Iniciar sesión
-                    </button>
-                    <p className="registro-p">¿No tienes cuenta?, Registrate...</p>
-                    <button className="boton_registro" type="button" onClick={() => enviarDatos(esEmpleado)}>
+                    </button></p>
+                    <p className="registro-p">¿No tienes cuenta?, Registrate...<br></br><br></br>
+                    <button className="boton_registro" type="button" onClick={() => navigate('/usuario')} >
                         Registrate
-                    </button>
+                    </button></p>
                 </div>
             </div>
         </div>
