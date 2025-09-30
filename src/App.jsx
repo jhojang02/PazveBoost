@@ -14,7 +14,7 @@ function App() {
     <PrimeReactProvider value={{ unstyled: false }}>
       <Router>
         <Routes>
-          <Route path="/" element={<HomeBienvenida />} />
+          <Route path="/bienvenida" element={<HomeBienvenida />} />
           <Route path="/usuario" element={<InfoUser />} />
           <Route path="/olvidaste" element={<OlvidoContra />} />
           <Route path="/ayuda" element={<Pantalla_ayuda />} />
