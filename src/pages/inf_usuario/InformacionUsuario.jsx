@@ -5,6 +5,7 @@ import './informacionUsuario.css'
 import { InputNumber } from 'primereact/inputnumber';
 import { FloatLabel } from 'primereact/floatlabel';
 import img from "./img.png"
+import { useNavigate } from "react-router-dom";
 
 function InformacionUsuario() {
     const [value, setValue] = useState('');
@@ -15,6 +16,7 @@ function InformacionUsuario() {
     const [telefono, setTelefono] = useState('');
     const [correo, setCorreo] = useState('');
     const [contrasena, setContrasena] = useState('');
+    const navigate = useNavigate();
 
     return (
         <div className='fondo'>
@@ -49,7 +51,7 @@ function InformacionUsuario() {
                             <label htmlFor="Ciudad">Ciudad:</label>
                         </FloatLabel><br/>
                         </div>
-                        <button className="register">Registrar</button>
+                        <button className="register" onClick={() => navigate('/')} >Registrar</button>
                 </div>
 
 

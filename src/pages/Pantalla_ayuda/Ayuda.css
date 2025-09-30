@@ -82,7 +82,7 @@ body {
   gap: 10px;
   margin-bottom: 20px;
   height: 95px;
-  height: 31px;
+  height: 80px;
 }
 
 .boton-pequeno {
@@ -109,6 +109,7 @@ body {
   margin-bottom: 5px;
   display: flex;
   justify-content: center;
+  padding-left: 90px;
 }
 
 .buscador .p-inputtext {

@@ -5,11 +5,13 @@ import { InputText } from "primereact/inputtext";
 import { FloatLabel } from "primereact/floatlabel";
 import Flechadevolver from "./Flechadevolver.png";
 import { Accordion, AccordionTab } from 'primereact/accordion';
+import { useNavigate } from "react-router-dom";
 
 function Ayuda() {
     const [value, setValue] = useState('');
     const [botonPrincipal, setBotonPrincipal] = useState('FAQ');
     const [botonSecundario, setBotonSecundario] = useState('Servicio');
+    const navigate = useNavigate();
 
     const handlePrincipalClick = (boton) => {
         setBotonPrincipal(boton);
@@ -24,7 +26,7 @@ function Ayuda() {
         <div className="container-principal-ayuda">
             <div className="header-ayuda">
                 <div className="logo" id="logo">
-                    <button className="volver"><img src={Flechadevolver} alt="Volver" id="volver-boton" /></button>
+                    <button className="volver" onClick={() => navigate('/')}><img src={Flechadevolver} alt="Volver" id="volver-boton" /></button>
                 </div>
                 <div className="titulos">
                     <h2>Ayuda & FAQS</h2>
