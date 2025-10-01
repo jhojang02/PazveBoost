@@ -56,7 +56,6 @@ body{
 
 .section-informacion p {
   margin-bottom: 40px;
-  color: #000000;
 }
 
 .inputs-login {
@@ -74,13 +73,24 @@ body{
 }
 
 .labels-login{
-  margin-right: 10px;
-  margin-top: 3px;
+  margin-top: -21px;
+  margin-left: -27px;
+}
+
+#correo-label{
+  margin-left: 1px;
 }
 
 .registro-p {
-  margin-top: 70px;
+  margin-top: 40px;
+  margin-left: 46px;
   font-size: 20px;
+}
+
+.olvida-contra {
+  margin-left: 100px;
+  color: blue;
+  text-decoration: underline;
 }
 
 .boton_inicio {
@@ -98,11 +108,13 @@ body{
   max-width: 180px;
   align-self: center;
   margin-top: 15px;
+  margin-bottom: 50px;
+  margin-left: -100px;
 }
 
 .boton_registro {
   background-color: #2686c5;
-    color: white;
+  color: white;
   padding: 10px 24px;
   border: none;
   border-radius: 6px;
@@ -114,8 +126,15 @@ body{
   height: 50px;
   max-width: 180px;
   align-self: center;
+  margin-left: -100px;
 }
 
 button:hover {
   background-color: #007acc;
+}
+
+ .labelsLogin {
+  transition: none;
+  top: 45%;
+  font-size: 25px;
 }

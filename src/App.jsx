@@ -10,12 +10,14 @@ import Perfil from './pages/perfil/perfil.jsx';
 import EditarPerfil from './pages/perfil/EditarPerfil.jsx';
 import OlvidasteContraseña from './pages/olvidasteContraseña/OlvidasteContraseña.jsx';
 import Ayuda from './pages/Pantalla_ayuda/Ayuda.jsx';
+import InicioSesion from './pages/Iniciar-sesion/IniciarSesion.jsx';
 
 function App() {
   return (
     <PrimeReactProvider value={{ unstyled: false }}>
       <Routes>
-        <Route path="/" element={<HomeBienvenida />} />
+        <Route path="/" element={<InicioSesion />} />
+        <Route path="/bienvenida" element={<HomeBienvenida />} />
         <Route path="/usuario" element={<InfoUser />} />
         <Route path="/olvidaste" element={<OlvidoContra />} />
         <Route path="/ayuda" element={<Pantalla_ayuda />} />

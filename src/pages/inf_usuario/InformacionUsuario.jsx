@@ -22,7 +22,7 @@ function InformacionUsuario() {
     const navigate = useNavigate();
 
     const handClick = () => {
-        navigate('/Perfil');
+        navigate('/bienvenida');
     };
 
     return (
@@ -35,7 +35,7 @@ function InformacionUsuario() {
                         <div className="Container1">
                         <FloatLabel>
                             <InputText id="InputInfo" value={nombre} onChange={(e) => setNombre(e.target.value)} />
-                            <label htmlFor="Apellido">Apellido:</label>
+                            <label htmlFor="Apellido">Correo:</label>
                         </FloatLabel><br />
                         <FloatLabel>
                             <InputText id="InputInfo" value={apellido} onChange={(e) => setApellido(e.target.value)} />

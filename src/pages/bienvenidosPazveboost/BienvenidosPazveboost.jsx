@@ -17,7 +17,7 @@ function BienvenidosPazveboost(){
             </strong>
             </p>
             <div className="BotonSiguienteBienvenida">
-            <button className="BotonSiguienteBienvenida" onClick={handClick}>Siguiente</button>
+            <button className="BotonSiguienteBienvenida" onClick={() => window.location.href = "https://pazveboostproductos.vercel.app/" }>Siguiente</button>
             </div>
             </div>
             

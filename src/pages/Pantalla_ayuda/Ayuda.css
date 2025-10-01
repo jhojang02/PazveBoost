@@ -147,8 +147,7 @@ body {
   margin-left: 150px;
 }
 
-.link_contraseña:active {
+.link_contraseña {
   color: blue;
-  font-weight: bold;
-  transform: translateY(2px);
+  text-decoration: underline;
 }
