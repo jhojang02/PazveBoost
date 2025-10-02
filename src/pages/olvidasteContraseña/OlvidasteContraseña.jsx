@@ -4,11 +4,18 @@ import { InputNumber } from 'primereact/inputnumber';
 import { FloatLabel } from 'primereact/floatlabel';
 import "./OlvidasteContraseña.css"
 import img from "./img.png"
-
-
+import { useNavigate } from "react-router-dom"
 
 function OlvidasteContraseña() {
     const [value, setValue] = useState('');
+
+    const navigate = useNavigate();
+
+    const clickRegistroos = () => {
+        navigate('/usuario')
+    };
+
+
     return (
         <div className='fondo'>
             <div className="cdr_inf2">
@@ -25,8 +32,8 @@ function OlvidasteContraseña() {
                         </FloatLabel>
                         </div>
                         <div className="btn">
-                            <button className="Sgn">Siguiente</button><br /><br/>
-                            <button className="rgr">Registrar</button>
+                            <button className="Sgn" onClick={() => window.location.href = "https://pazveboostcambiocontra.vercel.app/" }>Siguiente</button><br /><br/>
+                            <button className="rgr" onClick={clickRegistroos}>Registrar</button>
                         </div>
                     </span>
 
