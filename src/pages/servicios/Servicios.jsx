@@ -25,12 +25,12 @@ function Header() {
       <nav className="navbar">
         <div className="nav-links">
           <a href="#">INICIO</a>
-          <a href="#">NOSOTROS</a>
+          <a href="https://www.facebook.com/PAZGOSOLUCIONES/">NOSOTROS</a>
           <a href="#" className="active">PRODUCTOS</a>
-          <a href="#">SERVICIOS</a>
-          <a href="#">CONTACTENOS</a>
+          <a href="https://pazveboost-servicios.vercel.app/">SERVICIOS</a>
+          <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
         </div>
-        <a href="#" className="login-button">Iniciar Sesión</a>
+        <a href="https://pazveboost.vercel.app" className="login-button">Cerrar Sesión</a>
       </nav>
     </header>
   )
@@ -83,7 +83,7 @@ const CarritoCompras = () => {
           )}
           <p><strong>Total:</strong> ${total.toLocaleString('es-CO')}</p>
           <div className="card flex flex-wrap justify-content-center gap-3">
-            <Button label="Success" severity="success" rounded className="sucess-boton"/>
+            <Button label="Success" severity="success" rounded className="sucess-boton" onClick={() => window.location.href = "https://pazveboostcarritocompras.vercel.app"}/>
             <Button label="Danger" severity="danger" rounded className="delete-boton"/>
           </div>
         </div>
