@@ -43,7 +43,7 @@ function InformacionUsuario() {
                         </FloatLabel><br/>
                         <FloatLabel>
                             <InputText id="InputInfo" value={fechaNacimiento} onChange={(e) => setFechaNacimiento(e.target.value)} />
-                            <label htmlFor="ID">Id:</label>
+                            <label htmlFor="CC">CC:</label>
                         </FloatLabel><br/>
                         <FloatLabel>
                             <InputText id="InputInfo" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
