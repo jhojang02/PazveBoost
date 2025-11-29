@@ -17,6 +17,17 @@ function InformacionUsuario() {
     const [telefono, setTelefono] = useState('');
     const [correo, setCorreo] = useState('');
     const [contrasena, setContrasena] = useState('');
+    const handleSubmit = (e) => {e.preventDefault();
+        const datos = {
+            nombre,
+            apellido,
+            direccion,
+            fechaNacimiento,
+            telefono,
+            correo,
+            contrasena
+        };
+    }
 
 
     const navigate = useNavigate();
@@ -33,6 +44,7 @@ function InformacionUsuario() {
                     <div className="Titulo"><p>Informacion de usuario<br />Por favor, digite su informacion</p></div>
                         <br /><br />
                         <div className="Container1">
+                            <form onSubmit={handleSubmit} name="formu" action="registroaprendiz.php" method="post" enctype="multipart/form-data">
                         <FloatLabel>
                             <InputText id="InputInfo" value={nombre} onChange={(e) => setNombre(e.target.value)} />
                             <label htmlFor="Apellido">Correo:</label>
@@ -60,7 +72,7 @@ function InformacionUsuario() {
                         </div>
                         <button className="register" onClick={handClick}>Registrar</button>
                 </div>
-
+            </form>
             </div>
         </div>
     )
