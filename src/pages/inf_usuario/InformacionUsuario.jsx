@@ -69,10 +69,10 @@ function InformacionUsuario() {
                             <InputText id="InputInfo" value={contrasena} onChange={(e) => setContrasena(e.target.value)} />
                             <label htmlFor="Ciudad">Ciudad:</label>
                         </FloatLabel><br/>
+                        </form>
                         </div>
                         <button className="register" onClick={handClick}>Registrar</button>
                 </div>
-            </form>
             </div>
         </div>
     )
