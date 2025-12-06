@@ -19,10 +19,10 @@ function InformacionUsuario() {
     const [telefono, setTelefono] = useState('');
     const [nombre, setNombre] = useState('');
     const [ciudad, setCiudad] = useState('');
-    const handleSubmit = (e) => {e.preventDefault();
-    }
+    
 
     const handleSubmit = async (e) => {
+        {e.preventDefault();
 
     const formData = new FormData();
     formData.append("Correo", correo);
@@ -46,6 +46,7 @@ function InformacionUsuario() {
       console.log(data);
     } catch (error) {
       console.error(error);
+    }
     }
   };
 

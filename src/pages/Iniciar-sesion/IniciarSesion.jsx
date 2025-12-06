@@ -30,7 +30,7 @@ function IniciarSesion({ esEmpleado }) {
                     <img src={img} alt="" />
                 </div>
                 <div className="section-informacion">
-                    <h2>Iniciar sesion {esEmpleado ? 'empleado' : 'cliente'}</h2>
+                    <h2>Iniciar sesion {esEmpleado ? 'empleado' : 'cliente' }</h2>
                     <p>Ingresar tus credenciales para ingresar a tu cuenta</p>
                     <div className="flotantes-labels">
                     <FloatLabel className="inputs-login">
