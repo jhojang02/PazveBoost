@@ -8,6 +8,7 @@ import { FloatLabel } from 'primereact/floatlabel';
 import imagen from "./img.png"
 import { useNavigate } from "react-router-dom"
 
+
 function InformacionUsuario() {
     const [value, setValue] = useState('');
 
@@ -20,13 +21,14 @@ function InformacionUsuario() {
     const [ciudad, setCiudad] = useState('');
     const handleSubmit = (e) => {e.preventDefault();
         const datos = {
-            nombre,
-            apellido,
-            direccion,
-            fechaNacimiento,
-            telefono,
             correo,
-            contrasena
+            contrasena,
+            direccion,
+            cc,
+            tipo_documento,
+            telefono,
+            nombre,
+            ciudad
         };
     }
 
