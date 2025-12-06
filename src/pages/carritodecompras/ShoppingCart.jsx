@@ -1,7 +1,7 @@
 import './ShoppingCart.css'
 import ProductCard from '../../components/ProductCard';
 import { products } from '../../data/products';
-import { Header } from '../Servicios';
+import { Header } from './Servicios';
 
 const ShoppingCart = () => {
     const productPrice = "$300.000 COP";

@@ -11,7 +11,7 @@ import EditarPerfil from './pages/perfil/EditarPerfil.jsx';
 import OlvidasteContraseña from './pages/olvidasteContraseña/OlvidasteContraseña.jsx';
 import Ayuda from './pages/Pantalla_ayuda/Ayuda.jsx';
 import InicioSesion from './pages/Iniciar-sesion/IniciarSesion.jsx';
-import ShoppingCart from "./carritodecompras/Home.jsx";
+import ShoppingCart from "./pages/carritodecompras/Home.jsx";
 
 function App() {
   return (
