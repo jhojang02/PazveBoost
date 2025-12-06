@@ -20,17 +20,34 @@ function InformacionUsuario() {
     const [nombre, setNombre] = useState('');
     const [ciudad, setCiudad] = useState('');
     const handleSubmit = (e) => {e.preventDefault();
-        const datos = {
-            correo,
-            contrasena,
-            direccion,
-            cc,
-            tipo_documento,
-            telefono,
-            nombre,
-            ciudad
-        };
     }
+
+    const handleSubmit = async (e) => {
+
+    const formData = new FormData();
+    formData.append("Correo", correo);
+    formData.append("Contraseña", contrasena);
+    formData.append("Direccion", direccion);
+    formData.append("CC", tipo_documento);
+    formData.append("telefono", telefono);
+    formData.append("Nombre", nombre);
+    formData.append("Ciudad", ciudad);
+
+    try {
+      const response = await fetch(
+        "http://localhost/PazveBoost_API/registrousuario.php",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await response.text();
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
 
     const navigate = useNavigate();
