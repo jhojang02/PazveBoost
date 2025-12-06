@@ -1,13 +1,15 @@
-.body {
+.shopping-body {
   width: 75%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   margin:0 auto;
 }
 
-.container{
-    width: 100%;
-    height: 776px;
+.shopping-container{
+    width: 90%;
+    height: 600px;
     background-color: white;
     position: relative;
 }
@@ -15,24 +17,26 @@
 .header-shopping-cart-container{
     background-color: #7cb3e0;
     width: 100%;
-    height: 84px;
+    height: 64px;
 }
 
 .shopping-cart-container {
     border: 1px solid black;
     border-radius: 16px;
     padding-right: 25px;
-    width: 927px;
+    width: 600px;
+    height: 200px;
     margin: auto;
+    margin-top: -20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .title {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
+    margin-top: 5px;
     font-size: 24px;
     color: black;
-    margin-top: 5px;
     font-weight: bold;
 }
 
@@ -107,7 +111,7 @@
 .container-icon{
     display: flex;
     align-items: center;
-    height: 84px;
+    height: 60px;
     font-size: 40px;
 }
 
@@ -115,7 +119,7 @@
     color: black;
     margin-right: 15%;
     margin-left: 9%;
-    font-size: 65px;
+    font-size: 50px;
 }
 
 .icon-shopping-cart{

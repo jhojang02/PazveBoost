@@ -23,8 +23,8 @@ body, html, #root {
 
 .header-logo .Imagen {
   margin-left: 100px;
-  width: 300px;
-  height: auto;
+  width: 350px;
+  height: 80px;
 }
 
 .search-bar {

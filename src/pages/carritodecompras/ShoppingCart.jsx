@@ -12,10 +12,12 @@ const ShoppingCart = () => {
     const totalCost = "$300.000 COP";
 
     return (
-        <><div>
+        <>
+        <div className='shopping-body'>
+        <div>
             <Header />
         </div>
-        <div className='container'>
+        <div className='shopping-container'>
                 <div className='header-shopping-cart-container'>
                     <div className='container-icon'>
                         <span className='header-arrow'>←</span>
@@ -52,7 +54,9 @@ const ShoppingCart = () => {
                         <button className="action-button secondary">Descarga tu factura</button>
                     </div>
                 </div>
-            </div></>
+            </div>
+            </div>
+            </>
     )
 }
 
