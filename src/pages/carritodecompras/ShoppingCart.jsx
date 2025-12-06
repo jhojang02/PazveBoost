@@ -2,6 +2,9 @@ import './ShoppingCart.css'
 import ProductCard from '../../components/ProductCard';
 import { products } from '../../data/products';
 import { Header } from './Servicios';
+import Logo from '../../Imagenes/Logo.png';
+import '../../styles/Servicios.css';
+import { useNavigate } from "react-router-dom";
 
 const ShoppingCart = () => {
     const productPrice = "$300.000 COP";
