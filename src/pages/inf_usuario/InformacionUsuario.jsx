@@ -11,12 +11,13 @@ import { useNavigate } from "react-router-dom"
 function InformacionUsuario() {
     const [value, setValue] = useState('');
 
-    const [nombre, setNombre] = useState('');
-    const [apellido, setApellido] = useState('');
-    const [fechaNacimiento, setFechaNacimiento] = useState('');
-    const [telefono, setTelefono] = useState('');
     const [correo, setCorreo] = useState('');
     const [contrasena, setContrasena] = useState('');
+    const [direccion, setDireccion] = useState('');
+    const [tipo_documento, setTipoDocumento] = useState('');
+    const [telefono, setTelefono] = useState('');
+    const [nombre, setNombre] = useState('');
+    const [ciudad, setCiudad] = useState('');
     const handleSubmit = (e) => {e.preventDefault();
         const datos = {
             nombre,
@@ -46,27 +47,31 @@ function InformacionUsuario() {
                         <div className="Container1">
                             <form onSubmit={handleSubmit} name="formu" action="registrousuario.php" method="post" enctype="multipart/form-data">
                         <FloatLabel>
-                            <InputText id="InputInfo" value={nombre} onChange={(e) => setNombre(e.target.value)} />
-                            <label htmlFor="Apellido">Correo:</label>
+                            <InputText id="InputInfo" value={correo} onChange={(e) => setCorreo(e.target.value)} name="mail"/>
+                            <label htmlFor="Correo">Correo:</label>
                         </FloatLabel><br />
                         <FloatLabel>
-                            <InputText id="InputInfo" value={apellido} onChange={(e) => setApellido(e.target.value)} />
-                            <label htmlFor="Direccion">Direccion:</label>
+                            <InputText id="InputInfo" value={contrasena} onChange={(e) => setContrasena(e.target.value)} name="contr"/>
+                            <label htmlFor="Contraseña">Contraseña:</label>
                         </FloatLabel><br/>
                         <FloatLabel>
-                            <InputText id="InputInfo" value={fechaNacimiento} onChange={(e) => setFechaNacimiento(e.target.value)} />
+                            <InputText id="InputInfo" value={direccion} onChange={(e) => setDireccion(e.target.value)} name="dir"/>
+                            <label htmlFor="Direccion">Dirección:</label>
+                        </FloatLabel><br/>
+                        <FloatLabel>
+                            <InputText id="InputInfo" value={tipo_documento} onChange={(e) => setTipoDocumento(e.target.value)} name="tp"/>
                             <label htmlFor="CC">CC:</label>
                         </FloatLabel><br/>
                         <FloatLabel>
-                            <InputText id="InputInfo" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
-                            <label htmlFor="Telefono">Telefono:</label>
+                            <InputText id="InputInfo" value={telefono} onChange={(e) => setTelefono(e.target.value)} name="tel"/>
+                            <label htmlFor="Telefono">Teléfono:</label>
                         </FloatLabel><br/>
                         <FloatLabel>
-                            <InputText id="InputInfo" value={correo} onChange={(e) => setCorreo(e.target.value)} />
+                            <InputText id="InputInfo" value={nombre} onChange={(e) => setNombre(e.target.value)} name="nom"/>
                             <label htmlFor="Nombre">Nombre:</label>
                         </FloatLabel><br/>
                         <FloatLabel>
-                            <InputText id="InputInfo" value={contrasena} onChange={(e) => setContrasena(e.target.value)} />
+                            <InputText id="InputInfo" value={ciudad} onChange={(e) => setCiudad(e.target.value)} name="ciud"/>
                             <label htmlFor="Ciudad">Ciudad:</label>
                         </FloatLabel><br/>
                         </form>
