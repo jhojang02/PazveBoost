@@ -31,7 +31,7 @@ function OlvidasteContraseña() {
                             <label htmlFor="username" className="p-inputtext2">Email:</label>
                         </FloatLabel>
                         </div>
-                        <div className="btn">
+                        <div className="btn-olvi-contra">
                             <button className="Sgn" onClick={() => window.location.href = "https://pazveboostcambiocontra.vercel.app/" }>Siguiente</button><br /><br/>
                             <button className="rgr" onClick={clickRegistroos}>Registrar</button>
                         </div>
