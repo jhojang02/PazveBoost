@@ -1,9 +1,9 @@
 import './ShoppingCart.css'
 import ProductCard from '../../components/ProductCard';
 import { products } from '../../data/products';
-import { Header } from './Servicios';
+import { Header } from '../../components/Servicios.jsx';
 import Logo from '../../Imagenes/Logo.png';
-import '../../styles/Servicios.css';
+import '../../components/Servicios.css';
 import { useNavigate } from "react-router-dom";
 
 const ShoppingCart = () => {

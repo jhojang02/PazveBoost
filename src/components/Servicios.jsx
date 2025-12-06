@@ -5,7 +5,7 @@ import { Badge } from 'primereact/badge';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { Rating } from "primereact/rating";
 
-import Logo from '../../Imagenes/Logo.png';
+import Logo from '../Imagenes/Logo.png';
 import './Servicios.css';
 
 function Header() {
