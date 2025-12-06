@@ -43,7 +43,7 @@ function InformacionUsuario() {
                 <img src={imagen} className="imagen"/>
                 <div className='letra'>
                     <div className="Titulo"><p>Informacion de usuario<br />Por favor, digite su informacion</p></div>
-                        <br /><br />
+                        <br />
                         <div className="Container1">
                             <form onSubmit={handleSubmit} name="formu" action="registrousuario.php" method="post" enctype="multipart/form-data">
                         <FloatLabel>
