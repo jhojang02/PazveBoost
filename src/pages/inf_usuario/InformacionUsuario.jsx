@@ -67,7 +67,7 @@ function InformacionUsuario() {
                         <div className="Container1">
                             <form onSubmit={handleSubmit} name="formu" action="registrousuario.php" method="post" enctype="multipart/form-data">
                         <FloatLabel>
-                            <InputText id="InputInfo" value={correo} onChange={(e) => setCorreo(e.target.value)} name="mail"/>
+                            <InputText id="Correo" value={correo} onChange={(e) => setCorreo(e.target.value)} name="mail"/>
                             <label htmlFor="Correo">Correo:</label>
                         </FloatLabel><br />
                         <FloatLabel>

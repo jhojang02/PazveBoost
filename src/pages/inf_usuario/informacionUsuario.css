@@ -29,7 +29,37 @@ body {
     margin-right: 55px;
 }
 
-#InputInfo {
+#Correo {
+    font-size: 50%;
+    padding-right: 95px;
+}
+
+#Contraseña {
+    font-size: 50%;
+    padding-right: 95px;
+}
+
+#Direccion {
+    font-size: 50%;
+    padding-right: 95px;
+}
+
+#CC {
+    font-size: 50%;
+    padding-right: 95px;
+}
+
+#Telefono {
+    font-size: 50%;
+    padding-right: 95px;
+}
+
+#Nombre {
+    font-size: 50%;
+    padding-right: 95px;
+}
+
+#Ciudad {
     font-size: 50%;
     padding-right: 95px;
 }
@@ -40,7 +70,7 @@ body {
     width: 266px;
     height: 52px;
     margin-left: 40px;
-    margin-top: 30px;
+    margin-top: -10px;
     border-radius: 10px;
 }
 
@@ -51,7 +81,7 @@ body {
 .Titulo{
     text-align: center;
     font-size: 25px;
-    margin-top: -10px;
+    margin-top: -20px;
 }
 
 .p-inputtext, .p-component {
