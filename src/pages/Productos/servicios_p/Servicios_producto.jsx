@@ -4,8 +4,6 @@ import { Button } from 'primereact/button';
 import { Badge } from 'primereact/badge';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { Rating } from "primereact/rating";
-
-
 import './Servicios_producto.css';
 import Logo from './Logo.png';
 import perfilHeader from './perfil.png';

@@ -11,8 +11,7 @@ import OlvidasteContraseña from './pages/olvidasteContraseña/OlvidasteContrase
 import Ayuda from './pages/Pantalla_ayuda/Ayuda.jsx';
 import InicioSesion from './pages/Iniciar-sesion/IniciarSesion.jsx';
 import ShoppingCart from './pages/carritodecompras/ShoppingCart.jsx';
-import './index_productos.css';
-import Estructura from './pages/Productos/estructura_pagina_productos/estructura_prodcutos';
+import Estructura from './pages/Productos/estructura_pagina_productos/estructura_prodcutos.jsx';
 
 function App() {
   return (
