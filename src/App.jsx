@@ -12,6 +12,8 @@ import OlvidasteContraseña from './pages/olvidasteContraseña/OlvidasteContrase
 import Ayuda from './pages/Pantalla_ayuda/Ayuda.jsx';
 import InicioSesion from './pages/Iniciar-sesion/IniciarSesion.jsx';
 import ShoppingCart from './pages/carritodecompras/ShoppingCart.jsx';
+import './index_productos.css';
+import Estructura from './pages/Productos/estructura_pagina_productos/estructura_prodcutos';
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
         <Route path="/editarPerfil" element={<EditarPerfil />} />
         <Route path="/olvidarContraseña" element={<OlvidasteContraseña />} />
         <Route path="/carrito" element={<ShoppingCart />} />
+        <Route path="/productos" element={<Estructura />} />
         <Route path="/ayuda" element={<Ayuda />} />
         <Route path="*" element={<div>Página no encontrada</div>} />
       </Routes>
