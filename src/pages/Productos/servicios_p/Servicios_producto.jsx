@@ -6,7 +6,8 @@ import { OverlayPanel } from 'primereact/overlaypanel';
 import { Rating } from "primereact/rating";
 
 import './Servicios_producto.css';
-import Logo from"./Logo.png";
+import Logo from './Logo.png';
+import perfilHeader from './perfil.png';
 
 function Header() {
   return (
@@ -24,7 +25,7 @@ function Header() {
       </div>
       <nav className="navbar">
         <div className="nav-links">
-          <img src="https://acortar.link/AHVt47" className="img-perf"></img>
+          <img src={perfilHeader} className="img-perf"></img>
           <a href="#">INICIO</a>
           <a href="https://www.facebook.com/PAZGOSOLUCIONES/">NOSOTROS</a>
           <a href="#" className="active">PRODUCTOS</a>

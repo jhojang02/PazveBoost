@@ -3,6 +3,7 @@ body, html, #root {
   padding: 0;
   width: 100%;
   background-color: #81c6f6;
+  overflow-x: hidden;
 }
 
 /* Barra Navegacion*/
@@ -143,7 +144,7 @@ body, html, #root {
 /*Filtro*/
 .card-uno {
   background-color: #0984e3;
-  width: 10vw;
+  width: 12vw;
   height: auto;
   margin: 30px;
 }
@@ -179,8 +180,8 @@ body, html, #root {
 .sidebar {
   position: relative;
   background-color: white;
-  width: 13%;
-  height: 80.5vh;
+  width: 30%;
+  height: 100vh;
   padding: 20px 15px;
   margin-top: 30px;
   border-radius: 12px;
