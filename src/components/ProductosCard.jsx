@@ -1,10 +1,6 @@
-<<<<<<< HEAD:src/components/ProductCard.jsx
 import { useState } from 'react';
-import './ProductCard.css'
-import { Checkbox } from 'primereact/checkbox';
-=======
 import './ProductosCard.css'
->>>>>>> productos:src/components/ProductosCard.jsx
+import { Checkbox } from 'primereact/checkbox';
 
 const ProductCard = ({ product }) => {
   const [checked, setChecked] = useState(false);

@@ -5,14 +5,9 @@ import { Badge } from 'primereact/badge';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { Rating } from "primereact/rating";
 
-<<<<<<<< HEAD:src/components/Servicios.jsx
 import Logo from '../Imagenes/Logo.png';
 import './Servicios.css';
-========
-import './Servicios_producto.css';
-import Logo from './Logo.png';
-import perfilHeader from './perfil.png';
->>>>>>>> productos:src/pages/Productos/servicios_p/Servicios_producto.jsx
+
 
 function Header() {
   return (
@@ -32,17 +27,11 @@ function Header() {
         <div className="nav-links">
           <img src={perfilHeader} className="img-perf"></img>
           <a href="#">INICIO</a>
-<<<<<<<< HEAD:src/components/Servicios.jsx
           <a href="#">NOSOTROS</a>
           <a href="#">PRODUCTOS</a>
           <a href="#">SERVICIOS</a>
           <a href="#">CONTACTENOS</a>
-========
-          <a href="https://www.facebook.com/PAZGOSOLUCIONES/">NOSOTROS</a>
-          <a href="#" className="active">PRODUCTOS</a>
-          <a href="https://pazveboost-servicios.vercel.app/">SERVICIOS</a>
-          <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
->>>>>>>> productos:src/pages/Productos/servicios_p/Servicios_producto.jsx
+
         </div>
         <a href="https://pazveboost.vercel.app" className="login-button">Cerrar Sesión</a>
       </nav>

@@ -1,5 +1,5 @@
 import './ShoppingCart.css'
-import ProductCard from '../../components/ProductCard';
+import ProductCard from '../../components/ProductosCard';
 import { products } from '../../data/products';
 import { Header } from '../../components/Servicios.jsx';
 import Logo from '../../Imagenes/Logo.png';
