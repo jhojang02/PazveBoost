@@ -1,6 +1,6 @@
-import ProductCard from "../../components/ProductCard";
-import { products } from "../../data/products";
-import "./home.css"
+import ProductCard from "../../../components/ProductosCard";
+import { products } from "../../../data/products";
+import "./home_product.css"
 
 function Home () {
   return (
