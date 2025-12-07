@@ -1,15 +1,16 @@
-import "./BienvenidosPazveboost.css"
-import img from "./img.png"
-import { useNavigate } from "react-router-dom"
+import "./BienvenidosPazveboost.css";
+import img from "./img.png";
+import { useNavigate } from "react-router-dom";
 
 function BienvenidosPazveboost(){
     const navigate = useNavigate();
 
     const handClick = () => {
-        navigate('/usuario');
+        navigate('/productos');
     };
 
     return(
+        <center>
         <div className="ContenedorBienvenida">
             <div className="ParrafoBienvenida">
             <p><strong><h1>¡¡Bienvenidos A <br/>PazveBoost!!</h1><img src={img} className="ImagenBienvenida"/><br/>
@@ -17,12 +18,13 @@ function BienvenidosPazveboost(){
             </strong>
             </p>
             <div className="BotonSiguienteBienvenida">
-            <button className="BotonSiguienteBienvenida" onClick={() => window.location.href = "https://pazveboostproductos.vercel.app/" }>Siguiente</button>
+            <button className="BotonSiguienteBienvenida" onClick={handClick}>Siguiente</button>
             </div>
             </div>
             
           
         </div>
+        </center>
     )
 }
 

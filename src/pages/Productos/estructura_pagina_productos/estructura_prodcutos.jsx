@@ -1,7 +1,9 @@
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 import BasicDemo, { Header, CarritoCompras, WithoutCancelDemo, AccesosRapidos} from '../servicios_p/Servicios_producto.jsx';
 import Home from '../menu_productos/Home_product.jsx';
-import '../../../index_productos.css'
+import '../menu_productos/Home_product.css';
+import '../index_productos.css';
+import '../servicios_p/Servicios_producto.css';
 
 function Estructura() {
 
