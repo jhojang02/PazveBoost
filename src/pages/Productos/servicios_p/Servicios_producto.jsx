@@ -8,6 +8,9 @@ import './Servicios_producto.css';
 import Logo from './Logo.png';
 import perfilHeader from './perfil.png';
 
+import { useNavigate } from "react-router-dom";
+
+
 function Header() {
   return (
     <header className="header">
@@ -54,6 +57,10 @@ export default function BasicDemo() {
 
 const CarritoCompras = () => {
   const op = useRef(null);
+      const navigate = useNavigate();
+      const handClick = () => {
+          navigate('/carrito');
+      };
   const [carrito, setCarrito] = useState([
     { id: 1, nombre: 'Cámara Tipo Domo', precio: 150000 },
     { id: 2, nombre: 'Instalación', precio: 75000 }
@@ -84,7 +91,7 @@ const CarritoCompras = () => {
           )}
           <p><strong>Total:</strong> ${total.toLocaleString('es-CO')}</p>
           <div className="card flex flex-wrap justify-content-center gap-3">
-            <Button label="Success" severity="success" rounded className="sucess-boton" onClick={() => window.location.href = "https://pazveboostcarritocompras.vercel.app"}/>
+            <Button label="Success" severity="success" rounded className="sucess-boton" onClick={handClick}/>
             <Button label="Danger" severity="danger" rounded className="delete-boton"/>
           </div>
         </div>

@@ -9,6 +9,13 @@
   margin: auto;
 }
 
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .product-card {
   background-color: #f7f2fa;
   width: 100%;
@@ -17,6 +24,41 @@
   border-radius: 16px;
   margin: 10px;
   box-shadow: 0 2px 4px black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkbox-product-card {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+.checkbox-product-card .p-checkbox-box {
+  width: 22px !important;
+  height: 22px !important;
+  border: 2px solid #3970FB !important;
+  background: #ffffff !important;
+}
+
+.checkbox-product-card .p-checkbox-box.p-highlight {
+  background: #3970FB !important;
+  border-color: #3970FB !important;
+}
+
+.checkbox-product-card .p-checkbox-icon {
+  color: #ffffff !important;
+  font-size: 18px !important;
+}
+
+.checkbox-product-card:hover .p-checkbox-box {
+  border-color: #003a91 !important;
+}
+.checkbox-product-card .p-checkbox-box svg {
+  color: #0056b3 !important; 
 }
 
 .product-img {
@@ -47,7 +89,6 @@
 .button-group {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 10px;
 }
 
@@ -60,31 +101,9 @@
   cursor: pointer;
   font-size: 18px;
   height: 40px;
+  transition: 0.3s ease;
 }
 
 .btn:hover {
   background-color: #0056b3;
-}
-
-.product {
-  display: ruby;
-}
-
-.checkbox-product-card .p-checkbox-box {
-  background-color: white;
-  border: 2px solid #3970FB;
-}
-
-.checkbox-product-card .p-checkbox-box svg{
- color: #3970FB;
-}
-
-.checkbox-product-card .p-checkbox-input {
-  border: 2px solid black;
-  border-radius: 6px;
-}
-
-.checkbox-product-card {
-  position: absolute;
-  margin-top: 25px;
 }
