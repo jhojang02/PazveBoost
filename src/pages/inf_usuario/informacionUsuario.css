@@ -85,7 +85,7 @@ body {
 }
 
 .p-inputtext, .p-component {
-    margin-left: 0 !important;
+    margin-left: 0;
 }
 
 .Container1 {
