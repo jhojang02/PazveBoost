@@ -10,8 +10,27 @@ import Logo from '../Imagenes/Logo.png';
 import './Servicios.css';
 import perfilHeader from './perfil.png';
 
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+        const navigate = useNavigate();
+    
+        const handClick = () => {
+            navigate('/servicios');
+        };
+  
+        const handClick2 = () => {
+          navigate('/bienvenida');
+        };
+  
+        const handClick3 = () => {
+              navigate('/');
+        };
+
+        const handClick4 = () => {
+            navigate('/productos');
+        };
+
   return (
     <header className="header">
       <div className="header-top">
@@ -28,14 +47,13 @@ function Header() {
       <nav className="navbar">
         <div className="nav-links">
           <img src={perfilHeader} className="img-perf"></img>
-          <a href="#">INICIO</a>
-          <a href="#">NOSOTROS</a>
-          <a href="#">PRODUCTOS</a>
-          <a href="#">SERVICIOS</a>
-          <a href="#">CONTACTENOS</a>
-
+          <a href="" onClick={handClick2}>INICIO</a>
+          <a href="https://www.facebook.com/PAZGOSOLUCIONES/">NOSOTROS</a>
+          <a href="" onClick={handClick4}>PRODUCTOS</a>
+          <a href="" onClick={handClick}>SERVICIOS</a>
+          <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
         </div>
-        <a href="https://pazveboost.vercel.app" className="login-button">Cerrar Sesión</a>
+        <a href="" onClick={handClick3} className="login-button">Cerrar Sesión</a>
       </nav>
     </header>
   )

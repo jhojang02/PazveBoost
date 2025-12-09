@@ -11,6 +11,12 @@ const ShoppingCart = () => {
     const shippingCost = "Gratis";
     const totalCost = "$300.000 COP";
 
+    const navigate = useNavigate();
+
+    const handClick4 = () => {
+            navigate('/productos');
+        };
+
     return (
         <>
         <div className='shopping-body'>
@@ -37,7 +43,7 @@ const ShoppingCart = () => {
 
                     <div className="item">
                         <span className="item-label">Productos</span>
-                        <span className="arrow">➔</span>
+                        <span className="arrow" onClick={handClick4}>➔</span>
                         <span className="item-value">{productPrice}</span>
                         <button className="action-button primary">Comprar ahora</button>
                     </div>

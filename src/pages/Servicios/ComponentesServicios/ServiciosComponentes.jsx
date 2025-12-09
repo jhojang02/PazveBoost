@@ -9,8 +9,23 @@ import perfilHeader from './perfil.png';
 import Logo from '../../../Imagenes/Logo.png';
 import './ServiciosComponentes.css';
 
+import { useNavigate } from "react-router-dom";
+
 
 function Header() {
+        const navigate = useNavigate();
+    
+        const handClick = () => {
+            navigate('/productos');
+        };
+
+        const handClick2 = () => {
+            navigate('/bienvenida');
+        };
+
+        const handClick3 = () => {
+            navigate('/');
+        };
   return (
     <header className="header">
       <div className="header-top">
@@ -27,14 +42,14 @@ function Header() {
       <nav className="navbar">
         <div className="nav-links">
           <img src={perfilHeader} className="img-perf"></img>
-          <a href="#">INICIO</a>
-          <a href="#">NOSOTROS</a>
-          <a href="#">PRODUCTOS</a>
-          <a href="#">SERVICIOS</a>
-          <a href="#">CONTACTENOS</a>
+          <a href="" onClick={handClick2}>INICIO</a>
+          <a href="https://www.facebook.com/PAZGOSOLUCIONES/">NOSOTROS</a>
+          <a href="" onClick={handClick}>PRODUCTOS</a>
+          <a href="" className="active">SERVICIOS</a>
+          <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
 
         </div>
-        <a href="https://pazveboost.vercel.app" className="login-button">Cerrar Sesión</a>
+        <a href="" onClick={handClick3} className="login-button">Cerrar Sesión</a>
       </nav>
     </header>
   )
@@ -64,6 +79,11 @@ const CarritoCompras = () => {
 
   const total = carrito.reduce((acc, prod) => acc + prod.precio, 0);
 
+        const navigate = useNavigate();
+        const handClick4 = () => {
+            navigate('/carrito');
+        };
+
   return (
     <div className="Boton-Carrito-Lateral">
       <div className="Filtro-Carrito">
@@ -87,7 +107,7 @@ const CarritoCompras = () => {
           )}
           <p><strong>Total:</strong> ${total.toLocaleString('es-CO')}</p>
           <div className="card flex flex-wrap justify-content-center gap-3">
-            <Button label="Success" severity="success" rounded className="sucess-boton" onClick={() => window.location.href = "https://pazveboostcarritocompras.vercel.app"}/>
+            <Button label="Success" severity="success" rounded className="sucess-boton" onClick={handClick4} />
             <Button label="Danger" severity="danger" rounded className="delete-boton"/>
           </div>
         </div>
