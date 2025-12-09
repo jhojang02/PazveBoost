@@ -2,7 +2,7 @@ import './ProductosCard.css';
 import { useCart } from '../context/CartContext';
 import carritoImg from '../components/carritoicono.png';
 
-const ProductCard = ({ product }) => {
+const ProductosCard = ({ product }) => {
   const { addToCart } = useCart();
 
   const handleAdd = () => {
@@ -30,4 +30,4 @@ const ProductCard = ({ product }) => {
   );
 };
 
-export default ProductCard;
+export default ProductosCard;

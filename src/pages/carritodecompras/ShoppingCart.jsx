@@ -1,5 +1,5 @@
 import './ShoppingCart.css';
-import ProductCard from '../../components/ProductosCard.jsx';
+import ProductCard from '../../components/ProductCard.jsx';
 import { products } from '../../data/products';
 import { Header } from '../../components/Servicios.jsx';
 import Logo from '../../Imagenes/Logo.png';
@@ -14,8 +14,12 @@ const ShoppingCart = () => {
     const navigate = useNavigate();
 
     const handClick4 = () => {
-            navigate('/productos');
-        };
+         navigate('/productos');
+     };
+
+    const handClick3 = () => {
+        navigate('/');
+    };
 
     return (
         <>

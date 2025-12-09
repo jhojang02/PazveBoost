@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 
 function Header() {
       const navigate = useNavigate();
+      const {cart} = useCart();
   
       const handClick = () => {
           navigate('/servicios');
@@ -26,6 +27,10 @@ function Header() {
       const handClick3 = () => {
             navigate('/');
       };
+
+      const handClick4 = () => {
+            navigate('/carrito');
+      }
   return (
     <header className="header">
       <div className="header-top">
@@ -38,6 +43,10 @@ function Header() {
             🔍
           </button>
         </div>
+        <div className="header-cart-icon" onClick={handClick4}>
+          🛒
+          {cart.length > 0 && (<span className="cart-count">{cart.length}</span>)}
+        </div>
       </div>
       <nav className="navbar">
         <div className="nav-links">
@@ -47,6 +56,7 @@ function Header() {
           <a href="#" className="active">PRODUCTOS</a>
           <a href="#" onClick={(e) => {e.preventDefault(); handClick();}}>SERVICIOS</a>
           <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
+          <a href="#" onClick={(e) => {e.preventDefault(); handClick4();}}>CARRITO</a>
         </div>
         <a href="#" onClick={(e) => { e.preventDefault(); handClick3(); }} className="login-button">Cerrar Sesión</a>
       </nav>

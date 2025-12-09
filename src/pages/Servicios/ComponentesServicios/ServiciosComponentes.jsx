@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 
 function Header() {
         const navigate = useNavigate();
+        const {cart} = useCart();
     
         const handClick = () => {
             navigate('/productos');
@@ -26,6 +27,10 @@ function Header() {
         const handClick3 = () => {
             navigate('/');
         };
+
+        const handClick4 = () => {
+            navigate('/carrito');
+      }
   return (
     <header className="header">
       <div className="header-top">
@@ -47,6 +52,7 @@ function Header() {
           <a href="" onClick={handClick}>PRODUCTOS</a>
           <a href="" className="active">SERVICIOS</a>
           <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
+          <a href="#" onClick={(e) => {e.preventDefault(); handClick4();}}>CARRITO</a>
 
         </div>
         <a href="" onClick={handClick3} className="login-button">Cerrar Sesión</a>
