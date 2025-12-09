@@ -4,13 +4,13 @@ import { Button } from 'primereact/button';
 import { Badge } from 'primereact/badge';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { Rating } from "primereact/rating";
+import { useCart } from '../../../context/CartContext.jsx';
 
 import perfilHeader from './perfil.png';
 import Logo from '../../../Imagenes/Logo.png';
 import './ServiciosComponentes.css';
 
 import { useNavigate } from "react-router-dom";
-
 
 function Header() {
         const navigate = useNavigate();
@@ -71,46 +71,37 @@ export default function BasicDemo() {
 }
 
 const CarritoCompras = () => {
+  const { cart } = useCart();
   const op = useRef(null);
-  const [carrito, setCarrito] = useState([
-    { id: 1, nombre: 'Instalación', precio: 175000 },
-    { id: 2, nombre: 'Soporte Técnico', precio: 350000 }
-  ]);
+  const navigate = useNavigate();
 
-  const total = carrito.reduce((acc, prod) => acc + prod.precio, 0);
-
-        const navigate = useNavigate();
-        const handClick4 = () => {
-            navigate('/carrito');
-        };
+  const total = cart.reduce((acc, s) => {
+    const clean = Number(s.price.replace(/[^0-9]/g, ""));
+    return acc + clean;
+  }, 0);
 
   return (
     <div className="Boton-Carrito-Lateral">
       <div className="Filtro-Carrito">
         <Button icon="pi pi-shopping-cart" rounded severity="info" onClick={(e) => op.current.toggle(e)} aria-label="Ver carrito" />
-        <Badge value={carrito.length} severity="info" className="badge-carrito" />
+        <Badge value={cart.length} severity="info" className="badge-carrito" />
       </div>
 
-      <OverlayPanel className="panel-filtro-overlay" ref={op}>
-        <div className="Panel-Filtro">
+      <OverlayPanel ref={op}>
           <h4>Carrito</h4>
-          {carrito.length === 0 ? (
+          {cart.length === 0 ? (
             <p>Tu carrito está vacío</p>
           ) : (
             <ul>
-              {carrito.map((producto) => (
-                <li key={producto.id}>
-                  {producto.nombre} - ${producto.precio.toLocaleString('es-CO')}
+              {cart.map((s) => (
+                <li key={s.id}>
+                  {s.name} - {s.price}
                 </li>
               ))}
             </ul>
           )}
           <p><strong>Total:</strong> ${total.toLocaleString('es-CO')}</p>
-          <div className="card flex flex-wrap justify-content-center gap-3">
-            <Button label="Success" severity="success" rounded className="sucess-boton" onClick={handClick4} />
-            <Button label="Danger" severity="danger" rounded className="delete-boton"/>
-          </div>
-        </div>
+
       </OverlayPanel>
 
     </div>

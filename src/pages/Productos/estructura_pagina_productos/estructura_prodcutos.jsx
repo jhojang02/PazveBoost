@@ -12,7 +12,7 @@ function Estructura() {
 
     <PrimeReactProvider value={{ unstyled: false }}>
       <CartProvider>
-      <Header />
+        <Header />
 
       <div className='body'>
         <div className='sidebar'>

@@ -2,13 +2,16 @@ import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 import BasicDemo, {Header, CarritoCompras, WithoutCancelDemo, AccesosRapidos} from '../ComponentesServicios/ServiciosComponentes.jsx';
 import Home from '../HomeServicios/HomeServicios.jsx';
 import './EstructuraServicios.css';
+import { CartProvider } from '../../../context/CartContext.jsx';
 
 function Servicios() {
 
   return (
 
     <PrimeReactProvider value={{ unstyled: false }}>
+      <CartProvider>
         <Header />
+        
       <div className='body'>
         <div className='sidebar'>
           <div className='carrito-container'>
@@ -24,10 +27,13 @@ function Servicios() {
           </div>
         </div>
         </div>
+
         <div className='contenedor contenedor_fondo'>
             <Home />
         </div>
       </div>
+
+      </CartProvider>
     </PrimeReactProvider>
   )
 }

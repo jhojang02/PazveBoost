@@ -5,13 +5,12 @@ import { Badge } from 'primereact/badge';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { Rating } from "primereact/rating";
 import './Servicios_producto.css';
+
 import Logo from './Logo.png';
 import perfilHeader from './perfil.png';
 import { useCart } from "../../../context/CartContext";
 
 import { useNavigate } from "react-router-dom";
-import { productspage } from "../../../data/productspage";
-
 
 function Header() {
       const navigate = useNavigate();
@@ -120,9 +119,9 @@ function WithoutCancelDemo() {
 
 function AccesosRapidos() {
   return (
-    <div class="sidebar-accessos">
+    <div className="sidebar-accessos">
   <h4>Accesos Rápidos</h4>
-  <ul class="accessos-lista">
+  <ul className="accessos-lista">
     <li><a href="#promociones">🔥 Cámaras en promoción</a></li>
     <li><a href="#kits">🔧 Kits de instalación</a></li>
     <li><a href="#nuevos">🆕 Nuevos productos</a></li>
