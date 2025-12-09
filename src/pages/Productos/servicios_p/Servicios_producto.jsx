@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState} from "react";
 import { ListBox } from 'primereact/listbox';
 import { Button } from 'primereact/button';
 import { Badge } from 'primereact/badge';
@@ -7,8 +7,10 @@ import { Rating } from "primereact/rating";
 import './Servicios_producto.css';
 import Logo from './Logo.png';
 import perfilHeader from './perfil.png';
+import { useCart } from "../../../context/CartContext";
 
 import { useNavigate } from "react-router-dom";
+import { productspage } from "../../../data/productspage";
 
 
 function Header() {
@@ -41,13 +43,13 @@ function Header() {
       <nav className="navbar">
         <div className="nav-links">
           <img src={perfilHeader} className="img-perf"></img>
-          <a href="" onClick={handClick2}>INICIO</a>
+          <a href="#" onClick={(e) => {e.preventDefault(); handClick2();}}>INICIO</a>
           <a href="https://www.facebook.com/PAZGOSOLUCIONES/">NOSOTROS</a>
-          <a href="" className="active">PRODUCTOS</a>
-          <a href="" onClick={handClick}>SERVICIOS</a>
+          <a href="#" className="active">PRODUCTOS</a>
+          <a href="#" onClick={(e) => {e.preventDefault(); handClick();}}>SERVICIOS</a>
           <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
         </div>
-        <a href="" onClick={handClick3} className="login-button">Cerrar Sesión</a>
+        <a href="#" onClick={(e) => { e.preventDefault(); handClick3(); }} className="login-button">Cerrar Sesión</a>
       </nav>
     </header>
   )
@@ -69,45 +71,37 @@ export default function BasicDemo() {
 }
 
 const CarritoCompras = () => {
+  const { cart } = useCart();
   const op = useRef(null);
-      const navigate = useNavigate();
-      const handClick = () => {
-          navigate('/carrito');
-      };
-  const [carrito, setCarrito] = useState([
-    { id: 1, nombre: 'Cámara Tipo Domo', precio: 150000 },
-    { id: 2, nombre: 'Instalación', precio: 75000 }
-  ]);
+  const navigate = useNavigate();
 
-  const total = carrito.reduce((acc, prod) => acc + prod.precio, 0);
+  const total = cart.reduce((acc, p) => {
+    const clean = Number(p.price.replace(/[^0-9]/g, ""));
+    return acc + clean;
+  }, 0);
 
   return (
     <div className="Boton-Carrito-Lateral">
       <div className="Filtro-Carrito">
         <Button icon="pi pi-shopping-cart" rounded severity="info" onClick={(e) => op.current.toggle(e)} aria-label="Ver carrito" />
-        <Badge value={carrito.length} severity="info" className="badge-carrito" />
+        <Badge value={cart.length} severity="info" className="badge-carrito" />
       </div>
 
-      <OverlayPanel className="panel-filtro-overlay" ref={op}>
-        <div className="Panel-Filtro">
+      <OverlayPanel ref={op}>
           <h4>Carrito</h4>
-          {carrito.length === 0 ? (
+          {cart.length === 0 ? (
             <p>Tu carrito está vacío</p>
           ) : (
             <ul>
-              {carrito.map((producto) => (
-                <li key={producto.id}>
-                  {producto.nombre} - ${producto.precio.toLocaleString('es-CO')}
+              {cart.map((p) => (
+                <li key={p.id}>
+                  {p.name} - {p.price}
                 </li>
               ))}
             </ul>
           )}
           <p><strong>Total:</strong> ${total.toLocaleString('es-CO')}</p>
-          <div className="card flex flex-wrap justify-content-center gap-3">
-            <Button label="Success" severity="success" rounded className="sucess-boton" onClick={handClick}/>
-            <Button label="Danger" severity="danger" rounded className="delete-boton"/>
-          </div>
-        </div>
+
       </OverlayPanel>
 
     </div>

@@ -1,18 +1,17 @@
-import { useState } from 'react';
 import './ProductosCard.css';
-import { Checkbox } from 'primereact/checkbox';
+import { useCart } from '../context/CartContext';
+import carritoImg from '../components/carritoicono.png';
 
 const ProductCard = ({ product }) => {
-  const [checked, setChecked] = useState(false);
+  const { addToCart } = useCart();
+
+  const handleAdd = () => {
+    addToCart(product);
+  };
 
   return (
     <div className="product">
       <div className="product-card">
-        <Checkbox
-          className="checkbox-product-card"
-          onChange={(e) => setChecked(e.checked)}
-          checked={checked}
-        />
 
         <img src={product.image} alt={product.name} className="product-img" />
 
@@ -21,6 +20,9 @@ const ProductCard = ({ product }) => {
           <p className="product-price">{product.price}</p>
           <div className="button-group">
             <button className="btn">Más detalles</button>
+            <button className='btn add-btn' onClick={() => addToCart(product)}>
+              <img src={carritoImg} alt="carrito" className='icono-carrito' />
+            </button>
           </div>
         </div>
       </div>

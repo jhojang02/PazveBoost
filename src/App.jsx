@@ -13,10 +13,12 @@ import InicioSesion from './pages/Iniciar-sesion/IniciarSesion.jsx';
 import ShoppingCart from './pages/carritodecompras/ShoppingCart.jsx';
 import Estructura from './pages/Productos/estructura_pagina_productos/estructura_prodcutos.jsx';
 import Servicios from './pages/Servicios/EstructuraServicios/EstructuraServicios.jsx';
+import { CartProvider } from './context/CartContext.jsx';
 
 function App() {
   return (
     <PrimeReactProvider value={{ unstyled: false }}>
+      <CartProvider>
       <Routes>
         <Route path="/" element={<InicioSesion />} />
         <Route path="/bienvenida" element={<HomeBienvenida />} />
@@ -32,6 +34,7 @@ function App() {
         <Route path="/ayuda" element={<Ayuda />} />
         <Route path="*" element={<div>Página no encontrada</div>} />
       </Routes>
+      </CartProvider>
     </PrimeReactProvider>
   );
 }
