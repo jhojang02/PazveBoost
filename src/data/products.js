@@ -17,4 +17,4 @@ export const products = [
         price: "$300.000 COP",
         image: "/images/instalacion.jpg",
     },
-]
+];

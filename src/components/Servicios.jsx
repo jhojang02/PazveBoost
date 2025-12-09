@@ -7,6 +7,7 @@ import { Rating } from "primereact/rating";
 
 import Logo from '../Imagenes/Logo.png';
 import './Servicios.css';
+import perfilHeader from './perfil.png';
 
 
 function Header() {

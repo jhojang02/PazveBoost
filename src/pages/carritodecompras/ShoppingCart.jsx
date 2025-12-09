@@ -1,5 +1,5 @@
-import './ShoppingCart.css'
-import ProductCard from '../../components/ProductosCard';
+import './ShoppingCart.css';
+import ProductCard from '../../components/ProductosCard.jsx';
 import { products } from '../../data/products';
 import { Header } from '../../components/Servicios.jsx';
 import Logo from '../../Imagenes/Logo.png';
@@ -14,8 +14,10 @@ const ShoppingCart = () => {
     return (
         <>
         <div className='shopping-body'>
+            <div className='hader_carrito'>
         <div>
             <Header />
+            </div>
         </div>
         <div className='shopping-container'>
                 <div className='header-shopping-cart-container'>
@@ -58,6 +60,6 @@ const ShoppingCart = () => {
             </div>
             </>
     )
-}
+};
 
-export default ShoppingCart
+export default ShoppingCart;
