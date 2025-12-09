@@ -1,5 +1,5 @@
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-import BasicDemo, { CarritoCompras, WithoutCancelDemo, AccesosRapidos} from '../ComponentesServicios/ServiciosComponentes.jsx';
+import BasicDemo, {Header, CarritoCompras, WithoutCancelDemo, AccesosRapidos} from '../ComponentesServicios/ServiciosComponentes.jsx';
 import Home from '../HomeServicios/HomeServicios.jsx';
 import './EstructuraServicios.css';
 
@@ -8,6 +8,7 @@ function Servicios() {
   return (
 
     <PrimeReactProvider value={{ unstyled: false }}>
+        <Header />
       <div className='body'>
         <div className='sidebar'>
           <div className='carrito-container'>

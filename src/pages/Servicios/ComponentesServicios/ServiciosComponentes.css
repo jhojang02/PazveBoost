@@ -30,7 +30,6 @@ body, html, #root {
 
 .search-bar {
   flex-grow: 1;
-  margin-left: 800px;
   margin-right: 70px;
   position: relative;
 }

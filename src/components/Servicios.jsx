@@ -5,7 +5,7 @@ import { Badge } from 'primereact/badge';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { Rating } from "primereact/rating";
 
-<<<<<<<< HEAD:src/components/Servicios.jsx
+
 import Logo from '../Imagenes/Logo.png';
 import './Servicios.css';
 import perfilHeader from './perfil.png';
@@ -40,10 +40,6 @@ function Header() {
     </header>
   )
 }
-========
-import Logo from '../../../ImagenesServicios/Logo.png';
-import './ServiciosComponentes.css';
->>>>>>>> servicios:src/pages/Servicios/ComponentesServicios/ServiciosComponentes.jsx
 
 export default function BasicDemo() {
   const [selectedCity, setSelectedCity] = useState(null);
@@ -126,4 +122,4 @@ function AccesosRapidos() {
   )
 }
 
-export { CarritoCompras, WithoutCancelDemo, AccesosRapidos}; 
+export { Header, CarritoCompras, WithoutCancelDemo, AccesosRapidos}; 
