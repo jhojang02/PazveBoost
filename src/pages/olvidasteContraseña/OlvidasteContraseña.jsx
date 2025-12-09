@@ -32,7 +32,7 @@ function OlvidasteContraseña() {
                         </FloatLabel>
                         </div>
                         <div className="btn-olvi-contra">
-                            <button className="Sgn" onClick={() => window.location.href = "https://pazveboostcambiocontra.vercel.app/" }>Siguiente</button><br /><br/>
+                            <button className="Sgn" onClick={() => window.location.href = "/cambiarcontraseña" }>Siguiente</button><br /><br/>
                             <button className="rgr" onClick={clickRegistroos}>Registrar</button>
                         </div>
                     </span>

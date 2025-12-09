@@ -13,6 +13,8 @@ import InicioSesion from './pages/Iniciar-sesion/IniciarSesion.jsx';
 import ShoppingCart from './pages/carritodecompras/ShoppingCart.jsx';
 import Estructura from './pages/Productos/estructura_pagina_productos/estructura_prodcutos.jsx';
 import Servicios from './pages/Servicios/EstructuraServicios/EstructuraServicios.jsx';
+import CambiarContraseña from './pages/cambiarcontraseña/CambiarContraseña.jsx';
+import Exito from './pages/exito/Exito.jsx';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path="/Perfil" element={<Perfil />} />
         <Route path="/editarPerfil" element={<EditarPerfil />} />
         <Route path="/olvidarContraseña" element={<OlvidasteContraseña />} />
+        <Route path="/exito" element={<Exito />} />
+        <Route path="/cambiarcontraseña" element={<CambiarContraseña />} />
         <Route path="/carrito" element={<ShoppingCart />} />
         <Route path="/productos" element={<Estructura />} />
         <Route path="/servicios" element={<Servicios />} />
