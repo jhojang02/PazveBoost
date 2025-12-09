@@ -5,37 +5,8 @@ import { Badge } from 'primereact/badge';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { Rating } from "primereact/rating";
 
-import Logo from '../Imagenes/Logo.png'
-import '../styles/Servicios.css';
-
-function Header() {
-  return (
-    <header className="header">
-      <div className="header-top">
-        <div className="header-logo">
-          <img src={Logo} className="Imagen" alt="Logo" />
-        </div>
-        <div className="search-bar">
-          <input type="text" placeholder="Buscar productos o servicios..." />
-          <button>
-            🔍
-          </button>
-        </div>
-      </div>
-      <nav className="navbar">
-        <div className="nav-links">
-          <img src="https://acortar.link/AHVt47" className="img-perf"></img>
-          <a href="#">INICIO</a>
-          <a href="https://www.facebook.com/PAZGOSOLUCIONES/">NOSOTROS</a>
-          <a href="https://pazveboostproductos.vercel.app/">PRODUCTOS</a>
-          <a href="#" className="active">SERVICIOS</a>
-          <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
-        </div>
-        <a href="https://pazveboost.vercel.app" className="login-button">Cerrar Sesión</a>
-      </nav>
-    </header>
-  )
-}
+import Logo from '../../../ImagenesServicios/Logo.png';
+import './ServiciosComponentes.css';
 
 export default function BasicDemo() {
   const [selectedCity, setSelectedCity] = useState(null);
@@ -118,4 +89,4 @@ function AccesosRapidos() {
   )
 }
 
-export { Header, CarritoCompras, WithoutCancelDemo, AccesosRapidos}; 
+export { CarritoCompras, WithoutCancelDemo, AccesosRapidos}; 
