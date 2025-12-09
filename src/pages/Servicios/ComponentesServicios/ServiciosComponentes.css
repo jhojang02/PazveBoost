@@ -1,0 +1,271 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #81c6f6;
+  overflow-x: hidden;
+}
+
+/* Barra Navegacion*/
+
+.header {
+  width: 100vw;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #81c6f6;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-logo .Imagen {
+  margin-left: 100px;
+  width: 350px;
+  height: 80px;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin-left: 800px;
+  margin-right: 70px;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  height: 40px;
+  padding: 10px 45px 10px 15px;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  margin-left: 5%;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  place-content: center;
+  padding: 8px 16px;
+  transition: background 0.3s;
+  margin-left: 35px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background-color: #0984e3;
+  border-radius: 20px;
+}
+
+.login-button {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 5%;
+  margin-top: 14px;
+}
+
+/* Carrito*/
+
+.Filtro-Carrito {
+  display: flex;
+  gap: 5px;
+  margin-right: 20px;
+}
+
+.badge-carrito {
+  margin-left: -20px;
+  position: relative;
+  margin-top: 40px;
+  position: left;
+  right: 0;
+  top: 0;
+  background-color: red;
+  border-radius: 0;
+}
+
+.Boton-Carrito-Lateral {
+  margin-top: 20px;
+}
+
+
+.panel-filtro-overlay {
+  background-color: #288edb;
+  color: white;
+}
+
+.panel-filtro-overlay:before {
+  border-bottom-color: #288edb;
+}
+
+.panel-filtro-overlay:after {
+  border-bottom-color: #288edb;
+}
+
+.sucess-boton {
+  margin-right: 65px;
+}
+
+/*Filtro*/
+.card-uno {
+  background-color: #0984e3;
+  width: 12vw;
+  height: auto;
+  margin: 30px;
+}
+.filtros-busqueda{
+  border-radius: 0;
+  border:1px solid #0984e3;
+}
+.filtros-busqueda > .p-listbox-header{
+  border-radius: 0;
+}
+
+.filtros-busqueda >
+.p-listbox-list-wrapper {
+  border-radius: 0;
+}
+
+.filtros-busqueda >
+.p-listbox-header {
+  background-color: #0984e3;
+}
+
+.p-listbox-item {
+  border-bottom: 1px solid grey;
+}
+
+.p-listbox .p-listbox-list{
+  padding: 0%;
+}
+
+
+/*sidebar */
+
+.sidebar {
+  position: relative;
+  background-color: white;
+  width: 30%;
+  height: 100vh;
+  padding: 20px 15px;
+  margin-top: 30px;
+  border-radius: 12px;
+  border: 2px solid #0984e3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.sidebar h3 {
+  color: #0984e3;
+  margin: 0;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.name_car {
+  margin: 20px;
+  align-self: center;
+}
+
+.sidebar button {
+  background-color: #e6f2fb;
+  color: #09528c;
+  border: 1px solid #0984e3;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.carrito-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Accesos Rapido  */
+.sidebar-accessos {
+  margin-top: 70px;
+  padding: 10px;
+  border-top: 2px solid #ccc;
+}
+
+.sidebar-accessos h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #09528c;
+}
+
+.accessos-lista {
+  list-style: none;
+  text-align: center;
+  margin-top: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.accessos-lista li {
+  margin: 6px 0;
+}
+
+.accessos-lista a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.accessos-lista a:hover {
+  color: #004b8c;
+  text-decoration: underline;
+}
+
+.img-perf{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}

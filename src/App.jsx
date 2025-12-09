@@ -12,6 +12,7 @@ import Ayuda from './pages/Pantalla_ayuda/Ayuda.jsx';
 import InicioSesion from './pages/Iniciar-sesion/IniciarSesion.jsx';
 import ShoppingCart from './pages/carritodecompras/ShoppingCart.jsx';
 import Estructura from './pages/Productos/estructura_pagina_productos/estructura_prodcutos.jsx';
+import Servicios from './pages/Servicios/EstructuraServicios/EstructuraServicios.jsx';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/olvidarContraseña" element={<OlvidasteContraseña />} />
         <Route path="/carrito" element={<ShoppingCart />} />
         <Route path="/productos" element={<Estructura />} />
+        <Route path="/servicios" element={<Servicios />} />
         <Route path="/ayuda" element={<Ayuda />} />
         <Route path="*" element={<div>Página no encontrada</div>} />
       </Routes>

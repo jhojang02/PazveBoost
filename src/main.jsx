@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import 'primereact/resources/themes/lara-light-cyan/theme.css';
 import App from './App.jsx';
+import './pages/Servicios/indexServicios.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
