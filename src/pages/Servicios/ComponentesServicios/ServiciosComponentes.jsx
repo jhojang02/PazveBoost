@@ -47,15 +47,15 @@ function Header() {
       <nav className="navbar">
         <div className="nav-links">
           <img src={perfilHeader} className="img-perf"></img>
-          <a href="" onClick={handClick2}>INICIO</a>
+          <a href="#" onClick={(e) => {e.preventDefault(); handClick2();}}>INICIO</a>
           <a href="https://www.facebook.com/PAZGOSOLUCIONES/">NOSOTROS</a>
-          <a href="" onClick={handClick}>PRODUCTOS</a>
-          <a href="" className="active">SERVICIOS</a>
+          <a href="#" onClick={(e) => {e.preventDefault(); handClick();}}>PRODUCTOS</a>
+          <a href="#" className="active">SERVICIOS</a>
           <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
           <a href="#" onClick={(e) => {e.preventDefault(); handClick4();}}>CARRITO</a>
 
         </div>
-        <a href="" onClick={handClick3} className="login-button">Cerrar Sesión</a>
+        <a href="#" onClick={(e) => { e.preventDefault(); handClick3(); }} className="login-button">Cerrar Sesión</a>
       </nav>
     </header>
   )

@@ -1,75 +1,93 @@
 import './ShoppingCart.css';
-import ProductCard from '../../components/ProductCard.jsx';
-import { products } from '../../data/products';
 import { Header } from '../../components/Servicios.jsx';
 import Logo from '../../Imagenes/Logo.png';
 import '../../components/Servicios.css';
+import { useCart } from '../../context/CartContext.jsx';
 import { useNavigate } from "react-router-dom";
 
-const ShoppingCart = () => {
-    const productPrice = "$300.000 COP";
-    const shippingCost = "Gratis";
-    const totalCost = "$300.000 COP";
 
+const ShoppingCart = () => {
+    const {cart, increaseQuantity, decreaseQuantity, removeFromCart} = useCart();
     const navigate = useNavigate();
 
-    const handClick4 = () => {
-         navigate('/productos');
-     };
-
-    const handClick3 = () => {
-        navigate('/');
+    const calculateTotal = () => {
+        const total = cart.reduce ((sum, item) => {
+            const digitsOnly = item.price ? String(item.price).replace(/\D/g, '') : '0';
+            const priceInt = parseInt(digitsOnly, 10) || 0;
+            return sum + item.quantity * priceInt;
+        }, 0);
+        return total.toLocaleString('es-CO');
     };
 
     return (
         <>
         <div className='shopping-body'>
-            <div className='hader_carrito'>
-        <div>
-            <Header />
+
+                    <Header />
+
+                <div className='shopping-container'>
+                    
+                    <div className='header-shopping-cart-container'>
+                        <div className='container-icon'>
+                            <span className='header-arrow' onClick={() => navigate(-1)}>←</span>
+                            <span className='icon-shopping-cart'>🛒</span>
+                            <span className='text-header'>Carrito de Compras</span>
+                        </div>
+                    </div>
+
+                <div className="cart-list">
+                    {cart.length === 0 ? (
+                        <p className="empty">Tu carrito está vacío</p>
+                    ) : (
+                        cart.map((item) => (
+                            <div key={item.id} className="cart-item">
+
+                                <img src={item.image} alt={item.name} className="cart-img" />
+
+                                <div className="cart-info">
+                                    <h3>{item.name}</h3>
+                                    <p>{item.price}</p>
+
+                                    <div className="qty-controls">
+                                        <button onClick={() => decreaseQuantity(item.id)}>-</button>
+                                        <span>{item.quantity}</span>
+                                        <button onClick={() => increaseQuantity(item.id)}>+</button>
+                                    </div>
+                                </div>
+
+                                <button className="delete-btn" onClick={() => removeFromCart(item.id)}>
+                                    ❌
+                                </button>
+                            </div>
+                        ))
+                    )}
+                </div>
+
+
+                <div className='shopping-cart-container'>
+                    <p className='title'>Información de la Compra</p>
+
+                    <div className='item'>
+                        <span>Productos</span>
+                        <span className='item-value'>{cart.reduce((sum, item) => sum + item.quantity, 0)} productos</span>
+                    </div>
+                    
+                    <div className='item'>
+                        <span>Envio</span>
+                        <span className='item-value green'>Gratis</span>
+                    </div>
+
+                    <div className='item'>
+                        <span>Total</span>
+                        <span className='item-value'>${calculateTotal()} COP</span>
+                    </div>
+
+                    <button className='action-button primary' onClick={() => navigate("/productos")}>Seguir comprando</button>
+                </div>
             </div>
         </div>
-        <div className='shopping-container'>
-                <div className='header-shopping-cart-container'>
-                    <div className='container-icon'>
-                        <span className='header-arrow'>←</span>
-                        <span className='icon-shopping-cart'>🛒</span>
-                        <span className='text-header'>Carrito de Compras</span>
-                    </div>
-                </div>
-                <div className="product-grid">
-                    {products.map((product) => (
-                        <ProductCard key={product.id} product={product} />
-                    ))}
-                </div>
-                <div className="shopping-cart-container">
-                    <p className="title">Información de la Compra</p>
-
-                    <div className="item">
-                        <span className="item-label">Productos</span>
-                        <span className="arrow" onClick={handClick4}>➔</span>
-                        <span className="item-value">{productPrice}</span>
-                        <button className="action-button primary">Comprar ahora</button>
-                    </div>
-
-                    <div className="item">
-                        <span className="item-label">Envio</span>
-                        <span className="arrow">➔</span>
-                        <span className="item-value green">{shippingCost}</span>
-                        <div className="button-placeholder"></div>
-                    </div>
-
-                    <div className="item">
-                        <span className="item-label">Total</span>
-                        <span className="arrow">➔</span>
-                        <span className="item-value">{totalCost}</span>
-                        <button className="action-button secondary">Descarga tu factura</button>
-                    </div>
-                </div>
-            </div>
-            </div>
-            </>
-    )
+        </>
+    );
 };
 
 export default ShoppingCart;

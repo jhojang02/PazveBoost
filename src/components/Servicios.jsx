@@ -31,6 +31,10 @@ function Header() {
             navigate('/productos');
         };
 
+        const handClick5 = () => {
+            navigate('/carrito');
+        };
+
   return (
     <header className="header">
       <div className="header-top">
@@ -47,13 +51,14 @@ function Header() {
       <nav className="navbar">
         <div className="nav-links">
           <img src={perfilHeader} className="img-perf"></img>
-          <a href="" onClick={handClick2}>INICIO</a>
+          <a href="#" onClick={(e) => {e.preventDefault(); handClick2();}}>INICIO</a>
           <a href="https://www.facebook.com/PAZGOSOLUCIONES/">NOSOTROS</a>
-          <a href="" onClick={handClick4}>PRODUCTOS</a>
-          <a href="" onClick={handClick}>SERVICIOS</a>
+          <a href="#" onClick={(e) => {e.preventDefault(); handClick4();}}>PRODUCTOS</a>
+          <a href="#" onClick={(e) => {e.preventDefault(); handClick();}}>SERVICIOS</a>
           <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
+          <a href="#" className="active">CARRITO</a>
         </div>
-        <a href="" onClick={handClick3} className="login-button">Cerrar Sesión</a>
+        <a href="#" onClick={(e) => { e.preventDefault(); handClick3(); }} className="login-button">Cerrar Sesión</a>
       </nav>
     </header>
   )

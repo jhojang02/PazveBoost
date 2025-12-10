@@ -43,10 +43,6 @@ function Header() {
             🔍
           </button>
         </div>
-        <div className="header-cart-icon" onClick={handClick4}>
-          🛒
-          {cart.length > 0 && (<span className="cart-count">{cart.length}</span>)}
-        </div>
       </div>
       <nav className="navbar">
         <div className="nav-links">

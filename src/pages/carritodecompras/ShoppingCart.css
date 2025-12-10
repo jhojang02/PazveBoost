@@ -1,70 +1,172 @@
 .shopping-body {
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin:0 auto;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
 }
 
-.shopping-container{
+.shopping-container {
     width: 90%;
-    height: 600px;
+    min-height: 600px;
     background-color: white;
     position: relative;
+    padding-bottom: 40px;
 }
 
-.header-shopping-cart-container{
+.header-shopping-cart-container {
     background-color: #7cb3e0;
     width: 100%;
     height: 64px;
+    align-items: center;
+}
+
+.container-icon {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+.header-arrow {
+    cursor: pointer;
+    color: black;
+    margin-right: 15%;
+    font-size: 50px;
+    transition: 0.2s;
+}
+
+.header-arrow:hover {
+    opacity: 0.7;
+}
+
+.icon-shopping-cart {
+    margin-right: 10%;
+}
+
+.text-header {
+    font-weight: 600;
+    font-size: 35px;
+    text-align: center;
+}
+
+.cart-list {
+    width: 100%;
+    padding: 20px;
+}
+
+.empty {
+    text-align: center;
+    font-size: 20px;
+    color: #777;
+    margin-top: 30px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cart-img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.cart-info {
+    flex: 1;
+}
+
+.cart-info h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cart-info p {
+    margin: 5px 0 10px;
+    font-size: 17px;
+    color: #333;
+}
+
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-controls button {
+    background-color: #3970FB;
+    color: white;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.qty-controls button:hover {
+    background-color: #2a54c9;
+}
+
+.qty-controls span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    transform: scale(1.2);
+    background: transparent;
 }
 
 .shopping-cart-container {
     border: 1px solid black;
     border-radius: 16px;
-    padding-right: 25px;
+    padding: 20px;
     width: 600px;
-    height: 200px;
-    margin: auto;
-    margin-top: -20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .title {
     text-align: center;
-    margin-bottom: 1px;
-    margin-top: 5px;
     font-size: 24px;
     color: black;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .item {
     display: flex;
     align-items: center;
-    margin-bottom: 0;
+    margin-bottom: 15px;
 }
 
-.item-label {
-    flex: 1;
+.item span {
     font-size: 20px;
-    color: black;
-    text-align: left;
-    margin-left: 20px;
-}
-
-.arrow {
-    margin: 0 15px;
-    color: #ff0000;
-    font-size: 25px;
 }
 
 .item-value {
-    flex: 2;
-    text-align: center;
-    color: black;
-    font-size: 20px;
+    margin-left: auto;
 }
 
 .item-value.green {
@@ -75,13 +177,12 @@
 .action-button {
     padding: 10px 20px;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    margin-left: auto;
-    width: 150px;
-    text-align: center;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .action-button.primary {
@@ -93,43 +194,17 @@
     background-color: #0056b3;
 }
 
-.action-button.secondary {
-    background-color: #3970FB;
-    color: white;
-    margin-bottom: 15px;
-}
+@media (max-width: 768px) {
+    .shopping-cart-container {
+        width: 90%;
+    }
 
-.action-button.secondary:hover {
-    background-color: #0056b3;
-}
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.button-placeholder {
-    width: 150px;
-    margin-left: auto;
-}
-
-.container-icon{
-    display: flex;
-    align-items: center;
-    height: 60px;
-    font-size: 40px;
-}
-
-.header-arrow{
-    color: black;
-    margin-right: 15%;
-    margin-left: 9%;
-    font-size: 50px;
-}
-
-.icon-shopping-cart{
-    margin-right: 10%;
-}
-
-.text-header{
-    font-weight: 600;
-}
-
-.hader_carrito .header-top {
-    margin: 0% !important;
+    .cart-img {
+        margin-bottom: 10px;
+    }
 }
