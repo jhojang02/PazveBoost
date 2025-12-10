@@ -21,7 +21,7 @@ function Perfil() {
         }
 
         const Click3 = () => {
-        navigate('/productos')
+        navigate(-1)
         }
     return (
         <div className='Contenedor'>
