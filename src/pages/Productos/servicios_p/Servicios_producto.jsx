@@ -1,24 +1,28 @@
 import React, { useState, useRef } from "react";
+import { ListBox } from 'primereact/listbox';
 import { Button } from 'primereact/button';
 import { Badge } from 'primereact/badge';
 import { OverlayPanel } from 'primereact/overlaypanel';
-import { Rating } from 'primereact/rating';
+import { Rating } from "primereact/rating";
+
+import './Servicios_producto.css';
 import Logo from './Logo.png';
 import perfilHeader from './perfil.png';
 import { useCart } from "../../../context/CartContext";
+import { useNavigate } from "react-router-dom";
 import { products } from "../../../data/products";
-import './Servicios_producto.css';
 
 // ------------------ HEADER ------------------
 function Header({ busqueda, setBusqueda }) {
+  const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
-  const { cart } = useCart();
-
   const productosFiltrados = busqueda
     ? products.filter(p =>
         p.name.toLowerCase().includes(busqueda.toLowerCase())
       )
     : [];
+
+  const handleNavigation = (ruta) => navigate(ruta);
 
   return (
     <header className="header">
@@ -26,7 +30,6 @@ function Header({ busqueda, setBusqueda }) {
         <div className="header-logo">
           <img src={Logo} className="Imagen" alt="Logo" />
         </div>
-
         <div className="search-bar">
           <input
             type="text"
@@ -62,29 +65,47 @@ function Header({ busqueda, setBusqueda }) {
 
       <nav className="navbar">
         <div className="nav-links">
-          <img src={perfilHeader} className="img-perf" alt="perfil" />
-          <a href="#">INICIO</a>
+          <img src={perfilHeader} className="img-perf" alt="perfil" onClick={() => handleNavigation('/perfil')} />
+          <a href="#" onClick={(e) => { e.preventDefault(); handleNavigation('/bienvenida'); }}>INICIO</a>
           <a href="https://www.facebook.com/PAZGOSOLUCIONES/">NOSOTROS</a>
           <a href="#" className="active">PRODUCTOS</a>
-          <a href="https://pazveboost-servicios.vercel.app/">SERVICIOS</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); handleNavigation('/servicios'); }}>SERVICIOS</a>
           <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
-          <a href="#">CARRITO ({cart.length})</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); handleNavigation('/carrito'); }}>CARRITO</a>
         </div>
-        <a href="https://pazveboost.vercel.app" className="login-button">Cerrar Sesión</a>
+        <a href="#" onClick={(e) => { e.preventDefault(); handleNavigation('/'); }} className="login-button">Cerrar Sesión</a>
       </nav>
     </header>
   );
 }
 
-// ------------------ COMPONENTE PRINCIPAL ------------------
-export default function BasicDemo({ busqueda, setBusqueda }) {
-  return <div className="page-container"></div>;
+// ------------------ COMPONENTE PRINCIPAL (Filtro) ------------------
+function BasicDemo({ selectedCity, setSelectedCity }) {
+  const cities = [
+    { name: 'Cámara Tipo Domo', code: 'CD' },
+    { name: 'Instalación', code: 'I' },
+    { name: 'Cámara Portátil', code: 'CP' },
+  ];
+
+  return (
+    <div className="card-uno">
+      <ListBox
+        filter
+        value={selectedCity}
+        onChange={(e) => setSelectedCity(e.value)}
+        options={cities}
+        optionLabel="name"
+        className="w-full md:w-14rem fondo filtros-busqueda"
+      />
+    </div>
+  );
 }
 
 // ------------------ CARRITO ------------------
-const CarritoCompras = () => {
+function CarritoCompras() {
   const { cart } = useCart();
   const op = useRef(null);
+  const navigate = useNavigate();
 
   const total = cart.reduce((acc, p) => {
     const clean = Number(p.price.replace(/[^0-9]/g, ""));
@@ -93,8 +114,10 @@ const CarritoCompras = () => {
 
   return (
     <div className="Boton-Carrito-Lateral">
-      <Button icon="pi pi-shopping-cart" rounded severity="info" onClick={(e) => op.current.toggle(e)} />
-      <Badge value={cart.length} severity="info" />
+      <div className="Filtro-Carrito">
+        <Button icon="pi pi-shopping-cart" rounded severity="info" onClick={(e) => op.current.toggle(e)} />
+        <Badge value={cart.length} severity="info" className="badge-carrito" />
+      </div>
       <OverlayPanel ref={op}>
         <h4>Carrito</h4>
         {cart.length === 0 ? (
@@ -107,15 +130,10 @@ const CarritoCompras = () => {
           </ul>
         )}
         <p><strong>Total:</strong> ${total.toLocaleString('es-CO')}</p>
-
-        <div className="card flex flex-wrap justify-content-center gap-3">
-          <Button label="Confirmar" severity="success" rounded />
-          <Button label="Cancelar" severity="danger" rounded />
-        </div>
       </OverlayPanel>
     </div>
   );
-};
+}
 
 // ------------------ RATING ------------------
 function WithoutCancelDemo() {
@@ -138,4 +156,4 @@ function AccesosRapidos() {
   );
 }
 
-export { Header, CarritoCompras, WithoutCancelDemo, AccesosRapidos };
+export { Header, BasicDemo, CarritoCompras, WithoutCancelDemo, AccesosRapidos };
