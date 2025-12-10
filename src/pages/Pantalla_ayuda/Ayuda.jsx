@@ -3,7 +3,7 @@ import { Button } from 'primereact/button';
 import React, { useState } from "react";
 import { InputText } from "primereact/inputtext";
 import { FloatLabel } from "primereact/floatlabel";
-import Flechadevolver from "./Flechadevolver.png";
+import 'primeicons/primeicons.css';
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import { useNavigate } from "react-router-dom"
 
@@ -26,12 +26,15 @@ function Ayuda() {
             navigate('/olvidarContraseña');
             };
 
+            const Click3 = () => {
+            navigate('/perfil');
+            }
 
     return (
         <div className="container-principal-ayuda">
             <div className="header-ayuda">
                 <div className="logo" id="logo">
-                    <button className="volver"><img src={Flechadevolver} alt="Volver" id="volver-boton" /></button>
+                    <i className='pi pi-arrow-left back-arrow' onClick={Click3} style={{ fontSize: '2rem', cursor: 'pointer', marginBottom: '15px' }}/>
                 </div>
                 <div className="titulos">
                     <h2>Ayuda & FAQS</h2>

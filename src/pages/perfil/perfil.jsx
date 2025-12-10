@@ -20,15 +20,18 @@ function Perfil() {
         navigate('/ayuda')
         }
 
+        const Click3 = () => {
+        navigate('/productos')
+        }
     return (
         <div className='Contenedor'>
-            <div className='pi pi-arrow-left'></div>
+            <div className='pi pi-arrow-left' onClick={Click3} style={{ fontSize: '2rem', cursor: 'pointer', marginBottom: '15px' }}></div>
             <div className="card">
             <div className="flex flex-wrap gap-5">
                 <div className="flex-auto">
                     <div className='avatar-container'>
                     <h2 className='Titulo_perfil'>Mi Perfil</h2>
-                    <div className='Malparida_imagen'><Avatar image="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png" className="Avatar" id='Avatar'/> </div>
+                    <div className='Malparida_imagen'><Avatar image="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png" className="Avatar" id='Avatar'/> </div> <br />
                     <h2 className='Titulo'>Usuario</h2>
                     </div>
                     <div className='general_botones'>

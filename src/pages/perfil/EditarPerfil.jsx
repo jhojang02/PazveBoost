@@ -6,9 +6,16 @@ import { InputText } from 'primereact/inputtext';
 import { FloatLabel } from 'primereact/floatlabel';
 import './EditarPerfil.css';
 import { Checkbox } from 'primereact/checkbox';
+import { useNavigate } from "react-router-dom"
 
 
 function EditarPerfil() {
+
+    const navigate = useNavigate();
+
+        const Click3 = () => {
+        navigate('/perfil');
+        }
 
     const avataresData = [
         {
@@ -35,7 +42,7 @@ function EditarPerfil() {
     return (
         <div className='ContenedorEditar'>
             <div className='Arrow'>
-            <i className='pi pi-arrow-left back-arrow' />
+            <i className='pi pi-arrow-left back-arrow' onClick={Click3} style={{ fontSize: '2rem', cursor: 'pointer', marginBottom: '15px' }}/>
             </div>
             <div className="card">
                 <div className="flex flex-wrap gap-5">

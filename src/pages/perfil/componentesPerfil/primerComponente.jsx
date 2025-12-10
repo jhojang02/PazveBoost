@@ -2,14 +2,16 @@ import { useState } from "react";
 import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
 import './primerComponente.css';
+import { useNavigate } from "react-router-dom"
 
 function Perfil1() {
   const [visible, setVisible] = useState(false);
 
-  const cerrarSesion = () => {
-    console.log("Sesión cerrada");
-    setVisible(false);
-  };
+  const navigate = useNavigate();
+   
+  const Click = () => {
+        navigate('/');
+        }
 
   return (
     <div className="cerrar_sesion">
@@ -33,7 +35,7 @@ function Perfil1() {
             label="Sí, Cerrar Sesión"
             icon="pi pi-check"
             className="p-button-success"
-            onClick={cerrarSesion}
+            onClick={Click}
           />
           <Button
             label="Cancelar"
