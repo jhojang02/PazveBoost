@@ -269,3 +269,59 @@ body, html, #root {
   height: 50px;
   border-radius: 50%;
 }
+
+/* Contenedor de la barra de búsqueda */
+.search-bar {
+  position: relative;
+}
+
+/* Tarjeta flotante con productos */
+.dropdown-productos-float {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 9999;
+  padding: 10px;
+}
+
+/* Cada producto dentro de la tarjeta */
+.dropdown-item-float {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Imagen del producto */
+.dropdown-item-float img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Texto del producto */
+.dropdown-text p {
+  margin: 0;
+}
+
+.dropdown-text p:first-child {
+  font-weight: bold;
+}
+
+/* Botón agregar dentro de la tarjeta */
+.btn-dropdown {
+  margin-top: 5px;
+}
+
+/* Hover para cada producto */
+.dropdown-item-float:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}

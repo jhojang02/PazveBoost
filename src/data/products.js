@@ -1,3 +1,5 @@
+
+
 export const products = [
     {
         id: 1,
@@ -35,4 +37,4 @@ export const products = [
         price: "$350.000 COP",
         image: "/images/camara6.png",
     },
-]
+];
