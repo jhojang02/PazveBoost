@@ -25,7 +25,7 @@ function App() {
         <Route path="/usuario" element={<InfoUser />} />
         <Route path="/olvidaste" element={<OlvidoContra />} />
         <Route path="/ayuda" element={<Pantalla_ayuda />} />
-        <Route path="/Perfil" element={<Perfil />} />
+        <Route path="/perfil" element={<Perfil />} />
         <Route path="/editarPerfil" element={<EditarPerfil />} />
         <Route path="/olvidarContraseña" element={<OlvidasteContraseña />} />
         <Route path="/carrito" element={<ShoppingCart />} />

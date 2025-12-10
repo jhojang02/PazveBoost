@@ -32,7 +32,7 @@ function Header() {
         };
 
         const handClick5 = () => {
-            navigate('/carrito');
+            navigate('/perfil');
         };
 
   return (
@@ -50,7 +50,7 @@ function Header() {
       </div>
       <nav className="navbar">
         <div className="nav-links">
-          <img src={perfilHeader} className="img-perf"></img>
+          <img src={perfilHeader} className="img-perf" onClick={handClick5} style={{ cursor: "pointer" }}></img>
           <a href="#" onClick={(e) => {e.preventDefault(); handClick2();}}>INICIO</a>
           <a href="https://www.facebook.com/PAZGOSOLUCIONES/">NOSOTROS</a>
           <a href="#" onClick={(e) => {e.preventDefault(); handClick4();}}>PRODUCTOS</a>
