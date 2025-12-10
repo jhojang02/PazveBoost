@@ -83,6 +83,7 @@ const ShoppingCart = () => {
                     </div>
 
                     <button className='action-button primary' onClick={() => navigate("/productos")}>Seguir comprando</button>
+                    <button className="action-button primary" onClick={() => window.location.href = "https://v0-purchase-confirmation-page-ten.vercel.app/" }>Confirmar Compra</button>
                 </div>
             </div>
         </div>
