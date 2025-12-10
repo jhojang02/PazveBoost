@@ -102,38 +102,43 @@ function BasicDemo({ selectedCity, setSelectedCity }) {
 }
 
 // ------------------ CARRITO ------------------
-function CarritoCompras() {
+const CarritoCompras = () => {
   const { cart } = useCart();
   const op = useRef(null);
   const navigate = useNavigate();
 
-  const total = cart.reduce((acc, p) => {
-    const clean = Number(p.price.replace(/[^0-9]/g, ""));
+  const total = cart.reduce((acc, s) => {
+    const clean = Number(s.price.replace(/[^0-9]/g, ""));
     return acc + clean;
   }, 0);
 
   return (
     <div className="Boton-Carrito-Lateral">
       <div className="Filtro-Carrito">
-        <Button icon="pi pi-shopping-cart" rounded severity="info" onClick={(e) => op.current.toggle(e)} />
+        <Button icon="pi pi-shopping-cart" rounded severity="info" onClick={(e) => op.current.toggle(e)} aria-label="Ver carrito" />
         <Badge value={cart.length} severity="info" className="badge-carrito" />
       </div>
+
       <OverlayPanel ref={op}>
-        <h4>Carrito</h4>
-        {cart.length === 0 ? (
-          <p>Tu carrito está vacío</p>
-        ) : (
-          <ul>
-            {cart.map((p) => (
-              <li key={p.id}>{p.name} - {p.price}</li>
-            ))}
-          </ul>
-        )}
-        <p><strong>Total:</strong> ${total.toLocaleString('es-CO')}</p>
+          <h4>Carrito</h4>
+          {cart.length === 0 ? (
+            <p>Tu carrito está vacío</p>
+          ) : (
+            <ul>
+              {cart.map((s) => (
+                <li key={s.id}>
+                  {s.name} - {s.price}
+                </li>
+              ))}
+            </ul>
+          )}
+          <p><strong>Total:</strong> ${total.toLocaleString('es-CO')}</p>
+
       </OverlayPanel>
+
     </div>
   );
-}
+};
 
 // ------------------ RATING ------------------
 function WithoutCancelDemo() {
