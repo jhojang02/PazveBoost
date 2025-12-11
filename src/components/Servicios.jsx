@@ -4,7 +4,7 @@ import { Button } from 'primereact/button';
 import { Badge } from 'primereact/badge';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { Rating } from "primereact/rating";
-
+import { Dialog } from "primereact/dialog";
 
 import Logo from '../Imagenes/Logo.png';
 import './Servicios.css';
@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 
 function Header() {
         const navigate = useNavigate();
+        const [visibleCerrar, setVisibleCerrar] = useState(false);
     
         const handClick = () => {
             navigate('/servicios');
@@ -52,8 +53,41 @@ function Header() {
           <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
           <a href="#" className="active">CARRITO</a>
         </div>
-        <a href="#" onClick={(e) => { e.preventDefault(); handClick3(); }} className="login-button">Cerrar Sesión</a>
-      </nav>
+
+        <a 
+                href="#" 
+                className="login-button"
+                onClick={(e) => { 
+                e.preventDefault(); 
+                setVisibleCerrar(true); 
+              }} 
+                >
+                  Cerrar Sesión
+                  </a>
+              </nav>
+        
+              <Dialog
+              header="Cerrar sesión"
+              visible={visibleCerrar}
+              onHide={() => setVisibleCerrar(false)}
+              style={{width: '300px'}}
+              >
+                <p>¿Estás seguro de que quieres cerrar sesión?</p>
+                <div className="flex justify-content-around mt-3">
+                  <Button
+                  label="Sí, cerrar sesión"
+                  icon="pi pi-check"
+                  className="p-button-success"
+                  onClick={handClick3}
+                  />
+                  <Button
+                  label="Cancelar"
+                  icon="pi pi-times"
+                  className="p-button-secondary"
+                  onClick={() => setVisibleCerrar(false)}
+                  />
+                </div>
+              </Dialog>
     </header>
   )
 }

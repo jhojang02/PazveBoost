@@ -81,8 +81,8 @@ function Header() {
           <a href="#" onClick={(e) => { e.preventDefault(); handClick(); }}>SERVICIOS</a>
           <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
           <a href="#" onClick={(e) => { e.preventDefault(); handClick4(); }}>CARRITO</a>
-
         </div>
+        
         <a 
         href="#" 
         className="login-button"
@@ -102,7 +102,7 @@ function Header() {
       style={{width: '300px'}}
       >
         <p>¿Estás seguro de que quieres cerrar sesión?</p>
-        <div className="flex justify-content-around mt3">
+        <div className="flex justify-content-around mt-3">
           <Button
           label="Sí, cerrar sesión"
           icon="pi pi-check"

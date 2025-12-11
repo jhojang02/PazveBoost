@@ -10,7 +10,7 @@ import { products } from "../../../data/productsServices.js"; // asegúrate de l
 import perfilHeader from "./perfil.png";
 import Logo from "../../../Imagenes/Logo.png";
 import "./ServiciosComponentes.css";
-
+import { Dialog } from "primereact/dialog";
 import { useNavigate } from "react-router-dom";
 
 function Header() {
@@ -19,14 +19,15 @@ function Header() {
 
   const [busqueda, setBusqueda] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
+  const [visibleCerrar, setVisibleCerrar] = useState(false);
 
   const productosFuente = Array.isArray(products) ? products : [];
   const productosFiltrados =
     busqueda.trim() === ""
       ? []
       : productosFuente.filter((p) =>
-          String(p.name).toLowerCase().includes(busqueda.toLowerCase())
-        );
+        String(p.name).toLowerCase().includes(busqueda.toLowerCase())
+      );
 
   const handClick = () => navigate("/productos");
   const handClick2 = () => navigate("/bienvenida");
@@ -37,6 +38,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-top">
+
         <div className="header-logo">
           <img src={Logo} className="Imagen" alt="Logo" />
         </div>
@@ -50,6 +52,7 @@ function Header() {
             onFocus={() => setShowDropdown(true)}
             onBlur={() => setTimeout(() => setShowDropdown(false), 120)}
           />
+
           <button>🔍</button>
 
           {showDropdown && busqueda.trim() !== "" && productosFiltrados.length > 0 && (
@@ -58,8 +61,8 @@ function Header() {
                 <div key={p.id} className="dropdown-item-float">
                   <img src={p.image} alt={p.name} />
                   <div className="dropdown-text">
-                    <p className="dd-name">{p.name}</p>
-                    <p className="dd-price">{p.price}</p>
+                    <p>{p.name}</p>
+                    <p>{p.price}</p>
                   </div>
                 </div>
               ))}
@@ -71,31 +74,50 @@ function Header() {
       <nav className="navbar">
         <div className="nav-links">
           <img
-            src={perfilHeader}
-            className="img-perf"
-            onClick={handClick5}
-            style={{ cursor: "pointer" }}
-            alt="perfil"
-          />
+            src={perfilHeader} className="img-perf" onClick={handClick5} style={{ cursor: "pointer" }} />
 
-          <a href="#" onClick={(e) => { e.preventDefault(); handClick2(); }}>
-            INICIO
-          </a>
+          <a href="#" onClick={(e) => { e.preventDefault(); handClick2(); }}>INICIO</a>
           <a href="https://www.facebook.com/PAZGOSOLUCIONES/">NOSOTROS</a>
-          <a href="#" onClick={(e) => { e.preventDefault(); handClick(); }}>
-            PRODUCTOS
-          </a>
+          <a href="#" onClick={(e) => { e.preventDefault(); handClick(); }}>PRODUCTOS</a>
           <a href="#" className="active">SERVICIOS</a>
           <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
-          <a href="#" onClick={(e) => { e.preventDefault(); handClick4(); }}>
-            CARRITO
-          </a>
+          <a href="#" onClick={(e) => { e.preventDefault(); handClick4(); }}>CARRITO</a>
         </div>
 
-        <a href="#" onClick={(e) => { e.preventDefault(); handClick3(); }} className="login-button">
+        <a
+          href="#"
+          className="login-button"
+          onClick={(e) => {
+            e.preventDefault();
+            setVisibleCerrar(true);
+          }}
+        >
           Cerrar Sesión
         </a>
       </nav>
+
+      <Dialog
+        header="Cerrar sesión"
+        visible={visibleCerrar}
+        onHide={() => setVisibleCerrar(false)}
+        style={{ width: '300px' }}
+      >
+        <p>¿Estás seguro de que quieres cerrar sesión?</p>
+        <div className="flex justify-content-around mt-3">
+          <Button
+            label="Sí, cerrar sesión"
+            icon="pi pi-check"
+            className="p-button-success"
+            onClick={handClick3}
+          />
+          <Button
+            label="Cancelar"
+            icon="pi pi-times"
+            className="p-button-secondary"
+            onClick={() => setVisibleCerrar(false)}
+          />
+        </div>
+      </Dialog>
     </header>
   );
 }
