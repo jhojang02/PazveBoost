@@ -138,3 +138,23 @@ button:hover {
   top: 45%;
   font-size: 25px;
 }
+
+.flotantes-labels .p-float-label:has(input:focus) label
+{
+  top: 0%;
+  font-size: 0%;
+}
+
+.flotantes-labels .p-float-label:has(input.p-filled) label
+{
+  top: 0%;
+  font-size: 25px;
+  margin-top: 13px;
+}
+
+.flotantes-labels .p-float-label:has(input:-webkit-autofill) label
+{
+  top: 0%;
+  font-size: 25px;
+  margin-top: 13px;
+}
