@@ -10,26 +10,36 @@ import Logo from './Logo.png';
 import perfilHeader from './perfil.png';
 import { useCart } from "../../../context/CartContext";
 import { useNavigate } from "react-router-dom";
-import { products } from "../../../data/products";
+import { productspage } from "../../../data/productspage";
 
-// ------------------ HEADER ------------------
-function Header({ busqueda, setBusqueda }) {
+function Header() {
+
   const navigate = useNavigate();
+  const { cart } = useCart();
+
+  const [busqueda, setBusqueda] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
+
   const productosFiltrados = busqueda
-    ? products.filter(p =>
+    ? productspage.filter(p =>
         p.name.toLowerCase().includes(busqueda.toLowerCase())
       )
     : [];
 
-  const handleNavigation = (ruta) => navigate(ruta);
+  const handClick = () => navigate('/servicios');
+  const handClick2 = () => navigate('/bienvenida');
+  const handClick3 = () => navigate('/');
+  const handClick4 = () => navigate('/carrito');
+  const handClick5 = () => navigate('/perfil');
 
   return (
     <header className="header">
       <div className="header-top">
+
         <div className="header-logo">
           <img src={Logo} className="Imagen" alt="Logo" />
         </div>
+
         <div className="search-bar">
           <input
             type="text"
@@ -39,9 +49,10 @@ function Header({ busqueda, setBusqueda }) {
             onFocus={() => setShowDropdown(true)}
             onBlur={() => setTimeout(() => setShowDropdown(false), 150)}
           />
+
           <button>🔍</button>
 
-          {showDropdown && busqueda !== "" && productosFiltrados.length > 0 && (
+          {showDropdown && productosFiltrados.length > 0 && (
             <div className="dropdown-productos-float">
               {productosFiltrados.map(p => (
                 <div key={p.id} className="dropdown-item-float">
@@ -49,42 +60,40 @@ function Header({ busqueda, setBusqueda }) {
                   <div className="dropdown-text">
                     <p>{p.name}</p>
                     <p>{p.price}</p>
-                    <Button
-                      label="Agregar"
-                      icon="pi pi-shopping-cart"
-                      className="btn-dropdown"
-                      onClick={() => alert(`Añadido: ${p.name}`)}
-                    />
                   </div>
                 </div>
               ))}
             </div>
           )}
         </div>
+
       </div>
 
       <nav className="navbar">
         <div className="nav-links">
-          <img src={perfilHeader} className="img-perf" alt="perfil" onClick={() => handleNavigation('/perfil')} />
-          <a href="#" onClick={(e) => { e.preventDefault(); handleNavigation('/bienvenida'); }}>INICIO</a>
+          <img src={perfilHeader} className="img-perf" onClick={handClick5} style={{ cursor: "pointer" }} />
+
+          <a href="#" onClick={(e) => { e.preventDefault(); handClick2(); }}>INICIO</a>
           <a href="https://www.facebook.com/PAZGOSOLUCIONES/">NOSOTROS</a>
           <a href="#" className="active">PRODUCTOS</a>
-          <a href="#" onClick={(e) => { e.preventDefault(); handleNavigation('/servicios'); }}>SERVICIOS</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); handClick(); }}>SERVICIOS</a>
           <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
-          <a href="#" onClick={(e) => { e.preventDefault(); handleNavigation('/carrito'); }}>CARRITO</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); handClick4(); }}>CARRITO</a>
+
         </div>
-        <a href="#" onClick={(e) => { e.preventDefault(); handleNavigation('/'); }} className="login-button">Cerrar Sesión</a>
+        <a href="#" onClick={(e) => { e.preventDefault(); handClick3(); }} className="login-button">Cerrar Sesión</a>
       </nav>
     </header>
-  );
+  )
 }
 
-// ------------------ COMPONENTE PRINCIPAL (Filtro) ------------------
-function BasicDemo({ selectedCity, setSelectedCity }) {
+export default function BasicDemo() {
+
+  const [selectedCity, setSelectedCity] = useState(null);
   const cities = [
-    { name: 'Cámara Tipo Domo', code: 'CD' },
-    { name: 'Instalación', code: 'I' },
-    { name: 'Cámara Portátil', code: 'CP' },
+    { name: 'Categorias', code: 'CD' },
+    { name: 'Instalacion', code: 'I' },
+    { name: 'Acesorias', code: 'CP' },
   ];
 
   return (
@@ -98,11 +107,11 @@ function BasicDemo({ selectedCity, setSelectedCity }) {
         className="w-full md:w-14rem fondo filtros-busqueda"
       />
     </div>
-  );
+  )
 }
 
-// ------------------ CARRITO ------------------
 const CarritoCompras = () => {
+
   const { cart } = useCart();
   const op = useRef(null);
   const navigate = useNavigate();
@@ -120,19 +129,19 @@ const CarritoCompras = () => {
       </div>
 
       <OverlayPanel ref={op}>
-          <h4>Carrito</h4>
-          {cart.length === 0 ? (
-            <p>Tu carrito está vacío</p>
-          ) : (
-            <ul>
-              {cart.map((s) => (
-                <li key={s.id}>
-                  {s.name} - {s.price}
-                </li>
-              ))}
-            </ul>
-          )}
-          <p><strong>Total:</strong> ${total.toLocaleString('es-CO')}</p>
+        <h4>Carrito</h4>
+        {cart.length === 0 ? (
+          <p>Tu carrito está vacío</p>
+        ) : (
+          <ul>
+            {cart.map((s) => (
+              <li key={s.id}>
+                {s.name} - {s.price}
+              </li>
+            ))}
+          </ul>
+        )}
+        <p><strong>Total:</strong> ${total.toLocaleString('es-CO')}</p>
 
       </OverlayPanel>
 
@@ -140,13 +149,16 @@ const CarritoCompras = () => {
   );
 };
 
-// ------------------ RATING ------------------
 function WithoutCancelDemo() {
   const [value, setValue] = useState(null);
-  return <Rating value={value} onChange={(e) => setValue(e.value)} cancel={false} />;
-}
 
-// ------------------ ACCESOS RAPIDOS ------------------
+  return (
+    <div className="card flex justify-content-center">
+      <Rating className="calificacion" value={value} onChange={(e) => setValue(e.value)} cancel={false} />
+    </div>
+  );
+};
+
 function AccesosRapidos() {
   return (
     <div className="sidebar-accessos">
@@ -158,7 +170,7 @@ function AccesosRapidos() {
         <li><a href="#populares">⭐ Más populares</a></li>
       </ul>
     </div>
-  );
+  )
 }
 
 export { Header, BasicDemo, CarritoCompras, WithoutCancelDemo, AccesosRapidos };
