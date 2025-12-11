@@ -11,6 +11,7 @@ import perfilHeader from './perfil.png';
 import { useCart } from "../../../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import { productspage } from "../../../data/productspage";
+import { Dialog } from "primereact/dialog";
 
 function Header() {
 
@@ -19,6 +20,7 @@ function Header() {
 
   const [busqueda, setBusqueda] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
+  const [visibleCerrar, setVisibleCerrar] = useState(false);
 
   const productosFiltrados = busqueda
     ? productspage.filter(p =>
@@ -81,8 +83,41 @@ function Header() {
           <a href="#" onClick={(e) => { e.preventDefault(); handClick4(); }}>CARRITO</a>
 
         </div>
-        <a href="#" onClick={(e) => { e.preventDefault(); handClick3(); }} className="login-button">Cerrar Sesión</a>
+        <a 
+        href="#" 
+        className="login-button"
+        onClick={(e) => { 
+        e.preventDefault(); 
+        setVisibleCerrar(true); 
+      }} 
+        >
+          Cerrar Sesión
+          </a>
       </nav>
+
+      <Dialog
+      header="Cerrar sesión"
+      visible={visibleCerrar}
+      onHide={() => setVisibleCerrar(false)}
+      style={{width: '300px'}}
+      >
+        <p>¿Estás seguro de que quieres cerrar sesión?</p>
+        <div className="flex justify-content-around mt3">
+          <Button
+          label="Sí, cerrar sesión"
+          icon="pi pi-check"
+          className="p-button-success"
+          onClick={handClick3}
+          />
+          <Button
+          label="Cancelar"
+          icon="pi pi-times"
+          className="p-button-secondary"
+          onClick={() => setVisibleCerrar(false)}
+          />
+        </div>
+      </Dialog>
+
     </header>
   )
 }
