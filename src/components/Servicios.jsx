@@ -41,12 +41,6 @@ function Header() {
         <div className="header-logo">
           <img src={Logo} className="Imagen" alt="Logo" />
         </div>
-        <div className="search-bar">
-          <input type="text" placeholder="Buscar productos o servicios..." />
-          <button>
-            🔍
-          </button>
-        </div>
       </div>
       <nav className="navbar">
         <div className="nav-links">
