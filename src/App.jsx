@@ -15,6 +15,7 @@ import Estructura from './pages/Productos/estructura_pagina_productos/estructura
 import Servicios from './pages/Servicios/EstructuraServicios/EstructuraServicios.jsx';
 import CambiarContraseña from './pages/cambiarContraseña/cambiarContra.jsx';
 import { CartProvider } from './context/CartContext.jsx';
+import Exito from './pages/exito_temp/Exito.jsx';
 
 function App() {
   return (
@@ -30,7 +31,8 @@ function App() {
         <Route path="/editarPerfil" element={<EditarPerfil />} />
         <Route path="/olvidarContraseña" element={<OlvidasteContraseña />} />
         <Route path="/carrito" element={<ShoppingCart />} />
-        <Route path="/productos" element={<Estructura />} />
+        <Route path="/productos" element={<Estructura />} /> 
+        <Route path="/exito" element={<Exito />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/cambioContra" element={<CambiarContraseña />} />
         <Route path="/ayuda" element={<Ayuda />} />

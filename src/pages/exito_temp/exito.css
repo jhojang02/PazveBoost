@@ -1,0 +1,93 @@
+body{
+  overflow-y: hidden;
+}
+
+.exito-container {
+  background-color: #87cefa;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exito-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  width: 1200px;
+  height: 750px;
+  max-width: 90%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.exito-left {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.exito-logo {
+  max-width: 450px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.exito-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.exito-subtitle {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.exito-right {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.exito-icon {
+  font-size: 60px;
+  color: black;
+  border: 3px solid black;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.exito-message {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.exito-button {
+  background-color: #0094ff;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.exito-button:hover {
+  background-color: #007fd1;
+}
