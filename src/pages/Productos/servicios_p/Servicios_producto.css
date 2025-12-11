@@ -127,7 +127,7 @@ body, html, #root {
 
 .sidebar h3, .sidebar h4 {
   color: #0984e3;
-  margin: 20px 0 1000px 0;
+  margin: 20px;
 }
 
 .carrito-titulo {
@@ -228,7 +228,7 @@ body, html, #root {
   overflow: hidden;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background-color: #f9f9f9;
+  background-color: white;
   margin-top: 1rem;
 }
 
