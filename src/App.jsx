@@ -13,6 +13,7 @@ import InicioSesion from './pages/Iniciar-sesion/IniciarSesion.jsx';
 import ShoppingCart from './pages/carritodecompras/ShoppingCart.jsx';
 import Estructura from './pages/Productos/estructura_pagina_productos/estructura_prodcutos.jsx';
 import Servicios from './pages/Servicios/EstructuraServicios/EstructuraServicios.jsx';
+import CambiarContraseña from './pages/cambiarContraseña/cambiarContra.jsx';
 import { CartProvider } from './context/CartContext.jsx';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/carrito" element={<ShoppingCart />} />
         <Route path="/productos" element={<Estructura />} />
         <Route path="/servicios" element={<Servicios />} />
+        <Route path="/cambioContra" element={<CambiarContraseña />} />
         <Route path="/ayuda" element={<Ayuda />} />
         <Route path="*" element={<div>Página no encontrada</div>} />
       </Routes>

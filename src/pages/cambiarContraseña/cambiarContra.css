@@ -1,0 +1,84 @@
+.container_principal_contraseña {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.caja_sesion_contraseña {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 1093px;
+    height: 793px;
+}
+
+.section_logo_contraseña img {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 0px solid #d0d0d0;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.section_informacion_contraseña .h2_contraseña {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.section_informacion_contraseña .p_contraseña {
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-size: 30px;
+    color: #000000;
+    align-items: center;
+}
+
+
+.section_informacion_contraseña .p-float-label {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.section_informacion_contraseña .p-float-label input {
+    width: 400px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+
+.section_informacion_contraseña .button_contraseña {
+    background-color: #0099ff;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 400px;
+    max-width: 180px;
+    align-self: center;
+    margin-left: 105px;
+}
+
+.section_informacion_contraseña .p-inputtext:enabled:focus {
+    width: none;
+}
+
+.section_informacion_contraseña .button_contraseña:hover {
+    background-color: #007acc;
+}
