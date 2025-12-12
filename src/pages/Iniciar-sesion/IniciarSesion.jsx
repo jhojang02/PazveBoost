@@ -11,8 +11,44 @@ function IniciarSesion({ esEmpleado }) {
     const [contraseña, setContraseña] = useState('');
 
     const navigate = useNavigate();
-    const handClick = () => {
-        navigate('/bienvenida');
+
+    const handClick = async () => {
+        if (!correo || !contraseña) {
+            alert("Debes completar los dos campos");
+            return;
+        }
+
+        try {
+            const response = await fetch("http://localhost/pazveboost/iniciar.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    correo: correo,
+                    contrasena: contraseña,
+                    esEmpleado: esEmpleado
+                })
+            });
+
+            const data = await response.json();
+            console.log(data);
+
+            if (data.ok) {
+
+                localStorage.setItem("id_cliente", data.id_cliente);
+                localStorage.setItem("nombre_cliente", data.nombre);
+                localStorage.setItem("correo_cliente", correo);
+
+                navigate("/bienvenida");
+            } else {
+                alert(data.mensaje);
+            }
+
+        } catch (error) {
+            alert("Error al conectar con el servidor");
+            console.error(error);
+        }
     };
 
     const otroClick = () => {
@@ -30,18 +66,18 @@ function IniciarSesion({ esEmpleado }) {
                     <img src={img} alt="" />
                 </div>
                 <div className="section-informacion">
-                    <h2>Iniciar sesion {esEmpleado ? 'empleado' : 'cliente' }</h2>
+                    <h2>Iniciar sesion {esEmpleado ? 'empleado' : 'cliente'}</h2>
                     <p>Ingresar tus credenciales para ingresar a tu cuenta</p>
                     <div className="flotantes-labels">
-                    <FloatLabel className="inputs-login">
-                        <InputText id="correo" value={correo} onChange={(e) => setCorreo(e.target.value)}/>
-                        <label htmlFor="correo" className="labels-login" id="correo-label">{esEmpleado ? 'Nombre de usuario' : 'Correo:'}</label>
-                    </FloatLabel>
-                    <FloatLabel className="inputs-login">
-                        <InputText id="contraseña" type='password' value={contraseña} onChange={(e) => setContraseña(e.target.value)} />
-                        <label htmlFor="contraseña" className="labels-login">Contraseña:</label>
-                    </FloatLabel>
-                    <p className="olvida-contra"><a onClick={otroClick} style={{cursor:"pointer"}}>¿Olvidaste tu contraseña?</a></p>
+                        <FloatLabel className="inputs-login">
+                            <InputText id="correo" value={correo} onChange={(e) => setCorreo(e.target.value)} />
+                            <label htmlFor="correo" className="labels-login" id="correo-label">{esEmpleado ? 'Nombre de usuario' : 'Correo:'}</label>
+                        </FloatLabel>
+                        <FloatLabel className="inputs-login">
+                            <InputText id="contraseña" type='password' value={contraseña} onChange={(e) => setContraseña(e.target.value)} />
+                            <label htmlFor="contraseña" className="labels-login">Contraseña:</label>
+                        </FloatLabel>
+                        <p className="olvida-contra"><a onClick={otroClick} style={{ cursor: "pointer" }}>¿Olvidaste tu contraseña?</a></p>
                     </div>
                     <button className="boton_inicio" type="button" onClick={handClick}>
                         Iniciar sesión
