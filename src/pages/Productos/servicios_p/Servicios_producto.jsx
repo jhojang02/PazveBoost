@@ -24,14 +24,19 @@ function Header() {
 
   const productosFiltrados = busqueda
     ? productspage.filter(p =>
-        p.name.toLowerCase().includes(busqueda.toLowerCase())
-      )
+      p.name.toLowerCase().includes(busqueda.toLowerCase())
+    )
     : [];
 
   const handClick = () => navigate('/servicios');
   const handClick2 = () => navigate('/bienvenida');
-  const handClick3 = () => navigate('/');
-  const handClick4 = () => navigate('/carrito');
+  const handClick3 = () => navigate('/'); 
+  const handClick4 = () => {
+    navigate('/carrito');
+    setTimeout(() => {
+      window.location.reload();
+    }, 50);
+  };;
   const handClick5 = () => navigate('/perfil');
 
   return (
@@ -82,38 +87,38 @@ function Header() {
           <a href="https://pazgo-contact.vercel.app">CONTACTENOS</a>
           <a href="#" onClick={(e) => { e.preventDefault(); handClick4(); }}>CARRITO</a>
         </div>
-        
-        <a 
-        href="#" 
-        className="login-button"
-        onClick={(e) => { 
-        e.preventDefault(); 
-        setVisibleCerrar(true); 
-      }} 
+
+        <a
+          href="#"
+          className="login-button"
+          onClick={(e) => {
+            e.preventDefault();
+            setVisibleCerrar(true);
+          }}
         >
           Cerrar Sesión
-          </a>
+        </a>
       </nav>
 
       <Dialog
-      header="Cerrar sesión"
-      visible={visibleCerrar}
-      onHide={() => setVisibleCerrar(false)}
-      style={{width: '300px'}}
+        header="Cerrar sesión"
+        visible={visibleCerrar}
+        onHide={() => setVisibleCerrar(false)}
+        style={{ width: '300px' }}
       >
         <p>¿Estás seguro de que quieres cerrar sesión?</p>
         <div className="flex justify-content-around mt-3">
           <Button
-          label="Sí, cerrar sesión"
-          icon="pi pi-check"
-          className="p-button-success"
-          onClick={handClick3}
+            label="Sí, cerrar sesión"
+            icon="pi pi-check"
+            className="p-button-success"
+            onClick={handClick3}
           />
           <Button
-          label="Cancelar"
-          icon="pi pi-times"
-          className="p-button-secondary"
-          onClick={() => setVisibleCerrar(false)}
+            label="Cancelar"
+            icon="pi pi-times"
+            className="p-button-secondary"
+            onClick={() => setVisibleCerrar(false)}
           />
         </div>
       </Dialog>

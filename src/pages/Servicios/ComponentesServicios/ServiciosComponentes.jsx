@@ -32,7 +32,12 @@ function Header() {
   const handClick = () => navigate("/productos");
   const handClick2 = () => navigate("/bienvenida");
   const handClick3 = () => navigate("/");
-  const handClick4 = () => navigate("/carrito");
+  const handClick4 = () => {
+    navigate('/carrito');
+    setTimeout(() => {
+      window.location.reload();
+    }, 50);
+  };
   const handClick5 = () => navigate("/perfil");
 
   return (

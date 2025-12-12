@@ -6,7 +6,7 @@ import { useCart } from '../../context/CartContext.jsx';
 import { useNavigate } from "react-router-dom";
 
 const ShoppingCart = () => {
-    const { cart, increaseQuantity, decreaseQuantity, removeFromCart } = useCart();
+    const { cart, increaseQuantity, decreaseQuantity, removeFromCart, clearCart } = useCart();
     const navigate = useNavigate();
 
     const idCliente = localStorage.getItem("id_cliente");
@@ -20,6 +20,7 @@ const ShoppingCart = () => {
         return total.toLocaleString('es-CO');
     };
 
+    //GUARDAR CARRITO EN BD Y LUEGO LIMPIARLO
     const guardarCarritoEnBD = () => {
 
         if (!idCliente) {
@@ -47,6 +48,8 @@ const ShoppingCart = () => {
             console.log("Respuesta del servidor:", data);
             if (data.ok) {
                 alert("Carrito guardado en la base de datos.");
+                
+                clearCart();
             } else {
                 alert("Error: " + data.mensaje);
             }
@@ -132,7 +135,7 @@ const ShoppingCart = () => {
                             className="action-button secondary"
                             onClick={guardarCarritoEnBD}
                         >
-                            Guardar carrito en BD
+                            Guardar carrito para la compra
                         </button>
                     </div>
                 </div>

@@ -1,7 +1,9 @@
-import { createContext, useContext, useState, useEffect} from "react";
-import {toast} from 'react-toastify';
+import { createContext, useContext, useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 export const CartContext = createContext();
+
+export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(() => {
@@ -13,7 +15,7 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  const addToCart = (product) => {
+  const addToCart = (product, email, name) => {
     setCart((prev) => {
       const existing = prev.find((item) => item.id === product.id);
 
@@ -25,8 +27,14 @@ export const CartProvider = ({ children }) => {
             : item
         );
       }
+
       toast.success("Producto agregado");
-      return [...prev, { ...product, quantity: 1 }];
+      return [...prev, {
+        ...product,
+        email: email || "",
+        name: name || "",
+        quantity: 1
+      }];
     });
   };
 
@@ -40,10 +48,9 @@ export const CartProvider = ({ children }) => {
 
   const decreaseQuantity = (id) => {
     setCart(prev =>
-      prev
-        .map(item =>
-          item.id === id ? { ...item, quantity: Math.max(0, item.quantity - 1) } : item
-        )
+      prev.map(item =>
+        item.id === id ? { ...item, quantity: Math.max(0, item.quantity - 1) } : item
+      )
     );
   };
 
@@ -52,15 +59,23 @@ export const CartProvider = ({ children }) => {
     toast.error("Producto eliminado");
   };
 
+  const clearCart = () => {
+    setCart([]);
+    toast.success("Carrito limpiado");
+  };
+
   return (
-    <CartContext.Provider value={{ cart,
-      addToCart,
-      increaseQuantity,
-      decreaseQuantity,
-      removeFromCart }}>
+    <CartContext.Provider 
+      value={{ 
+        cart,
+        addToCart,
+        increaseQuantity,
+        decreaseQuantity,
+        removeFromCart,
+        clearCart
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
 };
-
-export const useCart = () => useContext(CartContext);
